@@ -1,99 +1,103 @@
 describe('calculator model', function () {
 
-    beforeEach(function () {
-        this.calculator = new Calculator();
-    });
+  beforeEach(function () {
+    this.calculator = new Calculator();
+  });
 
 
-    it('should add numbers', function () {
-        console.log(this.calculator.add(Infinity, NaN));
-        console.log(this.calculator.add(2, 3));
+  it('should add numbers', function () {
+    console.log(this.calculator.add(Infinity, NaN));
+    console.log(this.calculator.add(2, 3));
 
-        expect(this.calculator.add(2, 2)).toBe(4);
-    });
-
-
-    it('should throw error when dividing by zero', function () {
-        var calculator = this.calculator;
-
-        expect(function () {
-            calculator.divide(1, 0);
-        }).toThrow();
-
-        // console.log(this.calculator.divide(2, 0));
-        console.log(this.calculator.divide(0, 2));
-        console.log(this.calculator.divide(2, -3));
-    });
+    expect(this.calculator.add(2, 2)).toBe(4);
+  });
 
 
-    it('should divide number', function () {
-        expect(this.calculator.divide(6, 2)).toBe(3);
-    });
+  it('should throw error when dividing by zero', function () {
+    var calculator = this.calculator;
+
+    expect(function () {
+      calculator.divide(1, 0);
+    }).toThrow();
+
+    // console.log(this.calculator.divide(2, 0));
+    console.log(this.calculator.divide(0, 2));
+    console.log(this.calculator.divide(2, -3));
+  });
 
 
-    it('should subtract positive numbers', function () {
-        expect(this.calculator.subtract(4, 2)).toBe(2);
-    });
+  it('should divide number', function () {
+    expect(this.calculator.divide(6, 2)).toBe(3);
+  });
 
 
-    it('should multiply numbers', function () {
-        expect(this.calculator.multiply(0, 3)).toBe(0);
-        expect(this.calculator.multiply(3, 0)).toBe(0);
-    });
+  it('should subtract positive numbers', function () {
+    expect(this.calculator.subtract(4, 2)).toBe(2);
+  });
+
+
+  it('should multiply numbers', function () {
+    expect(this.calculator.multiply(0, 3)).toBe(0);
+    expect(this.calculator.multiply(3, 0)).toBe(0);
+  });
 });
 
-describe('calculator view', function () {
+// only execute in jasmine v2
+if (window.jasmine && !window.jasmine.version_ || window.jasmine.version_.major !== 1) {
+
+  describe('calculator view', function () {
 
     beforeEach(function (done) {
-        $('body').append("<div id=\"calculator\"/>");
-        $('#calculator').load('html/calculator.html', function () {
-            initCalculator();
-            done();
-        });
+      $('body').append("<div id=\"calculator\"/>");
+      $('#calculator').load('html/calculator.html', function () {
+        initCalculator();
+        done();
+      });
     });
 
     afterEach(function () {
-        $('#calculator').remove();
+      $('#calculator').remove();
     });
 
     it('should add numbers', function () {
 
-        console.log(window.document.body.clientHeight);
+      console.log(window.document.body.clientHeight);
 
-        $('#7').click();
-        $('#plus').click();
-        $('#9').click();
-        $('#eval').click();
+      $('#7').click();
+      $('#plus').click();
+      $('#9').click();
+      $('#eval').click();
 
-        expect($('.screen').text()).toBe('16');
+      expect($('.screen').text()).toBe('16');
     });
 
     it('should divide numbers', function () {
-        $('#6').click();
-        $('#divide').click();
-        $('#3').click();
-        $('#eval').click();
+      $('#6').click();
+      $('#divide').click();
+      $('#3').click();
+      $('#eval').click();
 
-        expect($('.screen').text()).toBe('2');
+      expect($('.screen').text()).toBe('2');
     });
 
 
     it('should multiply numbers', function () {
-        $('#7').click();
-        $('#multiply').click();
-        $('#8').click();
-        $('#eval').click();
+      $('#7').click();
+      $('#multiply').click();
+      $('#8').click();
+      $('#eval').click();
 
-        expect($('.screen').text()).toBe('56');
+      expect($('.screen').text()).toBe('56');
     });
 
 
     it('should subtract numbers', function () {
-        $('#7').click();
-        $('#minus').click();
-        $('#8').click();
-        $('#eval').click();
+      $('#7').click();
+      $('#minus').click();
+      $('#8').click();
+      $('#eval').click();
 
-        expect($('.screen').text()).toBe('-1');
+      expect($('.screen').text()).toBe('-1');
     });
-});
+  });
+}

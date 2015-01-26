@@ -67,7 +67,7 @@ describe('calculator view', function () {
         $('#9').click();
         $('#eval').click();
 
-        $('.screen').text().should.be.a('16');
+        $('.screen').text().should.equal('16');
     });
 
     it('should divide numbers', function () {
@@ -76,7 +76,7 @@ describe('calculator view', function () {
         $('#3').click();
         $('#eval').click();
 
-        $('.screen').text().should.be.a('2');
+        $('.screen').text().should.equal('2');
     });
 
 
@@ -86,7 +86,7 @@ describe('calculator view', function () {
         $('#8').click();
         $('#eval').click();
 
-        $('.screen').text().should.be.a('56');
+        $('.screen').text().should.equal('56');
     });
 
 
@@ -95,6 +95,6 @@ describe('calculator view', function () {
         $('#minus').click();
         $('#8').click();
         $('#eval').click();
-        $('.screen').text().should.be.a('-1');
+        $('.screen').text().should.equal('-1');
     });
 });
