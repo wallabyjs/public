@@ -1,5 +1,6 @@
 # Wallaby.js quick links
 
+- [Wallaby.js website](http://wallabyjs.com)
 - [Download wallaby.js](http://wallabyjs.com/#download)
 - [Getting started with wallaby.js](#getting-started)
 - [Wallaby.js configuration file](#configuration-file-format)
