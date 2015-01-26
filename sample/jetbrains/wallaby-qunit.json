@@ -1,0 +1,12 @@
+{
+  "files": [
+    "style/calculator.css",
+    "html/calculator.html",
+    "lib/jquery.js",
+    "src/*.js"
+  ],
+  "tests": [
+    "test/*QUnitSpec.js"
+  ],
+  "testFramework": "qunit@1.16.0"
+}

@@ -1,0 +1,13 @@
+{
+  "files": [
+    "style/calculator.css",
+    "html/calculator.html",
+    "lib/jquery.js",
+    "src/*.js",
+    "test/lib/chai.js"
+  ],
+  "tests": [
+    "test/*MochaSpec.js"
+  ],
+  "testFramework": "mocha@2.0.1"
+}
