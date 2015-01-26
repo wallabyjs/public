@@ -4,10 +4,10 @@
     "html/calculator.html",
     "lib/jquery.js",
     "src/*.js",
-    "test/lib/chai.js"
+    "test/helpers/template.js"
   ],
   "tests": [
-    "test/*MochaSpec.js"
+    "test/*QUnitSpec.js"
   ],
-  "testFramework": "mocha@2.0.1"
+  "testFramework": "qunit@1.16.0"
 }

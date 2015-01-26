@@ -3,7 +3,8 @@
     "style/calculator.css",
     "html/calculator.html",
     "lib/jquery.js",
-    "src/*.js"
+    "src/*.js",
+    "test/helpers/template.js"
   ],
   "tests": [
     "test/*JasmineSpec.js"

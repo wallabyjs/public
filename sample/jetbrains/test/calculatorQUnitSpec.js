@@ -45,11 +45,7 @@ test('should multiply numbers', function () {
 module('calculator view', {
     beforeEach: function () {
         $('body').append("<div id=\"calculator\"/>");
-        QUnit.stop();
-        $('#calculator').load('html/calculator.html', function () {
-            initCalculator();
-            QUnit.start();
-        });
+        $('#calculator').html(calculatorTemplate);
     },
     afterEach: function () {
         $('#calculator').remove();

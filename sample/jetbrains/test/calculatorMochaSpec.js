@@ -46,12 +46,9 @@ describe('calculator model', function () {
 
 describe('calculator view', function () {
 
-    beforeEach(function (done) {
+    beforeEach(function () {
         $('body').append("<div id=\"calculator\"/>");
-        $('#calculator').load('html/calculator.html', function () {
-            initCalculator();
-            done();
-        });
+        $('#calculator').html(calculatorTemplate);
     });
 
     afterEach(function () {
