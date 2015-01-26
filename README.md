@@ -3,6 +3,7 @@
 - [Wallaby.js website](http://wallabyjs.com)
 - [Download wallaby.js](http://wallabyjs.com/#download)
 - [Getting started with wallaby.js](#getting-started)
+- [Sample calculator project](https://github.com/wallabyjs/public/tree/master/sample/jetbrains)
 - [Wallaby.js configuration file](#configuration-file-format)
 
 # Wallaby.js philosophy
