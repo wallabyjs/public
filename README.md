@@ -1,6 +1,7 @@
 # Wallaby.js quick links
 
 - [Wallaby.js website](http://wallabyjs.com)
+- [Wallaby.js in action video](https://www.youtube.com/watch?v=uUmF16R9JNs)
 - [Download wallaby.js](http://wallabyjs.com/#download)
 - [Getting started with wallaby.js](#getting-started)
 - [Sample calculator project](https://github.com/wallabyjs/public/tree/master/sample/jetbrains)
