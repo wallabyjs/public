@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="wallaby-jasmine-1.3" type="wallaby" factoryName="Wallaby.js" config="$PROJECT_DIR$/wallaby-jasmine-1.3.json">
+    <RunnerSettings RunnerId="wallaby" />
+    <ConfigurationWrapper RunnerId="wallaby" />
+    <method />
+  </configuration>
+</component>
