@@ -21,11 +21,11 @@ There are other apps and tools to test your application in different browsers, t
 
 # Supported code editors
 
-- WebStorm 9.0.3
-- PhpStorm 8.0.2
-- IntelliJ IDEA Ultimate 14.0.2
-- RubyMine 7.0.2
-- PyCharm 4.0.4
+- WebStorm **>= 9.0.3**
+- PhpStorm **>= 8.0.2**
+- IntelliJ IDEA Ultimate **>= 14.0.2**
+- RubyMine **>= 7.0.2**
+- PyCharm **>= 4.0.4**
 
 # Supported testing frameworks
 
@@ -41,6 +41,8 @@ Our plan is to support latest versions of popular testing frameworks as they are
 # Getting started
 
 *with wallaby.js in WebStorm, IntelliJ IDEA Ultimate, PhpStorm, RubyMine, PyCharm Professional*
+
+*You may also find a sample calculator project with created run configurations and config files for Mocha, QUnit, Jasmine and [in this repository](https://github.com/wallabyjs/public/tree/master/sample/jetbrains).*
 
 After you have downloaded wallaby.js plugin zip file, you can install the plugin by opening Settings - Plugins, clicking "Install plugin from disk" button and selecting the downloaded file. From now on, you will be able to automatically update the plugin right from your IDE.
 
