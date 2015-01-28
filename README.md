@@ -110,7 +110,7 @@ In the tool window you can see the "Failing Tests" tab and the "Wallaby Console"
 
 Once wallaby.js is running, you can see the code coverage in the source files that it tracks (specified in the configuration file). The coverage is live, so you can start changing your code and the coverage will automatically be updated, just as you type.
 
-As you can see, there are various colored squares displayed for each line fo your source code.
+As you can see, there are various colored squares displayed for each line of your source code.
 
 
 ![coverage](https://cloud.githubusercontent.com/assets/979966/5896430/228025e4-a581-11e4-9bb2-eb3fd47c842b.png)
