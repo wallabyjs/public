@@ -4,6 +4,7 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 
 - [Wallaby.js website](http://wallabyjs.com)
 - [Wallaby.js in action video](https://www.youtube.com/watch?v=uUmF16R9JNs)
+- [Wallaby.js blog post](http://dm.gl/2015/01/30/wallaby/)
 - [Download wallaby.js](http://wallabyjs.com/#download)
 - [Getting started with wallaby.js](#getting-started)
 - [Sample calculator project](https://github.com/wallabyjs/public/tree/master/sample/jetbrains)
