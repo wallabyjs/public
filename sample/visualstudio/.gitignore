@@ -1,0 +1,7 @@
+*.suo
+*.user
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+.localhistory

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/jetbrains.iml" filepath="$PROJECT_DIR$/.idea/jetbrains.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/wallaby-sample.iml" filepath="$PROJECT_DIR$/.idea/wallaby-sample.iml" />
     </modules>
   </component>
 </project>
