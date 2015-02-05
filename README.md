@@ -127,6 +127,7 @@ As you can see, there are various colored squares displayed for each line of you
 
 Clicking a square against a source code line will display a window with the information about the tests covering the line, including any error messages and console.log messages.
 
+You can search inside the window by using standard **Cmd/Ctrl + F** command and navigate links by using **Cmd/Ctrl + B**.
 
 ![window](https://cloud.githubusercontent.com/assets/979966/5896734/3b720036-a586-11e4-9a14-31f6fbdec3e8.png)
 
