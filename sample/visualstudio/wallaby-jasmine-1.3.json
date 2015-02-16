@@ -1,7 +1,7 @@
 {
   "files": [
     "style/calculator.css",
-    "lib/jquery.js",
+    { "pattern" : "lib/jquery.js", "instrument": false },
     "src/*.js",
     "test/helper/template.js"
   ],
