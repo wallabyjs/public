@@ -4,11 +4,22 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 
 - [Wallaby.js website](http://wallabyjs.com)
 - [Wallaby.js in action video](https://www.youtube.com/watch?v=uUmF16R9JNs)
-- [Wallaby.js blog post](http://dm.gl/2015/01/30/wallaby/)
+- [Wallaby.js motivation blog post](http://dm.gl/2015/01/30/wallaby/)
+- [Testing angular.js application with wallaby.js tutorial](http://dm.gl/2015/02/16/wallaby-angular/)
 - [Download wallaby.js](http://wallabyjs.com/#download)
 - [Getting started with wallaby.js](#getting-started)
-- [Sample calculator project](https://github.com/wallabyjs/public/tree/master/sample/jetbrains)
 - [Wallaby.js configuration file](#configuration-file-format)
+- [Wallaby.js preprocessors](#preprocessor-setting)
+- [Wallaby.js node.js and io.js support](#environment-setting)
+
+# Sample projects with wallaby configuration
+
+- [Calculator for browser environment](https://github.com/wallabyjs/public/tree/master/sample/jetbrains/)
+- [Calculator for node.js and io.js environment](https://github.com/wallabyjs/wallaby-node-iojs-sample/)
+- [Wallaby.js with require.js app](https://github.com/wallabyjs/wallaby-requirejs-sample/)
+- [Wallaby.js with angular.js app](https://github.com/wallabyjs/wallaby-angular-todomvc-sample/)
+- [Wallaby.js with react.js and JSX](https://github.com/wallabyjs/wallaby-react-todomvc-sample/)
+- [Wallaby.js with browser ES6 via babel (former 6to5) preprocessor](https://github.com/wallabyjs/wallaby-es6-sample/)
 
 # Wallaby.js philosophy
 
@@ -32,12 +43,16 @@ There are other apps and tools to test your application in different browsers, t
 
 Our plan is to support latest versions of popular testing frameworks as they are released. **If the version of the framework that you are using is not listed, you can still try to run wallaby.js with the closest supported version of the framework supported, it may just work**.
 
+**For browser:**
 - jasmine@1.3.1
 - jasmine@2.1.3 (default value)
 - mocha@2.0.1 (with any expectation framework of your choice)
 - qunit@1.16.0
 - [suggest another framework/version](https://github.com/wallabyjs/public/issues/new?title=Support%20...&labels=new%20testing%20framework%2Fversion)
 
+**For node.js and io.js:**
+- mocha@2.1.0 (with any expectation framework of your choice)
+- [suggest another framework/version](https://github.com/wallabyjs/public/issues/new?title=Support%20...&labels=new%20testing%20framework%2Fversion)
 
 # Getting started
 
@@ -52,22 +67,34 @@ After you have downloaded wallaby.js plugin zip file, you can install the plugin
 
 ### Configuration file
 
-After the plugin is installed, you can start by creating wallaby configuration file. The configuration file is just a [simple JSON file](#configuration-file-format) in your project root with just a couple of mandatory settings. It's recommended to prefix or suffix it with "wallaby", for example "wallaby.json".
+After the plugin is installed, you can start by creating wallaby configuration file. The configuration file is just a [simple JSON or JavaScript file](#configuration-file-format) in your project root with just a couple of mandatory settings. It's recommended to prefix or suffix it with "wallaby", for example "wallaby.json" or "wallaby.js".
 
-Simple configuration file should include "files", "tests" and "testFramework" properties.
+Simple configuration file should include "files", "tests" (and "testFramework", if you are not using jasmine) properties.
 
 ```json
 {
   "files": [
-    "src/*.js",
+    "src/*.js"
   ],
 
   "tests": [
     "test/*Spec.js"
-  ],
-
-  "testFramework": "jasmine@2.1.3"
+  ]
 }
+```
+or
+```javascript
+module.exports = function () {
+  return {
+    files: [
+      'src/*.js'
+    ],
+
+    tests: [
+      'test/*Spec.js'
+    ]
+  };
+};
 ```
 
 "Files" property should list your source files, "tests" property should list your test files. Any test helpers or other test related files, that are not the files with actual tests/specs, should be listed under the files property. Glob patterns can also be used, just make sure your files are in the order that you would like them to be loaded into the (internally generated) test page.
@@ -143,6 +170,8 @@ Another way to access some source code line/context actions is to use the light 
 
 
 - **Show line test(s) action**: works similar to clicking a source code line square and displays the line related test data.
+- **Jump to failing test action**: allows to quickly navigate to the failing test from any 'pink' context (the failing test execution path).
+- **Jump to error source action**: allows to quickly navigate to the source of the test error from any 'pink' context (failing test execution path).
 - **Show line uncovered regions**: the action is useful for "yellow" lines to display what is exactly not covered in the line. Not covered expressions will be highlighted in red.
 - **Show file uncovered regions**: the action is similar to the previous one, it displays uncovered regions for the whole file. The red highlights for both actions can be removed by pressing "Esc" (or you can just start changing the file code and they will disappear).
 - **Run scope test(s)**: the action is pretty simple (yet so much wanted by so many people), it just runs a single test (if invoked from within the test) or all related tests (if invoked within some source code covered by the tests).
@@ -185,51 +214,78 @@ Unless it's not something obvious and easily reproducible, please make sure to d
 
 # Configuration file format
 
-Wallaby.js configuration file is a simple JSON file with a root object containing the properties listed below.
+Wallaby.js configuration file is a simple JSON or JavaScript file, with a root object containing the properties listed below or exporting a function that returns the object of the same structure.
+
+Like:
+```json
+{
+  "files": [
+    "src/*.js"
+  ],
+
+  "tests": [
+    "test/*Spec.js"
+  ]
+}
+```
+or
+```javascript
+module.exports = function () {
+  return {
+    files: [
+      'src/*.js'
+    ],
+
+    tests: [
+      'test/*Spec.js'
+    ]
+  };
+};
+```
 
 ### Files and tests
 
-**```files```** array property specifies an array of source files or file name patterns. The files will be loaded in the test sandbox in the specified order. So if one script loading depends on the other script, the second one should be specified before the first one in the files list. If you have a configuration file for Karma runner or runner HTML page - you can use the order of files from there.
+**`files`** array property specifies an array of source files or file name patterns. The files will be loaded in the test sandbox in the specified order. So if one script loading depends on the other script, the second one should be specified before the first one in the files list. If you have a configuration file for Karma runner or runner HTML page - you can use the order of files from there.
 
 Files may be of any type, not just JavaScript files. While JavaScript files and CSS files are by default included in the internally generated test runner page, other files may be loaded by tests when required (for example HTML files/fragments can be loaded with [jQuery.load](http://api.jquery.com/load/) or any other way you may be using).
 
-**```tests```** array property specifies an array of test files or test file name patterns. Please note that only actual test files should be specified in the tests list (the files with specs/modules and tests); any test helpers or testing frameworks extensions should be specified in the "files" list (normally at the end of the list).
+**`tests`** array property specifies an array of test files or test file name patterns. Please note that only actual test files should be specified in the tests list (the files with specs/modules and tests); any test helpers or testing frameworks extensions should be specified in the "files" list (normally at the end of the list).
 
 Both files and tests paths are specified relatively to the location of the wallaby.js configuration file.
 
-For example, the configuration sample below makes wallaby.js to track all ```.js``` files in the ```src``` folder, and also a CSS and HTML file. The sample also includes all test files from the ```test``` folder that name ends with ```Spec```.
+For example, the configuration sample below makes wallaby.js to track all `.js` files in the `src` folder, and also a CSS and HTML file. The sample also includes all test files from the `test` folder that name ends with `Spec`.
 
 ```json
 {
   "files": [
     "style/calculator.css",
     "html/calculator.html",
-    "src/*.js",
+    "src/*.js"
   ],
 
   "tests": [
     "test/*Spec.js"
-  ],
+  ]
 }
 ```
 
 Files and tests are basically the only mandatory configuration properties, the rest is optional (please note that jasmine v2 is used by default as a testing framework).
 
-Both **```files```** and **```tests```** properties support [glob patterns](https://github.com/isaacs/minimatch), so you can use wildcards to avoid specifying each and every file.
+Both **`files`** and **`tests`** properties support [glob patterns](https://github.com/isaacs/minimatch), so you can use wildcards to avoid specifying each and every file.
 
-Both **```files```** and **```tests```** property element can either be a string representing file name/name pattern or an object defining additional properties.
+Both **`files`** and **`tests`** property element can either be a string representing file name/name pattern or an object defining additional properties.
 
 ### File object
 
-**```pattern```** string property represents the file name or pattern.
+**`pattern`** string property represents the file name or pattern.
 
-**```ignore```** boolean property (default value: **false**) is used to completely exclude the file from being processed by wallaby.js. The setting may be useful to adjust some broader patterns.
+**`ignore`** boolean property (default value: **false**) is used to completely exclude the file from being processed by wallaby.js. The setting may be useful to adjust some broader patterns.
 
-**```instrument```** boolean property (default value: **true**) determines whether the file is instrumented. Setting the property to **false** disables the file code coverage reporting and prevents the file changes to trigger automatic test execution. The setting should normally be set to **false** for libraries/utils/other rarely changing files. Using the setting makes wallaby.js to run your code faster, as it doesn't have to perform unnecessary work.
+**`instrument`** boolean property (default value: **true**) determines whether the file is instrumented. Setting the property to **false** disables the file code coverage reporting and prevents the file changes to trigger automatic test execution. The setting should normally be set to **false** for libraries/utils/other rarely changing files. Using the setting makes wallaby.js to run your code faster, as it doesn't have to perform unnecessary work.
 
-**```load```** boolean property (default value: **true**) determines whether the file is loaded to the sandbox HTML (via script tag in case of JavaScript files). Setting the property to **false** is useful if you are using some alternative script loading mechanism, such as RequireJs.
+**`load`** boolean property (default value: **true**) determines whether the file is loaded to the sandbox HTML (via script tag in case of JavaScript files). Setting the property to **false** is useful if you are using some alternative script loading mechanism, such as RequireJs.
 
-For example, the configuration sample below makes wallaby.js to track all ```.js``` files in the ```src``` folder and all its subfolders recursively, except those files that names ends with ```.generated```, include but avoid instrumenting  libraries in ```libs``` folder, include but avoid instrumenting test helpers (such as testing frameworks configuration scripts, custom matcher, etc.). The sample also includes all test files from the ```test``` folder that name ends with ```Spec```.
+For example, the configuration sample below makes wallaby.js to track all `.js` files in the `src` folder and all its subfolders recursively, except those files that names ends with `.generated`, include but avoid instrumenting  libraries in `libs` folder, include but avoid instrumenting test helpers (such as testing frameworks configuration scripts, custom matcher, etc.). The sample also includes all test files from the `test` folder that name ends with `Spec`.
 
 ```json
 {
@@ -245,21 +301,160 @@ For example, the configuration sample below makes wallaby.js to track all ```.js
   ]
 }
 ```
+### Environment setting
+
+Wallaby.js supports different environments, such as PhantomJs, node.js and io.js. By default, PhantomJs is used as tests runner environment. Configuration file for node.js or io.js looks like:
+
+```javascript
+module.exports = function () {
+  return {
+    files: [
+      'lib/*.js'
+    ],
+
+    tests: [
+      'test/*Spec.js'
+    ],
+
+    env: {
+      // use 'node' type to use node.js or io.js
+      type: 'node',
+      
+      // if runner property is not set, then wallaby.js embedded node/io.js version is used
+      // you can specifically set the node version by specifying 'node' (or any other command)
+      // that resolves your default node version or just specify the path 
+      // your node installation, like
+      
+      // runner: 'node'
+      // or
+      // runner: 'path to the desired node version'
+      
+      params: {
+        runner: '--harmony --harmony_arrow_functions',
+        env: 'PARAM1=true;PARAM2=false'
+      }
+    }
+  };
+};
+```
+
+**`env.type`** should be set to 'node' to use node.js or io.js.
+
+**`env.runner`** should be set to your local node/io.js path, or just 'node' (or any other command) that resolves your default node version. If not set, wallaby.js will use its own version of io.js.
+
+**`env.params.runner`** allows to set spawned node process flags.
+
+**`env.params.env`** allows to set spawned node process environment variables.
+
+### Preprocessors setting
+
+Wallaby.js supports Karma-like preprocessors to transform the content of your files before feeding it to the test runner.
+
+```javascript
+module.exports = function () {
+  return {
+    files: [
+      'src/*.js'
+    ],
+
+    tests: [
+      'test/*Spec.js'
+    ],
+
+    preprocessors: {
+      '**/*.js': file => require('babel').transform(file.content, {sourceMap: true}),
+      '**/*.jsx': file => require('babel').transform(file.content, {sourceMap: true})
+    }
+  };
+};
+```
+
+Wallaby preprocessors are extremely simple - you just specify a function or an array of functions to run for each file, that satisfies a given pattern:
+
+```javascript
+'**/*.js': file => file.content + '\n// modified once'
+or
+```
+```javascript
+'**/*.js': [file => file.content + '\n// modified 1', file => file.content + '\n// modified 2']
+```
+
+Wallaby.js uses io.js to run the configuration, so you can use arrow functions, classes, etc. in your wallaby.js configuration, but you don't have to:
+
+```javascript
+'**/*.js': function (file) { return file.content + '\n// modified once'; }
+```
+
+Although we encourage to use existing npm packages and write simple preprocessors without too much ceremony when possible, the preprocessor functions don't have to be inline, **feel free to encapsulate them anywhere, reuse, wrap and adapt karma plugins or other npm packages**.
+
+Over time we are planning to expose more and more extension points, but would like to do it carefully to keep wallaby.js public API as simple and clean as possible. In a meantime, Karma to Wallaby adapter could be a nice and interesting open source project.
+
+```javascript
+var es6ToEs5Preprocessor = file => require('babel').transform(file.content, {sourceMap: true});
+var dummyPreprocessor = file => '// dummy prefix\n' + file.content;
+
+module.exports = function () {
+  return {
+    files: [
+      'src/*.js'
+    ],
+
+    tests: [
+      'test/*Spec.js'
+    ],
+
+    preprocessors: {
+      '**/*.js': [es6ToEs5Preprocessor, dummyPreprocessor]
+      '**/*.jsx': es6ToEs5Preprocessor
+    }
+  };
+};
+```
+
+The preprocessor function may take one or two arguments:
+```javascript
+'**/*.js': file => file.content + '// modified'
+```
+```javascript
+'**/*.js': (file, done) => done(file.content + '// modified')
+```
+In case of one argument - the preprocessor result is expected immediately, in case of two arguments the preprocessor is async and the second argument is the callback that is invoked when the preprocessor result is ready.
+
+The first argument is a `file` object. 
+**`file.content`** property contains current content of the file.
+**`file.path`** property contains current content of the file.
+**`file.rename(newPath)`** function allows to rename/move the file.
+
+For example, the following preprocessor runs react tools transformation to all `jsx` files and renames them to be `*.jsx.js` files.
+
+```javascript
+'**/*.jsx': file => require('react-tools')
+                     .transformWithDetails(file.rename(file.path + '.js').content, 
+                                           {sourceMap: true})
+```
+
+The result of a preprocessor can be:
+
+- a string: modified content of the file,
+- an object: with `code` and `map` (or `sourceMap`) properties, where `code` is the file modified content, and `map` is the source map of the transformation.
+- an error: error object of `Error` type (passed to `done` callback or thrown from sync preprocessor).
+
+Please note, that if the transformation produces a JavaScript file that **if you are interested to see the coverage for, then returning the source map is essential**. Otherwise, the reported coverage and error stacks may not be correct.
 
 ### Delays setting
 
-**```delays```** object property specifies how much time (in milliseconds) wallaby.js should wait before proceeding to the next stage of the automated test run workflow. It's recommended to skip setting the property and leave it up to wallaby.js to decide what timeouts to use, until you actually encounter a case where you think tuning the delays may help. The property is an object with up to 2 properties, each representing a delay before a certain stage. Depending on how frequently you'd like to run your tests or how powerful your system is, tuning the delays may help to optimize wallaby.js and your system performance.
+**`delays`** object property specifies how much time (in milliseconds) wallaby.js should wait before proceeding to the next stage of the automated test run workflow. It's recommended to skip setting the property and leave it up to wallaby.js to decide what timeouts to use, until you actually encounter a case where you think tuning the delays may help. The property is an object with up to 2 properties, each representing a delay before a certain stage. Depending on how frequently you'd like to run your tests or how powerful your system is, tuning the delays may help to optimize wallaby.js and your system performance.
 
-**```edit```** numeric delay property is a number of milliseconds to wait after last code edit and before letting wallaby.js know about the code change.
+**`edit`** numeric delay property is a number of milliseconds to wait after last code edit and before letting wallaby.js know about the code change.
 
-**```run```** numeric delay property is a number of milliseconds to wait before letting wallaby.js to automatically run your tests as a result of your code changes.
+**`run`** numeric delay property is a number of milliseconds to wait before letting wallaby.js to automatically run your tests as a result of your code changes.
 
 ### Workers setting
 
-**```workers```** object property specifies the degree of parallelism used to run your tests. It's recommended to skip setting the property and leave it up to wallaby.js to decide how many processes to use based on your system capacity, until you actually encounter a case where you think tuning the workers count may help.
+**`workers`** object property specifies the degree of parallelism used to run your tests. It's recommended to skip setting the property and leave it up to wallaby.js to decide how many processes to use based on your system capacity, until you actually encounter a case where you think tuning the workers count may help.
 
-**```initial```** numeric property specifies the number of parallel processes to run your tests when your start/restart wallaby.js.
-**```regular```** numeric property specifies the number of parallel processes to run your tests every time when your code changes.
+**`initial`** numeric property specifies the number of parallel processes to run your tests when your start/restart wallaby.js.
+**`regular`** numeric property specifies the number of parallel processes to run your tests every time when your code changes.
 
 For example, the configuration sample below makes wallaby.js to wait a half of a second after editing a source file and before registering the code change, and to wait 150 milliseconds before running affected tests after the code change was registered. The configuration also makes wallaby.js to run all tests in 6 separate workers initially, then use up to 2 workers to run tests on your code changes.
 
@@ -290,40 +485,41 @@ For example, the configuration sample below makes wallaby.js to wait a half of a
 
 ### Testing framework setting
 
-**```testFramework```** string property specifies the name and the version of the testing framework that you are using for your tests. It uses following format: "name@version". Please note that because in order to properly support a testing framework, wallaby.js has to integrate with it and extend it, you can not use an arbitrary version of any framework with wallaby.js and may only use those that are supported. Currently supported frameworks/versions are [listed here](#supported-testing-frameworks).
+**`testFramework`** string property specifies the name and the version of the testing framework that you are using for your tests. It uses following format: "name@version". Please note that because in order to properly support a testing framework, wallaby.js has to integrate with it and extend it, you can not use an arbitrary version of any framework with wallaby.js and may only use those that are supported. Currently supported frameworks/versions are [listed here](#supported-testing-frameworks).
 
 ### Debug setting
 
-**```debug```** boolean property, when is set to **true**, produces a detailed wallaby.js log. It can be used to investigate any possible issues and can be supplied when [reporting bugs](https://github.com/wallabyjs/public/issues).
+**`debug`** boolean property, when is set to **true**, produces a detailed wallaby.js log. It can be used to investigate any possible issues and can be supplied when [reporting bugs](https://github.com/wallabyjs/public/issues).
 
 ### Full config file sample
 
-The full configuration with custom delays and workers settings (optional), for mocha v2.0.1, may look like:
-```json
-{
-  "files": [
-    "style/calculator.css",
-    "html/calculator.html",
-    { "pattern": "src/libs/*.js", "instrument": false },
-    "src/*.js",
-  ],
+The full configuration with custom delays and workers settings (optional), for mocha v2.0.1, browser environment, may look like:
+```javascript
+module.exports = function () {
+  return {
+    files: [
+      'style/calculator.css',
+      'html/calculator.html',
+      {pattern: 'src/libs/*.js', instrument: false},
+      'src/*.js'
+    ],
 
-  "tests": [
-    "test/*Spec.js"
-  ],
+    tests: [
+      'test/*Spec.js'
+    ],
 
-  "delays": {
-    "edit": 100,
-    "run": 0
-  },
+    delays: {
+      edit: 100,
+      run: 0
+    },
 
-  "workers": {
-    "initial": 6,
-    "regular": 3
-  },
+    workers: {
+      initial: 6,
+      regular: 3
+    },
 
-  "testFramework": "mocha@2.0.1",
-
-  "debug": false
-}
+    testFramework: 'mocha@2.0.1',
+    debug: false
+  };
+};
 ```
