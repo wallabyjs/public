@@ -348,7 +348,7 @@ module.exports = function () {
 
 ### Preprocessors setting
 
-Wallaby.js supports Karma-like preprocessors to transform the content of your files before feeding it to the test runner.
+Wallaby.js supports Karma-like preprocessors to transform the content of your files before feeding it to the test runner. **Preprocessors can be both sync or async** (keep reading for more details).
 
 ```javascript
 module.exports = function () {
