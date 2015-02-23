@@ -9,7 +9,7 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 - [Download wallaby.js](http://wallabyjs.com/#download)
 - [Getting started with wallaby.js](#getting-started)
 - [Wallaby.js configuration file](#configuration-file-format)
-- [Wallaby.js preprocessors](#preprocessor-setting)
+- [Wallaby.js preprocessors](#preprocessors-setting)
 - [Wallaby.js node.js and io.js support](#environment-setting)
 
 # Sample projects with wallaby configuration
