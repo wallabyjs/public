@@ -451,6 +451,92 @@ The result of a preprocessor can be:
 
 Please note, that if the transformation produces a JavaScript file that **if you are interested to see the coverage for, then returning the source map is essential**. Otherwise, the reported coverage and error stacks may not be correct.
 
+### Bootstrap setting
+
+In case if you have to configure your testing framework or sandbox environment just before a test run starts, you can use the `bootstrap` setting. It allows you to specify a function to be executed just before a test run starts.
+
+ ```javascript
+ module.exports = function () {
+   return {
+     files: [
+       'src/*.js'
+     ],
+
+     tests: [
+       'test/*Spec.js'
+     ],
+
+     bootstrap: function (wallaby) {
+       // wallaby.testFramework is jasmine/QUnit/mocha object
+       wallaby.testFramework.ui('tdd');
+
+       // you can access 'window' object in browser environment,
+       // 'global' object or require(...) something in node environment
+     }
+   };
+ };
+```
+
+The parameter of the function (named `wallaby` in the code above) has following functions and properties:
+
+- `delayStart()` function that allows to prevent wallaby from starting the test run automatically.
+- `start()` function that allows to start the test run manually when required, the function can be used in conjunction with `delayStart()` function to perform some async actions before starting the test run.
+- `tests` property that contains the list of all test files that wallaby.js know about.
+- `testFramework` property that contains a reference to the test framework object. The property can be used to configure your test framework before executing tests, for example to change some of its default settings.
+
+The API will be extending in future to include more members, feel free to request more wallaby data or control functions to be exposed via the parameter.
+
+*Important*: the `bootstrap` function is executed in the context of the test runner, not in the context of the configuration file.
+
+It means that you can not use objects/variables defined within the configuration file code. For example, this code:
+
+```javascript
+module.exports = function () {
+  var myParam = 'hello from config';
+  return {
+    files: [
+      'src/*.js'
+    ],
+
+    tests: [
+      'test/*Spec.js'
+    ],
+
+    bootstrap: function (wallaby) {
+      console.log(myParam);
+    }
+  };
+};
+```
+
+will output `undefined`, because `myParam` will not be defined in the context of the test runner, when the `bootstrap` function will be executed.
+
+However, because the `bootstrap` function is executed in the context of the test runner, you can use its environment to initialize it the way you need.
+
+For example, you can access `window` object if you are running browser tests or use `global` object in the case of node.js tests (or `require` modules you need).
+
+The configuration for a typical scenario of configuring a testing framework, for example `mocha` options, before the test run may look like:
+
+```javascript
+module.exports = function () {
+  return {
+    files: [
+      'src/*.js'
+    ],
+
+    tests: [
+      'test/*Spec.js'
+    ],
+
+    bootstrap: function (wallaby) {
+      var mocha = wallaby.testFramework;
+      mocha.ui('tdd);
+      // etc.
+    }
+  };
+};
+```
+
 ### Delays setting
 
 **`delays`** object property specifies how much time (in milliseconds) wallaby.js should wait before proceeding to the next stage of the automated test run workflow. It's recommended to skip setting the property and leave it up to wallaby.js to decide what timeouts to use, until you actually encounter a case where you think tuning the delays may help. The property is an object with up to 2 properties, each representing a delay before a certain stage. Depending on how frequently you'd like to run your tests or how powerful your system is, tuning the delays may help to optimize wallaby.js and your system performance.
