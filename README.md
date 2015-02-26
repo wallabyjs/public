@@ -203,7 +203,7 @@ Wallaby.js issues are registered [using this repository](https://github.com/wall
 
 Unless it's not something obvious and easily reproducible, please make sure to do whatever you can from the checklist:
 
-- clear the local server file cache: currently you can force it to be cleared by just stopping your wallaby run configuration, changing wallaby configuration file (even just adding a space to it) and running wallaby run configuration again: if the issue doesn't disappear, keep going through the checklist;
+- clear the local server file cache: currently you can force it to be cleared by just stopping your wallaby run configuration, changing wallaby configuration file content (even just adding a space somewhere inside) and running wallaby run configuration again: if the issue doesn't disappear, keep going through the checklist;
 - review and attach idea.log: the location is available from the "Help - Show Log" menu of your code editor;
 - review and attach wallaby.js log: you can record it while reproducing the issue, by setting the "debug" property to "true" in your wallaby configuration file and copying the log text from the "Wallaby Console" tab of the running wallaby.js tool window.
 
