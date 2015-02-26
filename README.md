@@ -10,6 +10,7 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 - [Getting started with wallaby.js](#getting-started)
 - [Wallaby.js configuration file](#configuration-file-format)
 - [Wallaby.js preprocessors](#preprocessors-setting)
+- [Wallaby.js bootstrap](#bootstrap-setting)
 - [Wallaby.js node.js and io.js support](#environment-setting)
 
 # Sample projects with wallaby configuration
@@ -486,7 +487,7 @@ The parameter of the function (named `wallaby` in the code above) has following 
 
 The API will be extending in future to include more members, feel free to request more wallaby data or control functions to be exposed via the parameter.
 
-*Important*: the `bootstrap` function is executed in the context of the test runner, not in the context of the configuration file.
+**Important**: the `bootstrap` function is executed in the context of the test runner, not in the context of the configuration file.
 
 It means that you can not use objects/variables defined within the configuration file code. For example, this code:
 
