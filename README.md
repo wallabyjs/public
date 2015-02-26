@@ -485,7 +485,7 @@ The parameter of the function (named `wallaby` in the code above) has following 
 - `tests` property that contains the list of all test files that wallaby.js know about.
 - `testFramework` property that contains a reference to the test framework object. The property can be used to configure your test framework before executing tests, for example to change some of its default settings.
 
-The API will be extending in future to include more members, feel free to request more wallaby data or control functions to be exposed via the parameter.
+The API will be extended in future to include more members, feel free to request more wallaby data or control functions to be exposed via the parameter.
 
 **Important**: the `bootstrap` function is executed in the context of the test runner, not in the context of the configuration file.
 
@@ -531,7 +531,7 @@ module.exports = function () {
 
     bootstrap: function (wallaby) {
       var mocha = wallaby.testFramework;
-      mocha.ui('tdd);
+      mocha.ui('tdd');
       // etc.
     }
   };
