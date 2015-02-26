@@ -8,10 +8,10 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 - [Testing angular.js application with wallaby.js tutorial](http://dm.gl/2015/02/16/wallaby-angular/)
 - [Download wallaby.js](http://wallabyjs.com/#download)
 - [Getting started with wallaby.js](#getting-started)
-- [Wallaby.js configuration file](#configuration-file-format)
-- [Wallaby.js preprocessors](#preprocessors-setting)
-- [Wallaby.js bootstrap](#bootstrap-setting)
-- [Wallaby.js node.js and io.js support](#environment-setting)
+- [Configuration file](#configuration-file-format)
+- [Preprocessors](#preprocessors-setting)
+- [Bootstrap](#bootstrap-setting)
+- [Node.js and io.js support](#environment-setting)
 
 # Sample projects with wallaby configuration
 
