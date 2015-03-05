@@ -467,7 +467,7 @@ module.exports = function () {
 
 *You may also find a sample calculator project with created run configurations and config files for Mocha, QUnit, Jasmine and [in this repository](https://github.com/wallabyjs/public/tree/master/sample/jetbrains).*
 
-After you have downloaded wallaby.js plugin zip file, you can install the plugin by opening Settings - Plugins, clicking "Install plugin from disk" button and selecting the downloaded file. **Important: select the downloaded ZIP file, and not the inner JAR file in case if you have unzipped the archive.** From now on, you will be able to automatically update the plugin right from your IDE.
+After you have downloaded wallaby.js plugin zip file, you can install the plugin by opening Settings - Plugins, clicking "Install plugin from disk" button and selecting the downloaded file. **Important: select the downloaded ZIP file, and not unzipped JAR file, in case if you have unzipped the archive.** From now on, you will be able to automatically update the plugin right from your IDE.
 
 
 ![plugin](https://cloud.githubusercontent.com/assets/979966/5896520/819ac25e-a582-11e4-8217-e98d3bf2af56.png)
