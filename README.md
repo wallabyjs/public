@@ -439,6 +439,7 @@ Wallaby.js issues are registered [using this repository](https://github.com/wall
 
 Unless it's not something obvious and easily reproducible, please make sure to do whatever you can from the checklist:
 
+- make sure your `files` and `tests` lists are correct. The `files` list should not contain any tests or patterns that include tests. Some project file structures contain both files and tests in the same folder(s) - in this case exclude tests from `files` list by adding the tests pattern with ignore flag to the `files` list: `{ pattern: 'server/**/*.spec.js', ignore: true }`.
 - clear the local server file cache: currently you can force it to be cleared by just stopping your wallaby run configuration, changing wallaby configuration file content (even just adding a space somewhere inside) and running wallaby run configuration again: if the issue doesn't disappear, keep going through the checklist;
 - review and attach idea.log: the location is available from the "Help - Show Log" menu of your code editor;
 - review and attach wallaby.js log: you can record it while reproducing the issue, by setting the "debug" property to "true" in your wallaby configuration file and copying the log text from the "Wallaby Console" tab of the running wallaby.js tool window.
