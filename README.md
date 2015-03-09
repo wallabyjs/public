@@ -190,6 +190,32 @@ module.exports = function () {
 
 **`env.params.env`** allows to set spawned node process environment variables.
 
+When running your node.js tests, wallaby by default tries to re-use once created node.js process(es) to make the runs faster. **If you are relying on the test node process re-start for each run, because your tests are not are not cleaning after themselves**, for example, not closing opened database connections, not stopping started web services, or are registering some callbacks that may be invoked after your test run finishes and interfere with your next test run - you may use [`workers.recycle` setting](#workers-setting) to make wallaby.js re-start node process for each run.
+
+```javascript
+module.exports = function () {
+  return {
+    files: [
+      'lib/*.js'
+    ],
+
+    tests: [
+      'test/*Spec.js'
+    ],
+
+    env: {
+      type: 'node'
+    },
+
+    workers: {
+      recycle: true
+    }
+  };
+};
+```
+
+No matter whether you use the setting or not, you will still benefit from wallaby.js incremental test run feature comparing to normal test runner. However, while using the setting allows you to rely on the process re-start and avoid writing any cleanup code, **we recommend to consider adding clean up code and not recycling node workers, because wallaby.js will be able to run your tests even faster** if node processes are reusable.
+
 ### Preprocessors setting
 
 Wallaby.js supports Karma-like preprocessors to transform the content of your files before feeding it to the test runner. **Preprocessors can be both sync or async** (keep reading for more details).
@@ -381,10 +407,13 @@ module.exports = function () {
 
 ### Workers setting
 
-**`workers`** object property specifies the degree of parallelism used to run your tests. It's recommended to skip setting the property and leave it up to wallaby.js to decide how many processes to use based on your system capacity, until you actually encounter a case where you think tuning the workers count may help.
+**`workers`** object property specifies the degree of parallelism used to run your tests and controls the way how wallaby.js re-uses workers. It's recommended to skip setting the property and leave it up to wallaby.js to decide how many processes to use based on your system capacity, until you actually encounter a case where you think tuning the workers count may help.
 
 **`initial`** numeric property specifies the number of parallel processes to run your tests when your start/restart wallaby.js.
+
 **`regular`** numeric property specifies the number of parallel processes to run your tests every time when your code changes.
+
+**`recycle`** boolean property determines whether wallaby.js should completely recycle workers. It's only applicable in node.js/io.js environment, because it browser we use recyclable pages anyway.
 
 For example, the configuration sample below makes wallaby.js to wait a half of a second after editing a source file and before registering the code change, and to wait 150 milliseconds before running affected tests after the code change was registered. The configuration also makes wallaby.js to run all tests in 6 separate workers initially, then use up to 2 workers to run tests on your code changes.
 
@@ -412,6 +441,8 @@ For example, the configuration sample below makes wallaby.js to wait a half of a
   }
 }
 ```
+
+If your tests depend on each other in some way and you would not like to or cannot make them isolated, you may set `initial` and `regular` properties to 1, this will make wallaby to run all of your tests sequentially like in Karma.
 
 ### Testing framework setting
 
