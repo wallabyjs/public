@@ -190,6 +190,7 @@ module.exports = function () {
 
 **`env.params.env`** allows to set spawned node process environment variables.
 
+#### Node process reuse
 When running your node.js tests, wallaby by default tries to re-use once created node.js process(es) to make the runs faster. **If you are relying on the test node process re-start for each run, because your tests are not are not cleaning after themselves**, for example, not closing opened database connections, not stopping started web services, or are registering some callbacks that may be invoked after your test run finishes and interfere with your next test run - you may use [`workers.recycle` setting](#workers-setting) to make wallaby.js re-start node process for each run.
 
 ```javascript
@@ -215,6 +216,8 @@ module.exports = function () {
 ```
 
 No matter whether you use the setting or not, you will still benefit from wallaby.js incremental test run feature comparing to normal test runner. However, while using the setting allows you to rely on the process re-start and avoid writing any cleanup code, **we recommend to consider adding clean up code and not recycling node workers, because wallaby.js will be able to run your tests even faster** if node processes are reusable.
+
+You can use `afterEach` hooks of your testing framework to clean up after your tests. Another option is to use [`bootstrap`](#bootstrap-setting) function to add some clean-up code that will be executed before each run. In the function you can make sure your database connection is closed, your web server is stopped, required node modules cache is cleaned, and any other conditions are met before running your tests.
 
 ### Preprocessors setting
 
@@ -470,12 +473,14 @@ Wallaby.js issues are registered [using this repository](https://github.com/wall
 
 Unless it's not something obvious and easily reproducible, please make sure to do whatever you can from the checklist:
 
-- make sure your `files` and `tests` lists are correct. The `files` list should not contain any tests or patterns that include tests. Some project file structures contain both files and tests in the same folder(s) - in this case exclude tests from `files` list by adding the tests pattern with ignore flag to the `files` list: `{ pattern: 'server/**/*.spec.js', ignore: true }`.
-- if you can, please provide a small sample project, where the error can be reproduced. Best if you create a repository on GitHub and give us a link to your repo. We will have a look, fix wallaby.js issue or the setup issue and send you a pull request, [like this one](https://github.com/Gregoor/wallaby-test/pull/1).  
-- clear the local server file cache: currently you can force it to be cleared by just stopping your wallaby run configuration, changing wallaby configuration file content (even just adding a space somewhere inside) and running wallaby run configuration again: if the issue doesn't disappear, keep going through the checklist;
-- review and attach idea.log: the location is available from the "Help - Show Log" menu of your code editor;
-- review and attach wallaby.js log: you can record it while reproducing the issue, by setting the "debug" property to "true" in your wallaby configuration file and copying the log text from the "Wallaby Console" tab of the running wallaby.js tool window.
-- when doing some advanced wallaby.js integration, it's local cache may be a useful place to have a look into for troubleshooting. Wallaby.js local cache folder is printed at the very beginning of the wallaby.js log when it starts. After you plugin runs, have a look into the `instrumented` subfolder to make sure all of the files are there and in the state you are expectinh them to be. 
+- Make sure your `files` and `tests` lists are correct. The `files` list should not contain any tests or patterns that include tests. Some project file structures contain both files and tests in the same folder(s) - in this case exclude tests from `files` list by adding the tests pattern with ignore flag to the `files` list: `{ pattern: 'server/**/*.spec.js', ignore: true }`.
+- If you can, please provide a small sample project, where the error can be reproduced. Best if you create a repository on GitHub and give us a link to your repo. We will have a look, fix wallaby.js issue or the setup issue and send you a pull request, [like this one](https://github.com/Gregoor/wallaby-test/pull/1).
+- If your tests run fine in Karma, but you are having some issues when running them in wallaby.js, try setting [`workers`](#workers-setting) count to 1. If it starts working after the change, it most likely means that your tests depend on each other in some way. For example, one of your test suites that is running first, sets some state, and test suites running later depend on it. You may keep worker number set to 1 to avoid the issue, but we recommend to make your test files isolated, so that wallaby.js can run them in parallel even faster.
+- If you have some transient issues in your node.js tests, try using [`workers.recycle` setting](#workers-setting). If it helps, then the most likely reason of the issues is that one or more of your tests set some state that causes tests to fail in the next run, because by default wallaby.js is trying to reuse node processes. You may either try adding some clean-up code to make node processes fully reusable as [described here](#node-process-reuse) and make your test runs even faster, or keep using the `workers.recycle` setting set to `true` and rely on the process re-start.
+- Clear the local server file cache: currently you can force it to be cleared by just stopping your wallaby run configuration, changing wallaby configuration file content (even just adding a space somewhere inside) and running wallaby run configuration again: if the issue doesn't disappear, keep going through the checklist.
+- Review and attach idea.log: the location is available from the "Help - Show Log" menu of your code editor.
+- Review and attach wallaby.js log: you can record it while reproducing the issue, by setting the "debug" property to "true" in your wallaby configuration file and copying the log text from the "Wallaby Console" tab of the running wallaby.js tool window.
+- When doing some advanced wallaby.js integration, it's local cache may be a useful place to have a look into for troubleshooting. Wallaby.js local cache folder is printed at the very beginning of the wallaby.js log when it starts. After you plugin runs, have a look into the `instrumented` subfolder to make sure all of the files are there and in the state you are expectinh them to be.
 
 ```javascript
 module.exports = function () {
