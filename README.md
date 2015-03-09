@@ -48,6 +48,7 @@ Our plan is to support latest versions of popular testing frameworks as they are
 **For browser:**
 - jasmine@1.3.1
 - jasmine@2.1.3 (default value)
+- jasmine@2.2.1
 - mocha@2.0.1 (with any expectation framework of your choice)
 - qunit@1.16.0
 - [suggest another framework/version](https://github.com/wallabyjs/public/issues/new?title=Support%20...&labels=new%20testing%20framework%2Fversion)
