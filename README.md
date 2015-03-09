@@ -191,7 +191,7 @@ module.exports = function () {
 **`env.params.env`** allows to set spawned node process environment variables.
 
 #### Node process reuse
-When running your node.js tests, wallaby by default tries to re-use once created node.js process(es) to make the runs faster. **If you are relying on the test node process re-start for each run, because your tests are not are not cleaning after themselves**, for example, not closing opened database connections, not stopping started web services, or are registering some callbacks that may be invoked after your test run finishes and interfere with your next test run - you may use [`workers.recycle` setting](#workers-setting) to make wallaby.js re-start node process for each run.
+When running your node.js tests (doesn't apply to browser tests via PhantomJs), wallaby by default tries to re-use once created node.js process(es) to make the runs faster. **If you are relying on the test node process re-start for each run, because your tests are not are not cleaning after themselves**, for example, not closing opened database connections, not stopping started web services, or are registering some callbacks that may be invoked after your test run finishes and interfere with your next test run - you may use [`workers.recycle` setting](#workers-setting) to make wallaby.js re-start node process for each run.
 
 ```javascript
 module.exports = function () {
