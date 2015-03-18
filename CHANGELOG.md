@@ -1,3 +1,10 @@
+<a name="IntelliJ 1.0.4"></a>
+# IntelliJ 1.0.4 (2015-03-19)
+
+## Bug Fixes
+
+- Fixed WebStorm 10 EAP compatibility issues, including but not limited to ([#42](https://github.com/wallabyjs/public/issues/42))
+
 <a name="Core 1.0.7"></a>
 # Core 1.0.7 (2015-03-11)
 
