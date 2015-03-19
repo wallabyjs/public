@@ -419,7 +419,7 @@ module.exports = function () {
 
 **`regular`** numeric property specifies the number of parallel processes to run your tests every time when your code changes.
 
-**`recycle`** boolean property determines whether wallaby.js should completely recycle workers. It's only applicable in node.js/io.js environment, because it browser we use recyclable pages anyway.
+**`recycle`** boolean property determines whether wallaby.js should completely recycle workers. It's only applicable in node.js/io.js environment, because in the browser we use recyclable pages anyway.
 
 For example, the configuration sample below makes wallaby.js to wait a half of a second after editing a source file and before registering the code change, and to wait 150 milliseconds before running affected tests after the code change was registered. The configuration also makes wallaby.js to run all tests in 6 separate workers initially, then use up to 2 workers to run tests on your code changes.
 
