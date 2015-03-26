@@ -1,5 +1,5 @@
-<a name="IntelliJ 1.0.4"></a>
-# Core 1.0.10 (2015-03-26)
+<a name="Core 1.0.11"></a>
+# Core 1.0.11 (2015-03-27)
 
 ## Bug Fixes
 
