@@ -1,3 +1,10 @@
+<a name="IntelliJ 1.0.4"></a>
+# Core 1.0.10 (2015-03-26)
+
+## Bug Fixes
+
+- Fixed require.js app files caching issues on Windows (changing app files was not trigerring tests because files were cached in phantomjs until wallaby.js restart).
+ 
 <a name="Core 1.0.9, IntelliJ 1.0.5"></a>
 # Core 1.0.9, IntelliJ 1.0.5 (2015-03-26)
 
