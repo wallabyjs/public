@@ -1,3 +1,12 @@
+<a name="Core 1.0.13"></a>
+# Core 1.0.13 (2015-03-30)
+
+## Changes and Bug Fixes
+
+- Added config.middleware extension point to allow configuring wallaby hosted web server.
+- Fixed ES6 module imports instrumentation [#55](https://github.com/wallabyjs/public/issues/55).
+- Implemented rest element support in escodegen fork.
+
 <a name="Core 1.0.11"></a>
 # Core 1.0.11 (2015-03-27)
 
