@@ -1,3 +1,12 @@
+<a name="Core 1.0.17"></a>
+# Core 1.0.17 (2015-04-01)
+
+## Changes and Bug Fixes
+
+- Implemented SystemJS support.
+- Fixed failed pasring for files with shebang [#58](https://github.com/wallabyjs/public/issues/58).
+- Exposed `projectCacheDir` property from wallaby config argument.
+
 <a name="Core 1.0.13"></a>
 # Core 1.0.13 (2015-03-30)
 
