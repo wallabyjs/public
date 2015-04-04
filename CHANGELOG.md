@@ -1,3 +1,10 @@
+<a name="Core 1.0.18"></a>
+# Core 1.0.18 (2015-04-04)
+
+## Changes and Bug Fixes
+
+- Implemented JSX spread attribute support.
+
 <a name="Core 1.0.17"></a>
 # Core 1.0.17 (2015-04-01)
 
