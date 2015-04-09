@@ -25,7 +25,7 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 - [Wallaby.js with react.js and JSX](https://github.com/wallabyjs/wallaby-react-todomvc-sample/)
 - [Wallaby.js with browser ES6 via babel (former 6to5) preprocessor](https://github.com/wallabyjs/wallaby-es6-sample/)
 - [Wallaby.js with webpack app](https://github.com/wallabyjs/wallaby-webpack-sample)
-- [Wallaby.js with browserify](https://github.com/wallabyjs/wallabify)
+- [Wallaby.js with browserify](https://github.com/wallabyjs/wallaby-browserify-sample)
 - [Wallaby.js with jspm/SystemJS](https://github.com/wallabyjs/wallaby-jspm-sample)
 
 # Wallaby.js philosophy
