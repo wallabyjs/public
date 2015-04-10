@@ -271,6 +271,7 @@ module.exports = function (wallaby) {
 
       '**/*.ts': wallaby.compilers.typeScript({
         // TypeScript compiler specific options
+        // https://github.com/Microsoft/TypeScript/blob/master/src/compiler/types.ts#L1584
       }),
 
       '**/*.coffee': wallaby.compilers.coffeeScript({
