@@ -11,7 +11,9 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 - [Download wallaby.js](http://wallabyjs.com/#download)
 - [Getting started with wallaby.js](#getting-started)
 - [Configuration file](#configuration-file-format)
+- [Compilers](#compilers-setting)
 - [Preprocessors](#preprocessors-setting)
+- [Postprocessor](#postprocessor-setting)
 - [Bootstrap](#bootstrap-setting)
 - [Node.js and io.js support](#environment-setting)
 - [Troubleshooting](#troubleshooting)
@@ -80,7 +82,7 @@ Like:
 ```
 or
 ```javascript
-module.exports = function () {
+module.exports = function (wallaby) {
   return {
     files: [
       'src/*.js'
@@ -92,6 +94,12 @@ module.exports = function () {
   };
 };
 ```
+
+`wallaby` parameter contains following properties:
+
+- `localProjectDir` string property returns the project local folder.
+- `projectCacheDir` string property returns the project cache folder. Note that wallaby.js uses files from this folder to run tests. It copies files specified in `files` and `tests` lists from `localProjectDir` to `projectCacheDir`.
+- `compilers` property allows to access builtin TypeScript, CoffeeScript and Babel [compilers](#compilers-setting).
 
 ### Files and tests
 
@@ -225,6 +233,111 @@ No matter whether you use the setting or not, you will still benefit from wallab
 
 You can use `afterEach` hooks of your testing framework to clean up after your tests. Another option is to use [`bootstrap`](#bootstrap-setting) function to add some clean-up code that will be executed before each run. In the function you can make sure your database connection is closed, your web server is stopped, required node modules cache is cleaned, and any other conditions are met before running your tests.
 
+### Compilers setting
+
+Wallaby.js supports [Karma-like preprocessors](#preprocessors-setting) to transform the content of your files before feeding it to the test runner. Before running any preprocessors for some JavaScript file, wallaby.js needs to instrument it (if it has `instrument: true` setting). It means that wallaby.js has to understand the dialect of the file to be able to parse, change and then emit the file source code.
+
+You can set `instrument: false` to any files and run them through preprocessors without wallaby.js instrumentation, but wallaby.js will not be able to collect and display coverage for such files. For some files, such as libraries code, styles or images, it is a desirable behaviour.
+
+Wallaby.js core supports ES6 (and less) plus JSX. It means that any other dialects or languages that you would like to get code coverage for, need to be compiled to JavaScript before the instrumentation phase.
+
+To allow such compilation from anything to JavaScript (ES6 or less), wallaby.js supports compilers.
+
+Wallaby.js has 3 built-in compilers: **TypeScript, CoffeeScript and Babel**. TypeScript and CoffeeScript compilers are turned on by default, Babel compiler is turned off by default. It means that **you don't even have to configure compiler at all if you are not using Babel compiler and happy with default compiler settings for TypeScript and CoffeeScript**. However, if you specify the `compilers` setting in your config, then you have to list all compilers that you are planning to use, because you are overriding the default value of the `compilers` setting.
+
+The format of the compiler setting is almost the same as [preprocessor](#preprocessors-setting) - it is an object with file patterns as keys and compiler functions as values. Here is an example how to configure compilers:
+
+```javascript
+var babel = require('babel');
+
+module.exports = function (wallaby) {
+  return {
+    files: [
+      'src/*.js'
+    ],
+
+    tests: [
+      'test/*Spec.js'
+    ],
+
+    compilers: {
+      '**/*.js': wallaby.compilers.babel({
+        babel: babel,
+        // other babel options
+        stage: 0    // https://babeljs.io/docs/usage/experimental/
+      }),
+
+      '**/*.ts': wallaby.compilers.typeScript({
+        // TypeScript compiler specific options
+      }),
+
+      '**/*.coffee': wallaby.compilers.coffeeScript({
+        // CoffeeScript compiler specific options
+      })
+    }
+  };
+};
+```
+
+#### Writing custom compiler
+
+If you would like to write **your own compiler for some other language** - the process is pretty straightforward. As preprocessor, compiler function can be sync or async, gets `file` argument with content and other properties and supposed to return an object with modified code and a source map.
+
+The important difference between preprocessor and compiler is that a compiler **must** return a source map and it must transform the code to JavaScript. Another mandatory property that a compiler **must** return is `ranges` property, where all coverable ranges of the original file must be listed.
+
+For example, if some file in my hypothetical language looks like
+
+```
+var a = b ? c() : d();
+```
+
+and conditional operator works in the same manner as in JavaScript (and other languages), then
+
+```
+module.exports = function (wallaby) {
+  return {
+    files: [
+      'src/*.hypotheticalLangExt'
+    ],
+
+    tests: [
+      'test/*Spec.hypotheticalLangExt'
+    ],
+
+    compilers: {
+      '**/*.hypotheticalLangExt': file => {
+        // Parsing file.content
+
+        // Traversing hypothetical language AST and collecting coverable ranges
+
+        // Coverable ranges is an array of locations,
+        // where each location is an array of the range
+        // start line, start column, end line, end column.
+
+        // In this specific case, we have a variable declaration statement
+        // and 2 branches of a conditional expression within it,
+        // so ranges would look like:
+        // ranges = [
+        //   [ 1, 0, 1, 22 ],   // whole statement
+        //   [ 1, 12, 1, 15 ],  // c() execution path
+        //   [ 1, 18, 1, 21 ]   // d() execution path
+        // ];
+        // Normally, parsers include (or have an option to include location in AST nodes),
+        // so it's just a matter of traversing the right nodes.
+
+        // Generating JavaScript with source map
+
+        return {
+          map: sourceMap,
+          code: generatedJavaScript,
+          ranges: ranges
+        };
+      }
+    }
+  };
+};
+```
+
 ### Preprocessors setting
 
 Wallaby.js supports Karma-like preprocessors to transform the content of your files before feeding it to the test runner. **Preprocessors can be both sync or async** (keep reading for more details).
@@ -319,6 +432,119 @@ The result of a preprocessor can be:
 - an error: error object of `Error` type (passed to `done` callback or thrown from sync preprocessor).
 
 Please note, that if the transformation produces a JavaScript file that **if you are interested to see the coverage for, then returning the source map is essential**. Otherwise, the reported coverage and error stacks may not be correct.
+
+### Postprocessor setting
+
+For every file change or batch of file changes, wallaby.js uses following processing pipeline:
+
+- [compilers](#compilers-setting)
+- instrumentation
+- [preprocessors](#preprocessors-setting)
+- postprocessor
+- test run
+
+Wallaby.js [compilers](#compilers-setting) and [preprocessors](#preprocessors-setting) are simple and stateless functions that take file argument and are supposed to returned processed content along with some other related data. It is not recommended to keep any state between function calls because preprocessors as well as compilers may run in different node processes.
+
+Postprocessor is a function that runs for every batch of file changes after all compilers and preprocessors. It has access not to just one file, but to all (compiled and preprocessed, as well as original) files. It is also guaranteed to always run in the same node process, so it can keep some required state.
+
+Considering all above, postprocessor is an ideal place for something like a module bundler, or anything else that needs to keep some state between test runs and have access to all files at the same time.
+
+From the implementation prospective, postprocessor is a function that takes a single argument and is supposed to return a promise.
+
+```javascript
+ module.exports = function () {
+   return {
+     files: [
+       'src/*.js'
+     ],
+
+     tests: [
+       'test/*Spec.js'
+     ],
+
+     postprocessor: function (wallaby) {
+       return new Promise(
+         function (resolve, reject) {
+            try {
+              // postprocessor work here
+              // ...
+
+              // resolve when the work is done
+              // or reject on errors
+              resolve();
+
+            } catch (err) {
+              reject(err);
+            }
+          });
+     }
+   };
+ };
+```
+
+The function argument is wallaby.js context where you can find some properties and functions to control emitted test files. Here is a list of the argument properties and functions:
+
+- `logger` property, allows to log debugging information or errors. Use `logger.debug()` to log any debugging information that will only be reported with `debug: true` setting, or `logger.error`/`logger.warn` to report errors.
+- `anyFilesAdded` and `anyFilesDeleted` properties, return whether or not any files have been added or deleted for the current batch of changes.
+- `nodeModulesDir` property returns local project node modules folder.
+- `baseDir` property returns wallaby cache project folder, please note that tests run on this folder files (not on the local project files).
+- `allFiles`, `affectedFiles` and `affectedTestFiles` properties return an array of all file objects that are tracked by wallaby.js, all source and test files affected by the current batch of file changes and just test files affected by the current batch of file changes respectively. `allFiles` set contains `affectedFiles` set, `affectedFiles` set contain `affectedTestFiles` set. 'Affected' in the context of test files means not only changed test files, but also files containing tests to run as a result of the whole change. For example, if file `a.js` is covered by tests from file `b.js` and file `a.js` changes, then `allFiles` will have `a.js`, `b.js` and other project files, `affectedFiles` will contain `a.js` and `b.js`, `affectedTestFiles` will contain `b.js`.
+- `createFile` function can create a new file, overwrite or clone/transform an existing one.
+
+File objects inside `allFiles`, `affectedFiles` and `affectedTestFiles` have the following structure:
+
+- `path` string property contains relative path of the file (relative to `baseDir`).
+- `fullPath` string property contains full path of the file in the `baseDir`.
+- `binary` boolean property returns true if the file is a binary file (file content in this case is base64 encoded string).
+- `ts` property contains the file change timestamp.
+- `id` property contains the file integer identifier in wallaby.js.
+- `type` property contains the file type, like 'js' or 'html'. The type is initially taken from the file name extension. Note that compilers and preprocessors may change the type (compilers do it without changing the file name extension).
+- `load` boolean property is the same as in configuration `files` object. In case of JavaScript file type, it allows to determine whether the file is loaded via script tag into the generated sandbox.
+- `instrument` boolean property is the same as in configuration `files` object.
+- `test` boolean property allows to determine whether the file is a test file.
+- `getContent` function returns a promise, when resolved it return the file string content.
+
+File objects that passed as an argument into `createFile` function should have the following structure:
+
+- `path` string property that contains relative path of the file (relative to `baseDir`).
+- `load` boolean property is the same as in configuration `files` object. In case of JavaScript file type, it allows to determine whether the file is loaded via script tag into the generated sandbox. If not set, the default value is `true`.
+- `order` numeric property that allows to control the file order in the list of all files included into the sandbox. Setting it to some negative value allows to tell wallaby.js that the file should be the first, setting it to `Infinity` will make it the last one.
+- `ts` numeric property that allows to set the file timestamp. File timestamps are used in caching mechanism, if the timestamp doesn't change, browser/phantomJs may use a cached copy. If not passed explicitly, `ts` will be set to the current time.
+- `content` property is a string content of the file.
+- `sourceMap` property allows to pass the source map in case if the created file is a transformed version of some other file. The property should be used in conjunction with `original` file property.
+- `original` file property allows to pass another file object, for example from `allFiles`, `affectedFiles` or `affectedTestFiles`. When `original` file is passed along with `sourceMap`, wallaby.js will make sure to correctly connect transformed and original files so that when the transformed file code is executed in the generated sandbox, error stack and code coverage is reported for the original file. It can be useful when you would like to execute transformed version of some file without overwriting the original version.
+
+For examples on how to write your own postprocessor, you may have look into wallaby.js postprocessor for [webpack](https://github.com/jeffling/wallaby-webpack/blob/master/index.js#L56) or [browserify](https://github.com/wallabyjs/wallabify/blob/master/index.js#L55).
+
+### Middleware setting
+
+Wallaby.js copies all files specified in `files` and `tests` lists to its own cache. It instruments these files, runs compilers, preprocessors and postprocessor, and serves all files from the cache. Required files are served to the sandbox from wallaby.js web server.
+
+However, sometimes you may want to just specify some file(s) or a folder that wallaby.js will serve as is, without copying it to its local cache, instrumenting and processing. You may also configure other options of how these files are served, such as cookies, various HTTP headers and so on.
+
+You may serve anything by specifying `middleware` function that takes 2 arguments: [express application instance and express instance](http://expressjs.com/guide/using-middleware.html), and allows to set and use any middleware.
+
+ ```javascript
+ module.exports = function () {
+   return {
+     files: [
+       'src/*.js'
+     ],
+
+     tests: [
+       'test/*Spec.js'
+     ],
+
+     // telling wallaby to serve jspm_packages project folder
+     // as is from wallaby web server
+     middleware: (app, express) => {
+       app.use('/jspm_packages',
+               express.static(
+                  require('path').join(__dirname, 'jspm_packages')));
+     }
+   };
+ };
+```
 
 ### Bootstrap setting
 
@@ -480,7 +706,7 @@ Wallaby.js issues are registered [using this repository](https://github.com/wall
 Unless it's not something obvious and easily reproducible, please make sure to do whatever you can from the checklist:
 
 - Make sure your `files` and `tests` lists are correct. The `files` list should not contain any tests or patterns that include tests. Some project file structures contain both files and tests in the same folder(s) - in this case exclude tests from `files` list by adding the tests pattern with ignore flag to the `files` list: `{ pattern: 'server/**/*.spec.js', ignore: true }`.
-- If you are running tests in node.js and getting `Cannot find module` error or other 'file not found' type of issues, please make sure that files that you are trying to load are listed in the `files` list. Wallaby.js uses its own cache, so it has to sync used files. Note, that this doesn't apply to `node_modules` folder, wallaby.js doesn't cache it and uses your local version of it. So no need to list node modules in the `files` list for your node tests (but may be required it for browser tests if you are using node modules as libs).
+- If you are running tests in node.js and getting `Cannot find module` error or other 'file not found' type of issues, please make sure that files that you are trying to load are listed in the `files` list. Wallaby.js uses its own cache, so it has to copy used files there. Note, that this doesn't apply to `node_modules` folder, wallaby.js doesn't cache it and uses your local version of it. So no need to list node modules in the `files` list for your node tests (but may be required it for browser tests if you are using node modules as libs).
 - If you can, please provide a small sample project, where the error can be reproduced. Best if you create a repository on GitHub and give us a link to your repo. We will have a look, fix wallaby.js issue or the setup issue and send you a pull request, [like this one](https://github.com/Gregoor/wallaby-test/pull/1).
 - If your tests run fine in Karma, but you are having some issues when running them in wallaby.js, try setting [`workers`](#workers-setting) count to 1. If it starts working after the change, it most likely means that your tests depend on each other in some way. For example, one of your test suites that is running first, sets some state, and test suites running later depend on it. You may keep worker number set to 1 to avoid the issue, but we recommend to make your test files isolated, so that wallaby.js can run them in parallel even faster.
 - If you have some transient issues in your node.js tests, try using [`workers.recycle` setting](#workers-setting). If it helps, then the most likely reason of the issues is that one or more of your tests set some state that causes tests to fail in the next run, because by default wallaby.js is trying to reuse node processes. You may either try adding some clean-up code to make node processes fully reusable as [described here](#node-process-reuse) and make your test runs even faster, or keep using the `workers.recycle` setting set to `true` and rely on the process re-start.
