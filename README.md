@@ -251,11 +251,15 @@ var babel = require('babel');
 module.exports = function (wallaby) {
   return {
     files: [
-      'src/*.js'
+      'src/*.js',
+      'src/*.ts',
+      'src/*.coffee'
     ],
 
     tests: [
       'test/*Spec.js'
+      'test/*Spec.ts',
+      'test/*Spec.coffee'
     ],
 
     compilers: {
