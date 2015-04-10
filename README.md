@@ -235,17 +235,13 @@ You can use `afterEach` hooks of your testing framework to clean up after your t
 
 ### Compilers setting
 
-Wallaby.js supports [Karma-like preprocessors](#preprocessors-setting) to transform the content of your files before feeding it to the test runner. Before running any preprocessors for some JavaScript file, wallaby.js needs to instrument it (if it has `instrument: true` setting). It means that wallaby.js has to understand the dialect of the file to be able to parse, change and then emit the file source code.
+Wallaby.js [preprocessors](#preprocessors-setting) can transform the content of your files before feeding it to the test runner. But if you would like to have code coverage for some file, wallaby.js has to instrument it before running any preprocessors. It means that wallaby.js has to understand the dialect of the file to be able to parse, change and then emit the file source code. Wallaby.js core supports ES6 (and less) plus JSX. It means that any other dialects or languages that you would like to get code coverage for, need to be compiled to JavaScript before the instrumentation phase.
 
-You can set `instrument: false` to any files and run them through preprocessors without wallaby.js instrumentation, but wallaby.js will not be able to collect and display coverage for such files. For some files, such as libraries code, styles or images, it is a desirable behaviour.
-
-Wallaby.js core supports ES6 (and less) plus JSX. It means that any other dialects or languages that you would like to get code coverage for, need to be compiled to JavaScript before the instrumentation phase.
-
-To allow such compilation from anything to JavaScript (ES6 or less), wallaby.js supports compilers.
+To allow such compilation from anything to JavaScript (ES6 or less), wallaby.js supports compilers, they run before instrumentation and preprocessors.
 
 Wallaby.js has 3 built-in compilers: **TypeScript, CoffeeScript and Babel**. TypeScript and CoffeeScript compilers are turned on by default, Babel compiler is turned off by default. It means that **you don't even have to configure compiler at all if you are not using Babel compiler and happy with default compiler settings for TypeScript and CoffeeScript**. However, if you specify the `compilers` setting in your config, then you have to list all compilers that you are planning to use, because you are overriding the default value of the `compilers` setting.
 
-**Note that if you are using Babel compiler, you don't need Babel preprocessor anymore.** If you are only using ES6 features and not using any experimental features, such as ES7, you may keep using Babel preprocessor and in this case you don't need Babel compiler.
+**Note that if you are using Babel compiler, you don't need Babel preprocessor anymore.** If you are only using ES6 features and not using any experimental features, such as ES7, you may keep using Babel preprocessor and in this case you don't need Babel compiler. In case of TypeScript and CoffeeScript, compilers is the only way to get coverage for such files with wallaby.js, preprocessors for TypeScript and CoffeeScript are not required.
 
 The format of the compiler setting is almost the same as [preprocessor](#preprocessors-setting) - it is an object with file patterns as keys and compiler functions as values. Here is an example how to configure compilers:
 
