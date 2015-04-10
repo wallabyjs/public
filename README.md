@@ -245,6 +245,8 @@ To allow such compilation from anything to JavaScript (ES6 or less), wallaby.js 
 
 Wallaby.js has 3 built-in compilers: **TypeScript, CoffeeScript and Babel**. TypeScript and CoffeeScript compilers are turned on by default, Babel compiler is turned off by default. It means that **you don't even have to configure compiler at all if you are not using Babel compiler and happy with default compiler settings for TypeScript and CoffeeScript**. However, if you specify the `compilers` setting in your config, then you have to list all compilers that you are planning to use, because you are overriding the default value of the `compilers` setting.
 
+**Note that if you are using Babel compiler, you don't need Babel preprocessor anymore.** If you are only using ES6 features and not using any experimental features, such as ES7, you may keep using Babel preprocessor and in this case you don't need Babel compiler.
+
 The format of the compiler setting is almost the same as [preprocessor](#preprocessors-setting) - it is an object with file patterns as keys and compiler functions as values. Here is an example how to configure compilers:
 
 ```javascript
