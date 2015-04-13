@@ -18,17 +18,20 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 - [Node.js and io.js support](#environment-setting)
 - [Troubleshooting](#troubleshooting)
 
-# Sample projects with wallaby configuration
+# Sample projects with wallaby.js configuration
 
-- [Calculator for browser environment](https://github.com/wallabyjs/public/tree/master/sample/jetbrains/)
-- [Calculator for node.js and io.js environment](https://github.com/wallabyjs/wallaby-node-iojs-sample/)
-- [Wallaby.js with require.js app](https://github.com/wallabyjs/wallaby-requirejs-sample/)
-- [Wallaby.js with angular.js app](https://github.com/wallabyjs/wallaby-angular-todomvc-sample/)
-- [Wallaby.js with react.js and JSX](https://github.com/wallabyjs/wallaby-react-todomvc-sample/)
-- [Wallaby.js with browser ES6 via babel (former 6to5) preprocessor](https://github.com/wallabyjs/wallaby-es6-sample/)
-- [Wallaby.js with webpack app](https://github.com/wallabyjs/wallaby-webpack-sample)
-- [Wallaby.js with browserify](https://github.com/wallabyjs/wallaby-browserify-sample)
-- [Wallaby.js with jspm/SystemJS](https://github.com/wallabyjs/wallaby-jspm-sample)
+- [Browser environment](https://github.com/wallabyjs/public/tree/master/sample/jetbrains/)
+- [Node.js and io.js environment](https://github.com/wallabyjs/wallaby-node-iojs-sample/)
+- [Require.js app](https://github.com/wallabyjs/wallaby-requirejs-sample/)
+- [Angular.js app](https://github.com/wallabyjs/wallaby-angular-todomvc-sample/)
+- [React.js and JSX](https://github.com/wallabyjs/wallaby-react-todomvc-sample/)
+- [ES6 via Babel preprocessor](https://github.com/wallabyjs/wallaby-es6-sample/)
+- [ES7 via Babel compiler](https://github.com/wallabyjs/wallaby-babel-es7-sample/)
+- [TypeScript support](https://github.com/wallabyjs/wallaby-typescript-sample/)
+- [CoffeeScript  support](https://github.com/wallabyjs/wallaby-coffeescript-sample/)
+- [Webpack and ES modules via Babel](https://github.com/wallabyjs/wallaby-webpack-sample)
+- [Browserify](https://github.com/wallabyjs/wallaby-browserify-sample)
+- [Jspm/SystemJS](https://github.com/wallabyjs/wallaby-jspm-sample)
 
 # Wallaby.js philosophy
 
