@@ -20,6 +20,8 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 
 # Sample projects with wallaby.js configuration
 
+![screen shot 2015-04-14 at 5 59 25 pm](https://cloud.githubusercontent.com/assets/979966/7132813/20047e28-e2d0-11e4-9159-bc57de581695.png)
+
 - [Browser environment](https://github.com/wallabyjs/public/tree/master/sample/jetbrains/)
 - [Node.js and io.js environment](https://github.com/wallabyjs/wallaby-node-iojs-sample/)
 - [Require.js app](https://github.com/wallabyjs/wallaby-requirejs-sample/)
