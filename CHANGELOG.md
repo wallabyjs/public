@@ -1,11 +1,13 @@
-<a name="Core 1.0.21"></a>
-# Core 1.0.21 (2015-04-14)
+<a name="Core 1.0.22"></a>
+# Core 1.0.22 (2015-04-14)
 
 ## Changes and Bug Fixes
 
 - Implemented [compilers extension point](https://github.com/wallabyjs/public#compilers-setting).
 - Implemented built-in TypeScript, CoffeeScript and Babel compilers [#49](https://github.com/wallabyjs/public/issues/49), [#60](https://github.com/wallabyjs/public/issues/60), [#61](https://github.com/wallabyjs/public/issues/61).
-- Fixed an issue with running tests with the same name in Jasmine [#64](https://github.com/wallabyjs/public/issues/64)
+- Added support for Mocha 2.2.4, QUnit 1.18.0
+- Fixed an issue with running tests with the same name in Jasmine [#64](https://github.com/wallabyjs/public/issues/64).
+- Fixed an issue with running tests with the same name in QUnit [#65](https://github.com/wallabyjs/public/issues/65).
 
 <a name="Core 1.0.18"></a>
 # Core 1.0.18 (2015-04-04)
