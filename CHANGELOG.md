@@ -3,7 +3,7 @@
 
 ## Changes and Bug Fixes
 
-- Implemented changing coffee files extension to js in CoffeeScript builtin compiler be default.
+- Implemented changing coffee files extension to js (for node.js environment) in CoffeeScript builtin compiler be default.
 - Implemented console.log invocation for cases when console.log is replaced with a different implementation, for example a sinon spy which results may be used in tests).
 - Implemented correct stack mapping for preprocessor renamed files.
 - Fixed an issue with screenshot taking and test cleanup code [#73](https://github.com/wallabyjs/public/issues/73).
