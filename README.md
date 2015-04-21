@@ -31,7 +31,7 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 - [ES7 via Babel compiler](https://github.com/wallabyjs/wallaby-babel-es7-sample/)
 - [TypeScript support](https://github.com/wallabyjs/wallaby-typescript-sample/)
 - [CoffeeScript  support](https://github.com/wallabyjs/wallaby-coffeescript-sample/)
-- [Webpack and ES modules via Babel](https://github.com/wallabyjs/wallaby-webpack-sample)
+- [Webpack and ES6 modules via Babel](https://github.com/wallabyjs/wallaby-webpack-sample)
 - [Browserify](https://github.com/wallabyjs/wallaby-browserify-sample)
 - [Jspm/SystemJS](https://github.com/wallabyjs/wallaby-jspm-sample)
 
@@ -289,7 +289,31 @@ module.exports = function (wallaby) {
 };
 ```
 
-#### Writing custom compiler
+#### CoffeeScript for node.js
+
+By default wallaby CoffeeScript compiler for node.js renames .coffee files to .js files, so that 
+``` CoffeeScript
+require './app'
+```
+where original file is app.coffee would work.
+
+If you'd like to not do it and use your own renaming strategy, you may pass 'noRename' option to CS compiler:
+``` JavaScript
+'**/*.coffee': w.compilers.coffeeScript({ noRename: true })
+```
+and use preprocessors to rename files the way you like:
+```
+preprocessors: {
+  '**/*.coffee': file => file.rename(file.path + '.js').content
+}
+```
+
+The preprocessor above will change `app.coffee` to `app.coffee.js` so you may require it as 
+``` CoffeeScript
+require './app.coffee'
+```
+
+#### Writing a custom compiler
 
 If you would like to write **your own compiler for some other language** - the process is pretty straightforward. As preprocessor, compiler function can be sync or async, gets `file` argument with content and other properties and supposed to return an object with modified code and a source map.
 
@@ -375,8 +399,8 @@ Wallaby preprocessors are extremely simple - you just specify a function or an a
 
 ```javascript
 '**/*.js': file => file.content + '\n// modified once'
-or
 ```
+or
 ```javascript
 '**/*.js': [file => file.content + '\n// modified 1', file => file.content + '\n// modified 2']
 ```

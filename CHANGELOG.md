@@ -1,3 +1,17 @@
+<a name="Core 1.0.28"></a>
+# Core 1.0.28 (2015-04-21)
+
+## Changes and Bug Fixes
+
+- Implemented changing coffee files extension to js in CoffeeScript builtin compiler be default.
+- Implemented console.log invocation for cases when console.log is replaced with a different implementation, for example a sinon spy which results may be used in tests).
+- Implemented correct stack mapping for preprocessor renamed files.
+- Fixed an issue with screenshot taking and test cleanup code [#73](https://github.com/wallabyjs/public/issues/73).
+- Added a trailing path separator to local project dir property.
+- Fixed empty variable declaration instrumenting case when the same variable is declared more than once.
+- Fixed ES6 default function parameter instrumenting case.
+- Fixed an issue with wallaby.js cache breaking for non JavaScript files [#66](https://github.com/wallabyjs/public/issues/66).
+
 <a name="Core 1.0.22"></a>
 # Core 1.0.22 (2015-04-14)
 
