@@ -289,17 +289,25 @@ module.exports = function (wallaby) {
 };
 ```
 
-#### CoffeeScript for node.js
+#### CoffeeScript and TypeScript for node.js
 
-By default wallaby CoffeeScript compiler for node.js renames .coffee files to .js files, so that 
+By default wallaby CoffeeScript and TypeScript compiler for node.js renames .coffee/.ts files to .js files, so that in CoffeeScript
 ``` CoffeeScript
 require './app'
 ```
-where original file is app.coffee would work.
+or in TypeScript
+``` TypeScript
+require('./app')
+```
+where original file is app.coffee/app.ts would work.
 
 If you'd like to not do it and use your own renaming strategy, you may pass 'noRename' option to CS compiler:
 ``` JavaScript
 '**/*.coffee': w.compilers.coffeeScript({ noRename: true })
+```
+or
+``` JavaScript
+'**/*.ts': w.compilers.typeScript({ noRename: true, module: 1 }) // CommonJs modules
 ```
 and use preprocessors to rename files the way you like:
 ```
@@ -307,10 +315,20 @@ preprocessors: {
   '**/*.coffee': file => file.rename(file.path + '.js').content
 }
 ```
+or
+```
+preprocessors: {
+  '**/*.ts': file => file.rename(file.path + '.js').content
+}
+```
 
-The preprocessor above will change `app.coffee` to `app.coffee.js` so you may require it as 
+The preprocessor above will change `app.coffee`/`app.ts` to `app.coffee.js`/`app.ts.js` so you may require it as 
 ``` CoffeeScript
 require './app.coffee'
+```
+or
+``` TypeScript
+require './app.ts'
 ```
 
 #### Writing a custom compiler
