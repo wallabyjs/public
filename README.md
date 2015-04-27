@@ -107,6 +107,7 @@ module.exports = function (wallaby) {
 - `localProjectDir` string property returns the project local folder.
 - `projectCacheDir` string property returns the project cache folder. Note that wallaby.js uses files from this folder to run tests. It copies files specified in `files` and `tests` lists from `localProjectDir` to `projectCacheDir`.
 - `compilers` property allows to access builtin TypeScript, CoffeeScript and Babel [compilers](#compilers-setting).
+- `defaults` property allows to set default values for file object properties.
 
 ### Files and tests
 
@@ -144,13 +145,49 @@ Both **`files`** and **`tests`** property element can either be a string represe
 
 **`pattern`** string property represents the file name or pattern.
 
-**`ignore`** boolean property (default value: **false**) is used to completely exclude the file from being processed by wallaby.js. The setting may be useful to adjust some broader patterns.
+**`ignore`** boolean property (default value: **false**) is used to completely exclude the file from being processed by wallaby.js. The setting may be useful to adjust some broader patterns. Note that if you'd like to ignore a file, you may also just add an exclamation mark as a first character of the path to negate the `ignore` property (which is `false` by default). For example, if you have your tests in the same folder with your source files, your config may look like:
+
+```json
+{
+  "files": [
+    "src/*.js",
+    "!src/*Spec.js"
+  ],
+
+  "tests": [
+    "src/*Spec.js"
+  ]
+}
+```
 
 **`instrument`** boolean property (default value: **true**) determines whether the file is instrumented. Setting the property to **false** disables the file code coverage reporting and prevents the file changes to trigger automatic test execution. The setting should normally be set to **false** for libraries/utils/other rarely changing files. Using the setting makes wallaby.js to run your code faster, as it doesn't have to perform unnecessary work.
 
 **`load`** boolean property (default value: **true**) determines whether the file is loaded to the sandbox HTML (via script tag in case of JavaScript files). Setting the property to **false** is useful if you are using some alternative script loading mechanism, such as RequireJs.
 
-For example, the configuration sample below makes wallaby.js to track all `.js` files in the `src` folder and all its subfolders recursively, except those files that names ends with `.generated`, include but avoid instrumenting  libraries in `libs` folder, include but avoid instrumenting test helpers (such as testing frameworks configuration scripts, custom matcher, etc.). The sample also includes all test files from the `test` folder that name ends with `Spec`.
+In case you would like to override file object properties default values, you may use `wallaby` parameter `defaults` property. For example, if in your configuration files list most of the items should have `instrument` property set to false, you may override the default property value as follows:
+
+```javascript
+module.exports = function (wallaby) {
+  wallaby.defaults.files.instrument = false;
+  return {
+    files: [
+      'libs/lib1.js',
+      'libs/lib2.js',
+      'libs/lib3.js',
+      'libs/lib4.js',
+      { pattern: 'src/*.js', instrument: true }
+    ],
+
+    tests: [
+      'test/*Spec.js'
+    ]
+  };
+};
+```
+
+Note, that the defaults for `files` and `tests` are set separately, so in the example above all tests will be instrumented. To set tests defaults in the example above one could use `wallaby.defaults.tests` object.
+
+To sum it up, the configuration sample below makes wallaby.js to track all `.js` files in the `src` folder and all its subfolders recursively, except those files that names ends with `.generated`, include but avoid instrumenting  libraries in `libs` folder, include but avoid instrumenting test helpers (such as testing frameworks configuration scripts, custom matcher, etc.). The sample also includes all test files from the `test` folder that name ends with `Spec`.
 
 ```json
 {
