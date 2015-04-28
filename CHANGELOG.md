@@ -4,7 +4,7 @@
 ## Changes and Bug Fixes
 
 - Implemented a way to [negate file path](https://github.com/wallabyjs/public#file-object) (inverts ignore property) [#62](https://github.com/wallabyjs/public/issues/62).
-- Implemented a way for [overriding defaults for files and tests list pattern objects]() https://github.com/wallabyjs/public#file-object [#71](https://github.com/wallabyjs/public/issues/71).
+- Implemented a way for [overriding defaults for files and tests list pattern objects](https://github.com/wallabyjs/public#file-object) [#71](https://github.com/wallabyjs/public/issues/71).
 - Fixed JSX whitespaces instrumentation [#88](https://github.com/wallabyjs/public/issues/88).
 - Added passing test number reporting and number of executed affected tests [#86](https://github.com/wallabyjs/public/issues/86).
 - Implemented TypeScript internal modules support via switching to built-in TypeScript postprocessor as opposed to just using the compiler.
