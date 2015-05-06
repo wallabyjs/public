@@ -16,7 +16,7 @@ If you do not wish to be bound by the terms of this Agreement, You may not insta
 
 Software is the property of Licensor. Software is licensed, not sold. Title and copyrights to Software, in whole and in part and all copies thereof, and all modifications, enhancements, derivatives and other alterations of Software regardless of who made any modifications, if any, are, and will remain, the sole and exclusive property of Licensor.
 
-Software is protected by United States Copyright Law and International Treaty provisions. Further, the structure, organization, and code embodied in Software are the valuable and confidential trade secrets of Licensor and its suppliers and are protected by intellectual property laws and treaties. Licensee agrees to abide by the copyright law and all other applicable laws of the United States including, but not limited to, export control laws.
+Software is protected by Australian Copyright Law and International Treaty provisions. Further, the structure, organization, and code embodied in Software are the valuable and confidential trade secrets of Licensor and its suppliers and are protected by intellectual property laws and treaties. Licensee agrees to abide by the copyright law and all other applicable laws.
 
 # RESTRICTED USE DURING EVALUATION PERIOD
 
