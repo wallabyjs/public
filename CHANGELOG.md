@@ -1,3 +1,14 @@
+<a name="Core 1.0.39, IntelliJ 1.0.12"></a>
+# Core 1.0.39, IntelliJ 1.0.12 (2015-05-08)
+
+## Changes and Bug Fixes
+
+- Upgraded TypeScript compiler to 1.5 beta.
+- Added licensing mechanism.
+- Removed checking it functiin arguments from Jasmine integration [#96](https://github.com/wallabyjs/public/issues/96).
+- Avoid stopping running session for errors with no stack, added chai specific default node setting [#92](https://github.com/wallabyjs/public/issues/92).
+- Added a queue of file change commands to avoid sending the file change operations from the core is live.
+
 <a name="Core 1.0.36, IntelliJ 1.0.9"></a>
 # Core 1.0.36, IntelliJ 1.0.9 (2015-04-28)
 
