@@ -5,7 +5,7 @@
 
 - Upgraded TypeScript compiler to 1.5 beta.
 - Added licensing mechanism.
-- Removed checking it functiin arguments from Jasmine integration [#96](https://github.com/wallabyjs/public/issues/96).
+- Removed checking it function arguments from Jasmine integration [#96](https://github.com/wallabyjs/public/issues/96).
 - Avoid stopping running session for errors with no stack, added chai specific default node setting [#92](https://github.com/wallabyjs/public/issues/92).
 - Added a queue of file change commands to avoid sending the file change operations from the core is live.
 
