@@ -32,7 +32,7 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 - [TypeScript support](https://github.com/wallabyjs/wallaby-typescript-sample/)
 - [CoffeeScript  support](https://github.com/wallabyjs/wallaby-coffeescript-sample/)
 - [Webpack and ES6 modules via Babel](https://github.com/wallabyjs/wallaby-webpack-sample)
-- [Browserify](https://github.com/wallabyjs/wallaby-browserify-sample)
+- [Browserify](https://github.com/wallabyjs/wallaby-browserify-sample), [Proxyquireify](https://github.com/wallabyjs/wallabify/issues/2)
 - [Jspm/SystemJS](https://github.com/wallabyjs/wallaby-jspm-sample)
 - [Sails.js](https://github.com/wallabyjs/sailsjs-mocha-testing-barrels-fixtures-example)
 
