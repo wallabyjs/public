@@ -1,4 +1,4 @@
-This End User License Agreement ("Agreement") is a legal contract between you as an individual or business organisation ("you" or "Licensee") and Artem Govorov, an Australian registered sole trader, ABN: 42580693604 ("Licensor") for the Wallaby.js software, including any associated media, printed materials and electronic documentation (the "Software").
+This End User License Agreement ("Agreement") is a legal contract between you as an individual or business organisation ("you" or "Licensee") and Artem Govorov, an Australian registered sole trader, ABN: 42580693604 ("Licensor") for the Wallaby.js for specified code editor(s) software, including any associated media, printed materials and electronic documentation (the "Software").
 
 By copying, downloading, accessing or otherwise using the Software, you agree to be bound by the terms of this Agreement and you represent that you are authorised to enter into this Agreement on behalf of yourself or your business organisation.
 
