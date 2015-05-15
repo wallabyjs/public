@@ -35,6 +35,7 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 - [Browserify](https://github.com/wallabyjs/wallaby-browserify-sample), [Proxyquireify](https://github.com/wallabyjs/wallabify/issues/2)
 - [Jspm/SystemJS](https://github.com/wallabyjs/wallaby-jspm-sample)
 - [Sails.js](https://github.com/wallabyjs/sailsjs-mocha-testing-barrels-fixtures-example)
+- [Jest](https://github.com/wallabyjs/wallaby-jest-sample)
 
 # Wallaby.js philosophy
 
@@ -66,6 +67,7 @@ Our plan is to support latest versions of popular testing frameworks as they are
 - mocha@2.2.4
 - qunit@1.16.0
 - qunit@1.18.0
+- [jest@0.4.3](https://github.com/wallabyjs/wallaby-jest-sample)
 - [suggest another framework/version](https://github.com/wallabyjs/public/issues/new?title=Support%20...&labels=new%20testing%20framework%2Fversion)
 
 **For node.js and io.js:**
