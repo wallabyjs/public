@@ -1,3 +1,15 @@
+<a name="Core 1.0.42, IntelliJ 1.0.14"></a>
+# Core 1.0.42, IntelliJ 1.0.14 (2015-05-15)
+
+## Changes and Bug Fixes
+
+- Implemented Facebook Jest support [#44](https://github.com/wallabyjs/public/issues/44).
+- Improved initial file scanning performance.
+- Added possible infinite loop in test warning.
+- Added wallaby core version to the Wallaby Console output.
+- Fixed affected tests run when a source file is deleted [#103](https://github.com/wallabyjs/public/issues/103).
+- Patched Jasmine spy to create an error with correct stack [#104](https://github.com/wallabyjs/public/issues/104).
+
 <a name="Core 1.0.39, IntelliJ 1.0.12"></a>
 # Core 1.0.39, IntelliJ 1.0.12 (2015-05-08)
 
