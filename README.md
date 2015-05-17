@@ -34,8 +34,9 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 - [Webpack and ES6 modules via Babel](https://github.com/wallabyjs/wallaby-webpack-sample)
 - [Browserify](https://github.com/wallabyjs/wallaby-browserify-sample), [Proxyquireify](https://github.com/wallabyjs/wallabify/issues/2)
 - [Jspm/SystemJS](https://github.com/wallabyjs/wallaby-jspm-sample)
-- [Sails.js](https://github.com/wallabyjs/sailsjs-mocha-testing-barrels-fixtures-example)
 - [Jest](https://github.com/wallabyjs/wallaby-jest-sample)
+- [Sails.js](https://github.com/wallabyjs/sailsjs-mocha-testing-barrels-fixtures-example)
+- [LoopbackJs](https://github.com/wallabyjs/public/issues/107#issuecomment-102716117)
 
 # Wallaby.js philosophy
 
