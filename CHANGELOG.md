@@ -1,3 +1,12 @@
+<a name="Core 1.0.45, VS 1.0.0"></a>
+# Core 1.0.45, VS 1.0.0 (2015-05-18)
+
+## Changes and Bug Fixes
+
+- [Visual Studio preview support](http://dm.gl/2015/05/18/wallaby-for-visual-studio/).
+- Added projectCacheDir to bootstrap argument [#107](https://github.com/wallabyjs/public/issues/107).
+- Fixed PhantomJs page reloading caused memory leak [#108](https://github.com/wallabyjs/public/issues/108).
+
 <a name="Core 1.0.42, IntelliJ 1.0.14"></a>
 # Core 1.0.42, IntelliJ 1.0.14 (2015-05-15)
 
