@@ -1,5 +1,5 @@
 <a name="Core 1.0.45, VS 1.0.0"></a>
-# Core 1.0.45, VS 1.0.0 (2015-05-18)
+# Core 1.0.45, Visual Studio 2013 1.0.0 (2015-05-18)
 
 ## Changes and Bug Fixes
 
