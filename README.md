@@ -56,6 +56,7 @@ There are other apps and tools to test your application in different browsers, t
 - IntelliJ IDEA Ultimate **>= 14.0.2**
 - RubyMine **>= 7.0.2**
 - PyCharm **>= 4.0.4**
+- Visual Studio **2013 Update 4**
 
 # Supported testing frameworks
 
