@@ -1,3 +1,12 @@
+<a name="Core 1.0.52, IntelliJ 1.0.16, VS 1.0.1"></a>
+# Core 1.0.52, IntelliJ 1.0.16, Visual Studio 2013 1.0.1 (2015-05-25)
+
+- Fixed a few Facebook Jest integration issues [#112](https://github.com/wallabyjs/public/issues/112), [#115](https://github.com/wallabyjs/public/issues/115), [#118](https://github.com/wallabyjs/public/issues/118), [#121](https://github.com/wallabyjs/public/issues/121).
+- Implemented ES6 assignment property support [#122](https://github.com/wallabyjs/public/issues/122).
+- Allowed to reference node modules by relative path from `bootstrap` function for node.js tests [#123](https://github.com/wallabyjs/public/issues/123).
+- Added [PhantomJs params passing support](https://github.com/wallabyjs/wallaby-external-script/blob/master/wallaby.js#L15).
+- Extended trial session time.
+
 <a name="Core 1.0.45, VS 1.0.0"></a>
 # Core 1.0.45, Visual Studio 2013 1.0.0 (2015-05-18)
 
