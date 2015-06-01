@@ -1,5 +1,19 @@
+<a name="Core 1.0.55, IntelliJ 1.0.18, VS 1.0.4"></a>
+# Core 1.0.55, IntelliJ 1.0.18, Visual Studio 2013 1.0.4 (2015-06-01)
+
+## Changes and Bug Fixes
+
+- PhantomJs 2 support [#137](https://github.com/wallabyjs/public/issues/137).
+- Made "Jump to Failing Test" action available for any context (not just coverable line) and has made context actions icon color be reflect the latest test results.
+- Fixed wallaby.js ReSharper 9.1.1 compatibility issues [#134](https://github.com/wallabyjs/public/issues/134).
+- Improved the IntelliJ plugin installation uer experience [#129](https://github.com/wallabyjs/public/issues/129).
+- Fixed timing issue on Windows when node process is requested while still connecting to it.
+- Signalling live event even if the file cache is invalid but up-to-date (fixes occasional issues when starting to wallaby.js with invalid JavaScript code).
+
 <a name="Core 1.0.52, IntelliJ 1.0.16, VS 1.0.1"></a>
 # Core 1.0.52, IntelliJ 1.0.16, Visual Studio 2013 1.0.1 (2015-05-25)
+
+## Changes and Bug Fixes
 
 - Fixed a few Facebook Jest integration issues [#112](https://github.com/wallabyjs/public/issues/112), [#115](https://github.com/wallabyjs/public/issues/115), [#118](https://github.com/wallabyjs/public/issues/118), [#121](https://github.com/wallabyjs/public/issues/121).
 - Implemented ES6 assignment property support [#122](https://github.com/wallabyjs/public/issues/122).
