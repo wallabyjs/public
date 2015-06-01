@@ -17,6 +17,7 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 - [Postprocessor](#postprocessor-setting)
 - [Bootstrap](#bootstrap-setting)
 - [Node.js and io.js support](#environment-setting)
+- [PhantomJs 2 support](#phantomjs-2)
 - [Troubleshooting](#troubleshooting)
 
 # Sample projects with wallaby.js configuration
@@ -246,13 +247,47 @@ module.exports = function () {
 };
 ```
 
-**`env.type`** should be set to 'node' to use node.js or io.js.
+**`env.type`** should be set to 'node' to use node.js or io.js or 'browser' to use browser environment (PhantomJs).
 
 **`env.runner`** should be set to your local node/io.js path, or just 'node' (or any other command) that resolves your default node version. If not set, wallaby.js will use its own version of io.js.
 
 **`env.params.runner`** allows to set spawned node process flags.
 
 **`env.params.env`** allows to set spawned node process environment variables.
+
+#### PhantomJs 2
+
+By default, wallaby.js ships with and uses the latest stable PhantomJs version, available for all supported platforms. At the moment, the version is 1.9.8. If you would like to use another PhantomJs, for example PhantomJs 2 available for your platform or any custom build, you may use `env.runner` setting to specify the path to it. For example:
+
+```javascript
+module.exports = function () {
+  return {
+    files: [
+      'lib/*.js'
+    ],
+
+    tests: [
+      'test/*Spec.js'
+    ],
+
+    env: {
+      type: 'browser',
+      runner: '/Users/user/Downloads/phantomjs-2.0.0-macosx/bin/phantomjs'
+      // or
+      // runner: 'C:\\Tmp\\phantomjs-2.0.0-windows\\bin\\phantomjs.exe'
+    }
+  };
+};
+```
+
+Please note, that if you are on **OSX** and have downloaded the **version 2.0** from https://bitbucket.org/ariya/phantomjs/downloads, once you have unzipped it, you will need to run:
+
+```
+brew install upx
+upx -d path/to/downloaded/unzipped/phantomjs
+```
+
+for the reasons [described here](http://stackoverflow.com/questions/28267809/phantomjs-getting-killed-9-for-anything-im-trying).
 
 #### Node process reuse
 When running your node.js tests (doesn't apply to browser tests via PhantomJs), wallaby by default tries to re-use once created node.js process(es) to make the runs faster. **If you are relying on the test node process re-start for each run, because your tests are not are not cleaning after themselves**, for example, not closing opened database connections, not stopping started web services, or are registering some callbacks that may be invoked after your test run finishes and interfere with your next test run - you may use [`workers.recycle` setting](#workers-setting) **set to `true`** to make wallaby.js re-start node process for each run.
