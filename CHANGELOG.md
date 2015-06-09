@@ -1,3 +1,9 @@
+<a name="Core 1.0.62, VS 1.0.6"></a>
+# Core 1.0.62, Visual Studio 2013 1.0.6 (2015-06-09)
+
+## Changes and Bug Fixes
+
+
 <a name="Core 1.0.55, IntelliJ 1.0.18, VS 1.0.4"></a>
 # Core 1.0.55, IntelliJ 1.0.18, Visual Studio 2013 1.0.4 (2015-06-01)
 
