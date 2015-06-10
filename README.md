@@ -255,6 +255,8 @@ module.exports = function () {
 
 **`env.params.env`** allows to set spawned node process environment variables.
 
+**`env.viewportSize`** allows to set PhantomJs page viewport size, the default value is `{width: 800, height: 600}`.
+
 #### PhantomJs 2
 
 By default, wallaby.js ships with and uses the latest stable PhantomJs version, available for all supported platforms. At the moment, the version is 1.9.8. If you would like to use another PhantomJs, for example PhantomJs 2 available for your platform or any custom build, you may use `env.runner` setting to specify the path to it. For example:
