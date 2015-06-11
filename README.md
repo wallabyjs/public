@@ -283,6 +283,13 @@ module.exports = function () {
 };
 ```
 
+Relative path is supported, so if you have PhantomJs 2 binary in your VCS or better have a NPM module that installs platform specific PhantomJs 2, for example (karma-phantomjs2-launcher)[https://www.npmjs.com/package/karma-phantomjs2-launcher], you may just reference PhantomsJs 2 like:
+``` JavaScript
+env: {
+  runner: "node_modules/karma-phantomjs2-launcher/node_modules/phantomjs2-ext/lib/phantom/bin/phantomjs"
+}
+```
+
 Please note, that if you are on **OSX** and have downloaded the **version 2.0** from https://bitbucket.org/ariya/phantomjs/downloads, once you have unzipped it, you will need to run:
 
 ```
