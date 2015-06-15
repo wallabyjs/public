@@ -3,7 +3,7 @@
     "style/calculator.css",
     { "pattern" : "lib/jquery.js", "instrument": false },
     "src/*.js",
-    "test/lib/chai.js",
+    { "pattern": "test/lib/chai.js", "instrument": false },
     "test/helper/template.js"
   ],
   "tests": [
