@@ -1,15 +1,24 @@
+<a name="Core 1.0.64, IntelliJ 1.0.19, VS 1.0.7"></a>
+# Core 1.0.64, IntelliJ 1.0.19, Visual Studio 2013 1.0.7 (2015-06-17)
+
+## Changes and Bug Fixes
+
+- PhantomJs page viewport size setting support [#150](https://github.com/wallabyjs/public/issues/150).
+- Implemented Solution Items support for wallaby configuration files in Visuall Studio (wallaby.js config file may now be a solution item) [#153](https://github.com/wallabyjs/public/issues/153).
+- Performance tuning for IntelliJ platform.
+
 <a name="Core 1.0.62, VS 1.0.6"></a>
 # Core 1.0.62, Visual Studio 2013 1.0.6 (2015-06-09)
 
 ## Changes and Bug Fixes
 
 - Improved test sandbox cleanup.
-- Implemented require.main.require support in node.js environment (added wallaby cache paths to main modules paths) [#147](https://github.com/wallabyjs/public/issues/147)
-- Fixed startup issue (missing error handling) [#140](https://github.com/wallabyjs/public/issues/140)
-- Fixed Jest integration issue with not correct cancelling of previously scheduled tests [#142](https://github.com/wallabyjs/public/issues/142)
-- Fixed Jest integration performance issue [#148](https://github.com/wallabyjs/public/issues/148)
+- Implemented require.main.require support in node.js environment (added wallaby cache paths to main modules paths) [#147](https://github.com/wallabyjs/public/issues/147).
+- Fixed startup issue (missing error handling) [#140](https://github.com/wallabyjs/public/issues/140).
+- Fixed Jest integration issue with not correct cancelling of previously scheduled tests [#142](https://github.com/wallabyjs/public/issues/142).
+- Fixed Jest integration performance issue [#148](https://github.com/wallabyjs/public/issues/148).
 - Fixed wallaby.js Xamarin (and other extensions) compatibility issues [#138](https://github.com/wallabyjs/public/issues/138).
-- Fixed wallaby.js restart issue with invalid config in Visual Studio [#143](https://github.com/wallabyjs/public/issues/143)
+- Fixed wallaby.js restart issue with invalid config in Visual Studio [#143](https://github.com/wallabyjs/public/issues/143).
 
 <a name="Core 1.0.55, IntelliJ 1.0.18, VS 1.0.4"></a>
 # Core 1.0.55, IntelliJ 1.0.18, Visual Studio 2013 1.0.4 (2015-06-01)
