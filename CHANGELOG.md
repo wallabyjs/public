@@ -1,3 +1,22 @@
+<a name="Core 1.0.69, IntelliJ 1.0.21, VS 1.0.9"></a>
+# Core 1.0.69, IntelliJ 1.0.21, Visual Studio 2013-2015 1.0.9 (2015-06-23)
+
+## Changes and Bug Fixes
+
+- Allowed specifing the test framework name (in `testFramework` property) without a version to use the latest supported version of the framework.
+- Assertion data diff viewer support to IntelliJ platform [#163](https://github.com/wallabyjs/public/issues/163).
+- Added "Run project tests" action to IntelliJ platform.
+- Added a warning to the Wallaby Console when it can't determine what tests to run as a result of some code changes.
+- Fixed babel plugins adding logic [#157](https://github.com/wallabyjs/public/issues/157).
+- Fixed TypeScript `.d.ts` files handling in wallaby.js.
+- Replaced the internal websocket connection address from `localhost` to `127.0.0.1` to address the case of running wallaby.js without internet connection [#102](https://github.com/wallabyjs/public/issues/102).
+- IntelliJ platform 142 support (IDEA 15, etc.).
+- Implemented "Restart Wallaby.js" command in Visual Studio.
+- Implemented support (in editor) of move/rename/include operations for opened files in Visual Studio.
+- Visual Studio 2015 support.
+- Visual Studio 2013 Update 5 RC support.
+- Performance tuning for Visual Studio.
+
 <a name="Core 1.0.64, IntelliJ 1.0.19, VS 1.0.7"></a>
 # Core 1.0.64, IntelliJ 1.0.19, Visual Studio 2013 1.0.7 (2015-06-17)
 
