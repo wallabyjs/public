@@ -1,9 +1,25 @@
+<a name="Core 1.0.73, IntelliJ 1.0.24, VS 1.0.11"></a>
+# Core 1.0.73, IntelliJ 1.0.24, Visual Studio 2013-2015 1.0.11 (2015-07-07)
+
+## Changes and Bug Fixes
+
+- Compilers infrastructure improvements (including performance).
+- Improved diagnostics for the case when a test times out.
+- Fixed TypeScript compiler issue for AMD [#173](https://github.com/wallabyjs/public/issues/173).
+- Changed TypeScript compiler replacement logic to trigger in all cases except CommonJs modules.
+- Made compiled files to inherit `load` property from original ones in TypeScript compiler.
+- For the case when compiler produces some files, excluded original files from the tests list available from wallaby parameter.
+- Added re-try logic for the core update process in Visual Studio [#169](https://github.com/wallabyjs/public/issues/169).
+- Fixed wallaby.js initialization error in Visual Studio [#164](https://github.com/wallabyjs/public/issues/164).
+- Implemented icons color change on failing tests in Visual Studio.
+- Fixed wallaby.js hanging in case of an error in middleware function in Visual Studio.
+
 <a name="Core 1.0.69, IntelliJ 1.0.21, VS 1.0.9"></a>
 # Core 1.0.69, IntelliJ 1.0.21, Visual Studio 2013-2015 1.0.9 (2015-06-23)
 
 ## Changes and Bug Fixes
 
-- Allowed specifing the test framework name (in `testFramework` property) without a version to use the latest supported version of the framework.
+- Allowed specifying the test framework name (in `testFramework` property) without a version to use the latest supported version of the framework.
 - Assertion data diff viewer support to IntelliJ platform [#163](https://github.com/wallabyjs/public/issues/163).
 - Added "Run project tests" action to IntelliJ platform.
 - Added a warning to the Wallaby Console when it can't determine what tests to run as a result of some code changes.
@@ -164,7 +180,7 @@
 ## Bug Fixes
 
 - Fixed require.js app files caching issues on Windows (changing app files was not trigerring tests because files were cached in phantomjs until wallaby.js restart).
- 
+
 <a name="Core 1.0.9, IntelliJ 1.0.5"></a>
 # Core 1.0.9, IntelliJ 1.0.5 (2015-03-26)
 
