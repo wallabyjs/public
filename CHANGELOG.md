@@ -10,6 +10,9 @@
 - Updated several project dependencies to their newer versions.
 - Implemented `urlArgs` support for require.js configurations.
 - Changed debug output to use `stdout` instead of `stderr`.
+- Implemented editor commands for smart actions, so now it's possible to map shortcuts to all wallaby.js actions.
+- Added default shortcuts for the "context menu" commands in Visual Studio.
+- Implemented Wallaby Console activation on errors from core in Visual Studio, added scrolling Failing Tests view to top when new results received.
 - Fixed error reporting issue in QUnit (message spaces and stack).
 - Fixed the case of wallaby.js not reporting errors reported by mocha in multiple `done(err)` calls. [#199](https://github.com/wallabyjs/public/issues/199).
 - Fixed few special cases for CoffeeScript compiler generated source maps.
