@@ -1,3 +1,20 @@
+<a name="Core 1.0.81, IntelliJ 1.0.25, VS 1.0.12"></a>
+# Core 1.0.81, IntelliJ 1.0.25, Visual Studio 2013-2015 1.0.12 (2015-07-21)
+
+## Changes and Bug Fixes
+
+- Jest 0.5.x support [#180](https://github.com/wallabyjs/public/issues/180).
+- Require.js Text plugin support (and generally XHR loaded files support) [#183](https://github.com/wallabyjs/public/issues/183).
+- Added [`env.report404AsError` setting](http://wallabyjs.com/docs/config/runner.html) to report requested missing resources as errors.
+- Updated several project dependencies to their newer versions.
+- Implemented `urlArgs` support for require.js configurations.
+- Changed debug output to use `stdout` instead of `stderr`.
+- Fixed error reporting issue in QUnit (message spaces and stack).
+- Fixed the case of wallaby.js not reporting errors reported by mocha in multiple `done(err)` calls. [#199](https://github.com/wallabyjs/public/issues/199).
+- Fixed few special cases for CoffeeScript compiler generated source maps.
+- Fixed console.log message range mapping for CoffeeScript. [#203](https://github.com/wallabyjs/public/issues/203).
+- Fixed TypeScript tests stopping after the initial run [#182](https://github.com/wallabyjs/public/issues/182).
+
 <a name="Core 1.0.73, IntelliJ 1.0.24, VS 1.0.11"></a>
 # Core 1.0.73, IntelliJ 1.0.24, Visual Studio 2013-2015 1.0.11 (2015-07-07)
 
