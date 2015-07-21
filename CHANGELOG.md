@@ -1,9 +1,10 @@
-<a name="Core 1.0.81, IntelliJ 1.0.25, VS 1.0.12"></a>
-# Core 1.0.81, IntelliJ 1.0.25, Visual Studio 2013-2015 1.0.12 (2015-07-21)
+<a name="Core 1.0.82, IntelliJ 1.0.25, VS 1.0.12"></a>
+# Core 1.0.82, IntelliJ 1.0.25, Visual Studio 2013-2015 1.0.12 (2015-07-21)
 
 ## Changes and Bug Fixes
 
 - Jest 0.5.x support [#180](https://github.com/wallabyjs/public/issues/180).
+- TypeScript 1.5.3 support.
 - Require.js Text plugin support (and generally XHR loaded files support) [#183](https://github.com/wallabyjs/public/issues/183).
 - Added [`env.report404AsError` setting](http://wallabyjs.com/docs/config/runner.html) to report requested missing resources as errors.
 - Updated several project dependencies to their newer versions.
