@@ -1,3 +1,13 @@
+<a name="Core 1.0.84"></a>
+# Core 1.0.84 (2015-08-04)
+
+## Changes and Bug Fixes
+
+- Literate CoffeeScript support [#220](https://github.com/wallabyjs/public/issues/220)
+- Improved sinon.js support [#194](https://github.com/wallabyjs/public/issues/194)
+- Fixed `$$` in file name issue [#219](https://github.com/wallabyjs/public/issues/219)
+- Added global teardown support for node.js tests (internal for now).
+
 <a name="Core 1.0.82, IntelliJ 1.0.25, VS 1.0.12"></a>
 # Core 1.0.82, IntelliJ 1.0.25, Visual Studio 2013-2015 1.0.12 (2015-07-21)
 
