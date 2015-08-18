@@ -1,11 +1,26 @@
+<a name="Core 1.0.86, IntelliJ 1.0.26, VS 1.0.14"></a>
+# Core 1.0.86, IntelliJ 1.0.26, Visual Studio 2013-2015 1.0.14 (2015-08-18)
+
+## Changes and Bug Fixes
+
+- Reporting full error stack to the 'Failing Tests' if there's no user code stack in case of global/async errors.
+- Improved PhantomJs 2 support.
+- Implemented `clearMemoryCache` opt-in support (for [cases when JS files are loaded into the sandbox not by wallaby.js](https://github.com/wallabyjs/public/issues/234#issuecomment-131015111), such as Polymer/Web Components).
+- Removed excessive console logging for the case when not tests were executed.
+- Fixed multiple markers issue in IntelliJ platform [#218](https://github.com/wallabyjs/public/issues/218).
+- Updated install instructions in the JAR file.
+- Implement support for files that are not under solution/project in Visual Studio.
+- Fixed open/change/close without saving scenario in Visual Studio.
+- Fixed the issue when clicking on a coverage indicator in Visual Studio 2015 in a TypeScript project did not show a peek preview for the test.
+
 <a name="Core 1.0.84"></a>
 # Core 1.0.84 (2015-08-04)
 
 ## Changes and Bug Fixes
 
-- Literate CoffeeScript support [#220](https://github.com/wallabyjs/public/issues/220)
-- Improved sinon.js support [#194](https://github.com/wallabyjs/public/issues/194)
-- Fixed `$$` in file name issue [#219](https://github.com/wallabyjs/public/issues/219)
+- Literate CoffeeScript support [#220](https://github.com/wallabyjs/public/issues/220).
+- Improved sinon.js support [#194](https://github.com/wallabyjs/public/issues/194).
+- Fixed `$$` in file name issue [#219](https://github.com/wallabyjs/public/issues/219).
 - Added global teardown support for node.js tests (internal for now).
 
 <a name="Core 1.0.82, IntelliJ 1.0.25, VS 1.0.12"></a>
