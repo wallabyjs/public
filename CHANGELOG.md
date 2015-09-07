@@ -1,3 +1,23 @@
+<a name="Core 1.0.98, IntelliJ 1.0.27, VS 1.0.15, Atom 1.0.3"></a>
+# Core 1.0.98, IntelliJ 1.0.27, Visual Studio 2013-2015 1.0.15, Atom 1.0.3 (2015-09-07)
+
+## Changes and Bug Fixes
+
+- [Atom editor support](http://wallabyjs.com/docs/intro/get-started-atom.html).
+- Implemented more reliable mechanism of re-running failed tests in affected test files on source file changes [#247](https://github.com/wallabyjs/public/issues/247).
+- Unexpected.js support in IntelliJ platfrom [#237](https://github.com/wallabyjs/public/issues/237).
+- CoffeeScript 1.10 support.
+- CoffeeScript loop results return mapping fix [#240](https://github.com/wallabyjs/public/issues/240).
+- Fixed Atom tree view file operations issues in wallaby [#246](https://github.com/wallabyjs/public/issues/246).
+- Fixed the issue of loading files referenced directly twice in Visual Studio [#229](https://github.com/wallabyjs/public/issues/229).
+- Fixed TypeScript compiler issue being deactivated initlally if there're not .ts files and not activated later when there're some being added.
+- Extended core introduction and main core refactoring to support it.
+- Setting correct cwd in extended core.
+- Passing local bin on Mac OSX (if not passed) in extended core.
+- Issuing test stats in case in no file change was detected in extended core.
+- Fixed file deleting logic in extended core to update test stats.
+- Reporting bug fixes in extended core report builder.
+
 <a name="Core 1.0.86, IntelliJ 1.0.26, VS 1.0.14"></a>
 # Core 1.0.86, IntelliJ 1.0.26, Visual Studio 2013-2015 1.0.14 (2015-08-18)
 
