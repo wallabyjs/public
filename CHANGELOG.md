@@ -1,3 +1,32 @@
+<a name="Core 1.0.115, IntelliJ 1.0.32, VS 1.0.16, Atom 1.0.8"></a>
+# Core 1.0.115, IntelliJ 1.0.32, Visual Studio 2013-2015 1.0.16, Atom 1.0.8 (2015-09-24)
+
+## Changes and Bug Fixes
+
+- [AngularJs 2 support](https://github.com/wallabyjs/wallaby-typescript-angular-seed).
+- Webpack + TypeScript support [#271](https://github.com/wallabyjs/public/issues/271).
+- Added [`teardown` function support](wallabyjs.com/docs/config/bootstrap.html#teardown-function) for node.js environment.
+- Improved core algorithms for determining what tests to run on changes, implemented loading sequences capturing.
+- Implemented [customizable TypeScript compiler version](http://wallabyjs.com/docs/integration/typescript.html#typescript-compiler-version).
+- Made built-in compliers to stay even if adding custom ones [#261](https://github.com/wallabyjs/public/issues/261).
+- Improved logging from global scope (before any tests were executed).
+- Added [session id and worker id](http://wallabyjs.com/docs/config/bootstrap.html) to node.js wallaby bootstrap/teardown parameter.
+- Fixed node module resolution by full path issue [#259](https://github.com/wallabyjs/public/issues/259).
+- Fixed webpack integration `entryPatterns` issues [#252](https://github.com/wallabyjs/public/issues/252).
+- Fixed postprocessor dependent files deleting issues [#260](https://github.com/wallabyjs/public/issues/260).
+- Improved postprocessor log reporting.
+- Correct reporting for errors in test hooks [#253](https://github.com/wallabyjs/public/issues/253).
+- Output window colors fix in Visual Studio [#270](https://github.com/wallabyjs/public/issues/270).
+- Fixed Unexpected.js ANSI output line breaks issue [#262](https://github.com/wallabyjs/public/issues/262).
+- Added existing and new plugin version to IntelliJ update notification [#268](https://github.com/wallabyjs/public/issues/268).
+- Increased dependency downloading timeout in Visual Studio.
+- Fixed node.js + TypeScript [stack mapping on Windows](https://twitter.com/jonasbjering/status/644804941979254784).
+- Fixed a few file path changing related issues in Atom (file renaming, moving, etc.).
+- Fixed wallaby config tree selection in Atom.
+- Fixed duplicated uncovered region markers in Atom.
+- Impemented extended core graceful exit on Windows.
+- Impemented lazy file ordering to improve core performance.
+
 <a name="Core 1.0.98, IntelliJ 1.0.27, VS 1.0.15, Atom 1.0.3"></a>
 # Core 1.0.98, IntelliJ 1.0.27, Visual Studio 2013-2015 1.0.15, Atom 1.0.3 (2015-09-07)
 
