@@ -1,3 +1,28 @@
+<a name="Core 1.0.130, IntelliJ 1.0.38, VS 1.0.17, Atom 1.0.12"></a>
+# Core 1.0.130, IntelliJ 1.0.38, Visual Studio 2013-2015 1.0.17, Atom 1.0.12 (2015-10-14)
+
+## Changes and Bug Fixes
+
+- Added a few new rules for automatic test runs.
+- Jasmine 2.3.4 support [#292](https://github.com/wallabyjs/public/issues/292).
+- Support for single expression arrow function coverage in ES6.
+- Improved reporting for PhantomJs parse errors [#13](https://github.com/wallabyjs/atom-wallaby/issues/13).
+- Updated Jest 0.5.x support.
+- Implemented correct test run cancelling when postprocessor is used.
+- Fixed shoe/socksjs issue with WS transport switching [#66](https://github.com/wallabyjs/public/issues/66).
+- `require.ensire` support and correct module caching in Webpack integration.
+- Improved Webpack/Browserify integration error reports.
+- Added 'busy' notification (core + across all editors) to better reflect the core state (whether it's doing something  or not).
+- Fixed test name equality issue [#290](https://github.com/wallabyjs/public/issues/290).
+- Fixed folder opeation tracking issues in IntelliJ platform.
+- Fixed mass file operation tracking issues in IntelliJ platform.
+- Added support for duplicated file paths in Visual Studio [#283](https://github.com/wallabyjs/public/issues/283).
+- Improved inline messages performance and stability in Atom.
+- Implemented hiding obsolete inline messages (errors/log messages) when editing a line of code in Atom.
+- Fixed package name in Atom loader (was causing automatic updates failures).
+- Fixed broken scenario of accessign uninitialized plugin in Atom [#16](https://github.com/wallabyjs/atom-wallaby/issues/16).
+- Fixed change/patch duplication in extended core file system [#11](https://github.com/wallabyjs/atom-wallaby/issues/11).
+
 <a name="Core 1.0.115, IntelliJ 1.0.32, VS 1.0.16, Atom 1.0.8"></a>
 # Core 1.0.115, IntelliJ 1.0.32, Visual Studio 2013-2015 1.0.16, Atom 1.0.8 (2015-09-24)
 
