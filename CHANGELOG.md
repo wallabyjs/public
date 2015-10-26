@@ -10,7 +10,7 @@
 - Updated Jest 0.5.x support.
 - Implemented correct test run cancelling when postprocessor is used.
 - Fixed shoe/socksjs issue with WS transport switching [#66](https://github.com/wallabyjs/public/issues/66).
-- `require.ensire` support and correct module caching in Webpack integration.
+- `require.ensure` support and correct module caching in Webpack integration.
 - Improved Webpack/Browserify integration error reports.
 - Added 'busy' notification (core + across all editors) to better reflect the core state (whether it's doing something  or not).
 - Fixed test name equality issue [#290](https://github.com/wallabyjs/public/issues/290).
