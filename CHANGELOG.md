@@ -9,14 +9,14 @@
 - Added support for a custom testing framework version path for browser.
 - Added support for [SystemJs `scriptLoad`](http://wallabyjs.com/docs/integration/systemjs.html), so JSPM, Angular 2, Aurelia, etc. can now display inline error messages correctly.
 - Fixed forced 'use strict' support in node.js [#302](https://github.com/wallabyjs/public/issues/302).
-- Implemented reference comments based file ordering support for TypeScript [161](https://github.com/wallabyjs/public/issues/161).
+- Implemented reference comments based file ordering support for TypeScript [#161](https://github.com/wallabyjs/public/issues/161).
 - Moved internal node.js version used by core to v4.4.2 [#331](https://github.com/wallabyjs/public/issues/331).
 - Implemented better path normalization for System.js/Require.js/JSPM support.
 - Implemented safe delete for instrumented files for file delele operations (for TypeScript + Webpack/Browserify scenarious).
 - Implemented full glob/minimatch support in IntelliJ platform [#69](https://github.com/wallabyjs/public/issues/69).
 - Fixed test comparer transitivity issue in IntelliJ platform.
 - Added a limit on a number displayed tests in Atom (+ Show All button).
-- Fixed selection range persisitng issue in Atom [21](https://github.com/wallabyjs/atom-wallaby/issues/21).
+- Fixed selection range persisitng issue in Atom [#21](https://github.com/wallabyjs/atom-wallaby/issues/21).
 - Fixed extended core test start link generation issue.
 
 <a name="Core 1.0.130, IntelliJ 1.0.38, VS 1.0.17, Atom 1.0.12"></a>
