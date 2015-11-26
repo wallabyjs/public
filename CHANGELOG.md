@@ -3,7 +3,7 @@
 
 ## Changes and Bug Fixes
 
-- Added Babel 6 support.
+- Added [Babel 6 support](http://wallabyjs.com/docs/integration/es-next.html#babel-6).
 - Added [Webpack 2 (beta) support](https://github.com/jeffling/wallaby-webpack).
 - Added [Jasmine for node.js support](http://wallabyjs.com/docs/integration/overview.html#supported-testing-frameworks).
 - Added support for a custom testing framework version path for browser.
