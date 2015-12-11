@@ -1,3 +1,20 @@
+<a name="Core 1.0.152, IntelliJ 1.0.46, VS 1.0.20, Atom 1.0.17, VS Code 1.0.3"></a>
+# Core 1.0.152, IntelliJ 1.0.46, Visual Studio 2013-2015 1.0.20, Atom 1.0.17, Visual Studio Code 1.0.3 (2015-12-11)
+
+## Changes and Bug Fixes
+
+- Added [Visual Studio Code support](http://wallabyjs.com/docs/intro/get-started-vscode.html).
+- Switched to use node processes (for both core and node test) in extended core.
+- Fixed Jasmine `xit` test reporting and added 'pending' status support.
+- Added Jest 0.6, 0.7, 0.8.1 support.
+- Improved XHR interception in tracer.
+- Fixed node modules resolution priority [#319](https://github.com/wallabyjs/public/issues/319).
+- Improved (and fixed timeouts) file system scanning in extended core.
+- Enabled WebSocket exposed API in extended core.
+- Fixed test name formatting issue in Visual Studio.
+- Fixed console logging issue in Atom.
+- Added shortcut hints in VS Code wallaby command palette.
+
 <a name="Core 1.0.142, IntelliJ 1.0.46, VS 1.0.17, Atom 1.0.16"></a>
 # Core 1.0.142, IntelliJ 1.0.46, Visual Studio 2013-2015 1.0.17, Atom 1.0.16 (2015-11-12)
 
