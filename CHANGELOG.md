@@ -1,3 +1,29 @@
+<a name="Core 1.0.170, IntelliJ 1.0.46, VS 1.0.20, Atom 1.0.19, VS Code 1.0.9, Sublime 1.0.11"></a>
+# Core 1.0.170, IntelliJ 1.0.46, Visual Studio 2013-2015 1.0.20, Atom 1.0.19, Visual Studio Code 1.0.9, Sublime Text 1.0.11 (2016-02-02)
+
+## Changes and Bug Fixes
+
+- Simplified configuration for Babel, TypeScript, CoffeeScript (local module lookup, ``.babelrc` support).
+- Improved changed test detection algorithm.
+- Added a [setting to fail tests](http://wallabyjs.com/docs/config/overview.html#report-console-error-as-test-run-error) if there were any `console.error` calls.
+- SystemJS support improvements (better instrumentation to avoid interfering with its module type guessing algorithm).
+- Error stack from PhantomJs `Parse Error`.
+- Added a warning about glob patterns in project path.
+- Added jasmine 2 support in jest [#431](https://github.com/wallabyjs/public/issues/431).
+- Improved chai (error stacks) support.
+- Improved jasmine (pending tests) support.
+- Improved qunit (error reporting) support.
+- Improved symlinks resolution [#416](https://github.com/wallabyjs/public/issues/416).
+- Fixed babel compiler for plugins that require `filename` to be passed in [#440](https://github.com/wallabyjs/public/issues/440).
+- Added `.es6` as a supported JavaScript file type extension.
+- Added HTML sandbox page title [#413](https://github.com/wallabyjs/public/issues/413).
+- Added binary file types support in extended core [#414](https://github.com/wallabyjs/public/issues/414).
+- Added [diff feature in Atom](https://twitter.com/wallabyjs/status/692233780610859009).
+- Fixed file renaming/moving issue with coverage indicators in Atom.
+- Added HTTP proxy support for VS Code extension [#426](https://github.com/wallabyjs/public/issues/426).
+- Fixed file opening/closing handling logic issue with coverage indicators for VS Code.
+- [Sublime Text integration](http://wallabyjs.com/docs/intro/get-started-sublime.html).
+
 <a name="Core 1.0.152, IntelliJ 1.0.46, VS 1.0.20, Atom 1.0.17, VS Code 1.0.3"></a>
 # Core 1.0.152, IntelliJ 1.0.46, Visual Studio 2013-2015 1.0.20, Atom 1.0.17, Visual Studio Code 1.0.3 (2015-12-11)
 
@@ -58,7 +84,7 @@
 - Improved inline messages performance and stability in Atom.
 - Implemented hiding obsolete inline messages (errors/log messages) when editing a line of code in Atom.
 - Fixed package name in Atom loader (was causing automatic updates failures).
-- Fixed broken scenario of accessign uninitialized plugin in Atom [#16](https://github.com/wallabyjs/atom-wallaby/issues/16).
+- Fixed broken scenario of accessing uninitialized plugin in Atom [#16](https://github.com/wallabyjs/atom-wallaby/issues/16).
 - Fixed change/patch duplication in extended core file system [#11](https://github.com/wallabyjs/atom-wallaby/issues/11).
 
 <a name="Core 1.0.115, IntelliJ 1.0.32, VS 1.0.16, Atom 1.0.8"></a>
@@ -71,7 +97,7 @@
 - Added [`teardown` function support](wallabyjs.com/docs/config/bootstrap.html#teardown-function) for node.js environment.
 - Improved core algorithms for determining what tests to run on changes, implemented loading sequences capturing.
 - Implemented [customizable TypeScript compiler version](http://wallabyjs.com/docs/integration/typescript.html#typescript-compiler-version).
-- Made built-in compliers to stay even if adding custom ones [#261](https://github.com/wallabyjs/public/issues/261).
+- Made built-in compilers to stay even if adding custom ones [#261](https://github.com/wallabyjs/public/issues/261).
 - Improved logging from global scope (before any tests were executed).
 - Added [session id and worker id](http://wallabyjs.com/docs/config/bootstrap.html) to node.js wallaby bootstrap/teardown parameter.
 - Fixed node module resolution by full path issue [#259](https://github.com/wallabyjs/public/issues/259).
@@ -87,8 +113,8 @@
 - Fixed a few file path changing related issues in Atom (file renaming, moving, etc.).
 - Fixed wallaby config tree selection in Atom.
 - Fixed duplicated uncovered region markers in Atom.
-- Impemented extended core graceful exit on Windows.
-- Impemented lazy file ordering to improve core performance.
+- Implemented extended core graceful exit on Windows.
+- Implemented lazy file ordering to improve core performance.
 
 <a name="Core 1.0.98, IntelliJ 1.0.27, VS 1.0.15, Atom 1.0.3"></a>
 # Core 1.0.98, IntelliJ 1.0.27, Visual Studio 2013-2015 1.0.15, Atom 1.0.3 (2015-09-07)
@@ -102,7 +128,7 @@
 - CoffeeScript loop results return mapping fix [#240](https://github.com/wallabyjs/public/issues/240).
 - Fixed Atom tree view file operations issues in wallaby [#246](https://github.com/wallabyjs/public/issues/246).
 - Fixed the issue of loading files referenced directly twice in Visual Studio [#229](https://github.com/wallabyjs/public/issues/229).
-- Fixed TypeScript compiler issue being deactivated initlally if there're not .ts files and not activated later when there're some being added.
+- Fixed TypeScript compiler issue being deactivated initially if there're not .ts files and not activated later when there're some being added.
 - Extended core introduction and main core refactoring to support it.
 - Setting correct cwd in extended core.
 - Passing local bin on Mac OSX (if not passed) in extended core.
