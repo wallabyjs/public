@@ -1,3 +1,46 @@
+<a name="Core 1.0.211, IntelliJ 1.0.55, VS 1.0.21, Atom 1.0.22, VS Code 1.0.11, Sublime 1.0.18"></a>
+# Core 1.0.211, IntelliJ 1.0.55, Visual Studio 2013-2015 1.0.21, Atom 1.0.22, Visual Studio Code 1.0.11, Sublime Text 1.0.18 (2016-04-05)
+
+## Changes and Bug Fixes
+
+- Support for testing in the latest Chromium/V8 environment via [Electron test runner](http://wallabyjs.com/docs/integration/electron.html).
+- Support for `tsconfig.json` file, allows not to have a `compilers` section for TypeScript at all.
+- Included `Function.prototype.bind` polyfill for PhantomJs in wallaby core.
+- Added [`maxConsoleMessagesPerTest` config setting](http://wallabyjs.com/docs/config/overview.html#maximum-console-messages-logged-per-test).
+- `.babelrc` changes now automatically invalidate wallaby cache.
+- `.babelrc` is now only used when no other babel options are passed to avoid any plugin duplications.
+- Jest 0.9 and 0.10 support.
+- Jasmine 2.4.1 support.
+- Fixed a few Webpack 2 support issues [#502](https://github.com/wallabyjs/public/issues/502), [#519](https://github.com/wallabyjs/public/issues/519).
+- Improved hanging test (and generally long running test) reporting [#141](https://github.com/wallabyjs/public/issues/141).
+- Fixed `for-of` and `for-in` instrumentation so that the loops are reported and `const` is supported in the left node.
+- Changed default TS compiler to include `.tsx` files.
+- Updated embedded TS compiler version to 1.8.2.
+- Added `iit` and `ddescribe` support in Jasmine 1.3.
+- ES6 module [support for wallaby config](https://github.com/wallabyjs/public/issues/530).
+- Improved corrupted cache check and the error message about it.
+- Improved code instrumentation to include more string literals that should stay at the top of a function (`use babel`, `ngInject`, etc.).
+- Correctly capturing globals in node runner [#522](https://github.com/wallabyjs/public/issues/522), [#526](https://github.com/wallabyjs/public/issues/526).
+- Fixed babel compiler alias related settings issue [#477](https://github.com/wallabyjs/public/issues/477).
+- Extended the list of binary file extensions for extended core [#521](https://github.com/wallabyjs/public/issues/521).
+- Fixed the issue with missing indicators in IntelliJ plugin [#493](https://github.com/wallabyjs/public/issues/493).
+- Fixed fast-typing caused indicators/messages update issues in IntelliJ plugin.
+- Allowed specifying anny node version for running wallaby.js core in [IntelliJ plugin](http://wallabyjs.com/docs/intro/install.html#nodejs) + the related fixed IDE version upgrade issue [#545](https://github.com/wallabyjs/public/issues/545).
+- Added failing tests indicator for presentation and distraction free modes in IntelliJ plugin [#106](https://github.com/wallabyjs/public/issues/106).
+- Updated core node version in VS extension.
+- Fixed license activation issue in VS extension (`/username/.wallaby` doesn't exist) [#296](https://github.com/wallabyjs/public/issues/296). 
+- Improved diff feature in Atom to consider broader word boundaries (such as object literals).
+- Fixed editor and change tracking issue in Atom [#30](https://github.com/wallabyjs/atom-wallaby/issues/30).
+- Fixed wallaby editor gutter management issue in Atom [#18](https://github.com/wallabyjs/atom-wallaby/issues/18).
+- Implemented new wallaby indicator for VS Code (includes test stats).
+- Fixed performance issues with a lot of `console.log` output in VS Code [#500](https://github.com/wallabyjs/public/issues/500).
+- Fixed node version setting issue in VS Code.
+- Optimized result rendering in Sublime Text [#460](https://github.com/wallabyjs/public/issues/460).
+- Improved editor gutter sharing with other plugins in Sublime Text [#454](https://github.com/wallabyjs/public/issues/454), [#436](https://github.com/wallabyjs/public/issues/439).
+- Fixed dependency unpacking issue in Linux Fedora for Sublime Text [#450](https://github.com/wallabyjs/public/issues/450).
+- Fixed multiple cursor shortcut compatibility issue in Sublime Text [#444](https://github.com/wallabyjs/public/issues/444).
+- Support for node version selection for Sublime Text [#439](https://github.com/wallabyjs/public/issues/439).
+
 <a name="Core 1.0.170, IntelliJ 1.0.46, VS 1.0.20, Atom 1.0.19, VS Code 1.0.9, Sublime 1.0.11"></a>
 # Core 1.0.170, IntelliJ 1.0.46, Visual Studio 2013-2015 1.0.20, Atom 1.0.19, Visual Studio Code 1.0.9, Sublime Text 1.0.11 (2016-02-02)
 
