@@ -1,3 +1,50 @@
+<a name="Core 1.0.264, IntelliJ 1.0.68, VS 1.0.23, Atom 1.0.28, VS Code 1.0.19, Sublime 1.0.20"></a>
+# Core 1.0.264, IntelliJ 1.0.68, Visual Studio 2013-2015 1.0.23, Atom 1.0.28, Visual Studio Code 1.0.19, Sublime Text 1.0.20 (2016-07-21)
+
+## Changes and Bug Fixes
+
+- [Wallaby.js App](http://dm.gl/2016/07/19/wallaby-app/).
+- [AVA support](http://dm.gl/2016/04/26/wallaby-sublime-electron-ava/#ava-support).
+- Experimental Tape support.
+- TypeScript 1.9, 2.0, 2.1 support.
+- Allowed comments in `tsconfig.json`.
+- Improved `files` pattern normalisation (increases startup performance).
+- Improved `setup`/`teardown` functions serializations (now supports arrow functions and ES6 class methods).
+- Experimental support for `ng-cli`.
+- Added [`slowTestThreshold` setting](https://wallabyjs.com/docs/config/overview.html#slow-tests).
+- Added [`lowCoverageThreshold` setting](https://wallabyjs.com/docs/config/overview.html#low-code-coverage-level).
+- Node.js 6.x [compatibility issue fixes](https://github.com/nodejs/node/pull/5522).
+- Jest 11, 12, 13 support (plus npm 2 support for Jest projects).
+- Babel [source maps fixes](https://github.com/wallabyjs/public/issues/570).
+- Angular 2 async tests instrumentation fixes.
+- Electron test runner stability and performance updates [#597](https://github.com/wallabyjs/public/issues/597).
+- Error stack mapping for Electron runner for System.js.
+- Improved instrumentation performance by moving to the latest `acorn` version.
+- Fixed Jasmine spies tracking [#621](https://github.com/wallabyjs/public/issues/621).
+- Passing environment variables in extended core [#622](https://github.com/wallabyjs/public/issues/622).
+- Support `testFramework.path` setting for node `mocha`.
+- Better chai support in PhantomJs2 [#547](https://github.com/wallabyjs/public/issues/549).
+- Fixed `chai` + `chai-as-promised` stack reporting scenarios [#684](https://github.com/wallabyjs/public/issues/684#issuecomment-232491528).
+- Added `setFileOrder` method to the [postprocessor API](https://wallabyjs.com/docs/config/postprocessor.html).
+- Fixed the case when suite name conflicts with a test name [#547](https://github.com/wallabyjs/public/issues/547).
+- Added different case `PATH` variable check [#555](https://github.com/wallabyjs/public/issues/555).
+- Extended core (affects Atom, VS Code, Sublime Text, Wallaby App) performance improvements for medium-large projects.
+- Fixed escaping for test/suite names [#595](https://github.com/wallabyjs/public/issues/595).
+- Fixed `for-in` statements instrumentation.
+- Extended core clients are now connecting to the core via WebSocket (improves performance).
+- Added `.jsx` extension to supported by default node extensions.
+- Optimised the initial file scan for IntelliJ platform (significantly increases the startup performance if `files` patterns affect large folders).
+- [Inline messages](http://wallabyjs.com/assets/img/vsc.gif) VS Code.
+- `Show last screenshot` feature for VS Code.
+- Configurable icon colors for VS Code.
+- Fixed Atom sending full file as changed on opening it.
+- Fixed Atom hiding inline messages before any changes.
+- Toggling uncovered region visibility in Atom on indicator click [#617](https://github.com/wallabyjs/public/issues/617).
+- Allowed to mute license notification group from the popup for IntelliJ platform.
+- Allowed to use a setting for `localhost` in Sublime Text [#584](https://github.com/wallabyjs/public/issues/584).
+- Updated VS extension dependencies.
+- Added external (core) navigation request support to VS extension.
+
 <a name="Core 1.0.211, IntelliJ 1.0.55, VS 1.0.21, Atom 1.0.22, VS Code 1.0.11, Sublime 1.0.18"></a>
 # Core 1.0.211, IntelliJ 1.0.55, Visual Studio 2013-2015 1.0.21, Atom 1.0.22, Visual Studio Code 1.0.11, Sublime Text 1.0.18 (2016-04-05)
 
@@ -28,7 +75,7 @@
 - Allowed specifying anny node version for running wallaby.js core in [IntelliJ plugin](http://wallabyjs.com/docs/intro/install.html#nodejs) + the related fixed IDE version upgrade issue [#545](https://github.com/wallabyjs/public/issues/545).
 - Added failing tests indicator for presentation and distraction free modes in IntelliJ plugin [#106](https://github.com/wallabyjs/public/issues/106).
 - Updated core node version in VS extension.
-- Fixed license activation issue in VS extension (`/username/.wallaby` doesn't exist) [#296](https://github.com/wallabyjs/public/issues/296). 
+- Fixed license activation issue in VS extension (`/username/.wallaby` doesn't exist) [#296](https://github.com/wallabyjs/public/issues/296).
 - Improved diff feature in Atom to consider broader word boundaries (such as object literals).
 - Fixed editor and change tracking issue in Atom [#30](https://github.com/wallabyjs/atom-wallaby/issues/30).
 - Fixed wallaby editor gutter management issue in Atom [#18](https://github.com/wallabyjs/atom-wallaby/issues/18).
