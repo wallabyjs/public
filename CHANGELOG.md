@@ -1,3 +1,36 @@
+<a name="Core 1.0.299, IntelliJ 1.0.76, VS 1.0.25, Atom 1.0.28, VS Code 1.0.27, Sublime 1.0.25"></a>
+# Core 1.0.299, IntelliJ 1.0.76, Visual Studio 2013-2015 1.0.25, Atom 1.0.28, Visual Studio Code 1.0.27, Sublime Text 1.0.25 (2016-09-28)
+
+## Changes and Bug Fixes
+
+- [Wallaby.js App Files](http://dm.gl/2016/09/06/wallaby-app-files/) and a few other [improvements](https://wallabyjs.com/docs/intro/get-started-wallaby-app.html#faq).
+- Switched to PhantomJs 2.1.1 by default for browser testing for all supported platforms.
+- Improved `files`/`tests` pattern matching.
+- [Colorized output](https://twitter.com/wallabyjs/status/770152041209397249) for VS Code.
+- [Colorized diff](https://twitter.com/wallabyjs/status/776331730387017729) for VS Code.
+- Added infinite loop detection for node.js [#796](https://github.com/wallabyjs/public/issues/796).
+- `Jasmine` v2.5.0 and v2.5.1 support (for node).
+- `Ava` compatibility with TypeScript compiler [#711](https://github.com/wallabyjs/public/issues/711).
+- `Jest` v14, v15, v15.1 support.
+- Improved instrumentation/parsing performance.
+- Improved configuration error reporting for `jasmine`, `ava`, `jest`.
+- Wallaby App now jumps to the latest executed and/or failing test.
+- Wallaby App now uses different icons for files/tests in the Files tree.
+- Fixed PhantomJs 2 stop/restart slowness and high CPU on Windows.
+- Fixed node.js runner memory leak.
+- Fixed source maps for Babel `async/await` support.
+- Fixed source maps for TypeScript `async/await` support.
+- Fixed `jasmine` error stack reporting for PhantomJs 2.
+- Fixed files/folders ordering in Wallaby App [#788](https://github.com/wallabyjs/public/issues/788).
+- Fixed ENV variables parsing [#742](https://github.com/wallabyjs/public/issues/742).
+- Fixed `ava` hooks support and the `setup` execution timing [#728](https://github.com/wallabyjs/public/issues/728), [#730](https://github.com/wallabyjs/public/issues/730), [#1](https://github.com/wallabyjs/ava-sample/issues/1).
+- Fixed file saving issue before running tasks for IntelliJ platform [#773](https://github.com/wallabyjs/public/issues/773).
+- Fixed core update notification for VS Code.
+- Fixed [output throttling issue](https://github.com/Microsoft/vscode/pull/12057) for VS Code.
+- Fixed [missing gutter icons](https://github.com/Microsoft/vscode/issues/12111) issue for VS Code.
+- Fixed config relative path issue in Sublime Text [#706](https://github.com/wallabyjs/public/issues/706).
+- Fixed wallaby panel display issue [#748](https://github.com/wallabyjs/public/issues/748).
+
 <a name="Core 1.0.264, IntelliJ 1.0.68, VS 1.0.23, Atom 1.0.28, VS Code 1.0.19, Sublime 1.0.20"></a>
 # Core 1.0.264, IntelliJ 1.0.68, Visual Studio 2013-2015 1.0.23, Atom 1.0.28, Visual Studio Code 1.0.19, Sublime Text 1.0.20 (2016-07-21)
 
