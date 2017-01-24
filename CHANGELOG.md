@@ -1,3 +1,52 @@
+<a name="Core 1.0.359, IntelliJ 1.0.79, VS 1.0.29, Atom 1.0.31, VS Code 1.0.39, Sublime 1.0.30"></a>
+# Core 1.0.359, IntelliJ 1.0.79, Visual Studio 2013, 2015, 2017 1.0.29, Atom 1.0.31, Visual Studio Code 1.0.39, Sublime Text 1.0.30 (2017-01-24)
+
+## Changes and Bug Fixes
+
+- [Inline view](https://twitter.com/wallabyjs/status/822391949642461185) for values of the expression statements with identifier expressions.
+- [Inline messages support](https://twitter.com/wallabyjs/status/808975647737401345) for Sublime Text.
+- Code coverage hints support [#248](https://github.com/wallabyjs/public/issues/248).
+- Dark theme for [Wallaby App](https://wallabyjs.com/docs/intro/get-started-wallaby-app.html).
+- Displaying [assertion data diffs](https://twitter.com/wallabyjs/status/819121381002489856) by default in Wallaby App.
+- Visual Studio 2017 RC [support](https://twitter.com/wallabyjs/status/822039658603298816).
+- Displaying [assertion data diffs](https://twitter.com/wallabyjs/status/806670890280726529) (including [snapshot diffs](https://twitter.com/wallabyjs/status/819121381002489856)) for `jest`.
+- Webpack 2 support.
+- `Jest` v16, v17, v18 support, performance improvements.
+- `Jasmine` v2.5.1-2 support.
+- Local hosting support for [Wallaby App](https://wallabyjs.com/docs/intro/get-started-wallaby-app.html).
+- Added the `runAllTestsInAffectedTestFile` setting to always run all tests in an affected test file [#939](https://github.com/wallabyjs/public/issues/939).
+- Special handling for `.vue` files.
+- Improved node modules lookup for node projects (by re-using certain bits from the node.js module lookup). Should eliminate the need to specify `NODE_ENV` for nested node modules or upper level node modules in most of the cases.
+- Support for mixed `.js`/`.ts` codebases (with the `allowJs` TS compiler setting).
+- Various improvements for source mapping for Babel/TypeScript compilers.
+- Improved a stack entry context (function name is now added).
+- Added support for tests in a different file [#124](https://github.com/wallabyjs/public/issues/124).
+- Improved electron runner support (performance, `electron` module support).
+- Improved [error reporting](https://github.com/wallabyjs/public/issues/2#issuecomment-252072695) for `tape`.
+- Improved `power-assert` support for `ava`.
+- Improved extended core process shutdown (if it's not responsive).
+- [Better status indicator position](https://twitter.com/dunchunter/status/810665864576036864) for VS Code.
+- The `module` setting is set to `commonjs` by default for TypeScript compiler.
+- TypeScript compiler should always report syntactic errors.
+- Fixed overriding test stats with a test error.
+- NPM v2 support for `jest` integration.
+- Automatically loading `babel-preset-jest` when `jest` + `babel` is used.
+- Added window resizing functionality to `electron` host.
+- Improved [license management for IntelliJ platform](https://wallabyjs.com/docs/intro/license.html#jetbrains-ides) (viewing/changing license details via `Help` menu).
+- Setting `jest` `rootDir` to be the local project dir.
+- Fixed the case when returning an object with a spread syntax (on a different line) breaks coverage [#963](https://github.com/wallabyjs/public/issues/963).
+- Fixed VS Code assertion data diff display issues [#898](https://github.com/wallabyjs/public/issues/898).
+- Resetting sandbox cache (browser runner serving unchanged files with corrupted cache) for corrupted cache cases.
+- Fixed TypeScript + node.js issue with incorrect test files compilation.
+- Fixed Visual Studio 2015 crash on startup issue because of the missing log folder [#884](https://github.com/wallabyjs/public/issues/884).
+- Fixed disappearing inline messages for the Electron + System.js + Angular stack [#822](https://github.com/wallabyjs/public/issues/822).
+- Fixed `it.only` and `it.skip` in mocha integration [#864](https://github.com/wallabyjs/public/issues/864).
+- Fixed binary files cache corruption on cache partial invalidation [#947](https://github.com/wallabyjs/public/issues/947).
+- Fixed `EADDRINUSE` error in Sublime Text [#933](https://github.com/wallabyjs/public/issues/933).
+- Fixed keyboard shortcut shadowing in Sublime Text [#940](https://github.com/wallabyjs/public/issues/940).
+- Fixed failing tests output grammar to only use standard token types in VS Code.
+- Fixed obsolete API call in Atom integration [#940](https://github.com/wallabyjs/atom-wallaby/issues/940).
+
 <a name="Core 1.0.299, IntelliJ 1.0.76, VS 1.0.25, Atom 1.0.28, VS Code 1.0.27, Sublime 1.0.25"></a>
 # Core 1.0.299, IntelliJ 1.0.76, Visual Studio 2013-2015 1.0.25, Atom 1.0.28, Visual Studio Code 1.0.27, Sublime Text 1.0.25 (2016-09-28)
 
