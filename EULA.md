@@ -14,7 +14,7 @@ If you do not wish to be bound by the terms of this Agreement, You may not insta
 
 # OWNERSHIP
 
-Software is the property of Licensor. Software is licensed, not sold. Title and copyrights to Software, in whole and in part and all copies thereof, and all modifications, enhancements, derivatives and other alterations of Software regardless of who made any modifications, if any, are, and will remain, the sole and exclusive property of Licensor.
+This Agreement does not convey to you any rights of ownership in the Software. All right, title, and interest in the Software and in any ideas, know-how, and programs which are developed by Licensor in the course of providing any technical services, including any enhancements or modifications made to the Software, shall at all times remain the property of Licensor. You acknowledge and agree that the Software is licensed, not sold. You shall not permit the Software to be accessed or used by anyone other than your employees whose duties require such access or use. You will not remove, modify or alter any of Licensor’s copyright, trademark or proprietary rights from any part of the Software.
 
 Software is protected by Australian Copyright Law and International Treaty provisions. Further, the structure, organization, and code embodied in Software are the valuable and confidential trade secrets of Licensor and its suppliers and are protected by intellectual property laws and treaties. Licensee agrees to abide by the copyright law and all other applicable laws.
 
@@ -67,10 +67,6 @@ A Named User License or Company Seat License is eligible for a free upgrade to a
 # LIMITED WARRANTY AND DISCLAIMER OF WARRANTY
 
 SOFTWARE IS PROVIDED TO LICENSEE "AS IS" AND WITHOUT WARRANTIES. LICENSOR MAKES NO WARRANTY AS TO ITS USE OR PERFORMANCE. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LICENSOR AND ITS AFFILIATES, SUPPLIERS AND RESELLERS DISCLAIM ALL OTHER WARRANTIES AND CONDITIONS, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT, WITH REGARD TO SOFTWARE, AND THE PROVISION OF OR FAILURE TO PROVIDE SUPPORT SERVICES.
-
-# OWNERSHIP
-
-This Agreement does not convey to you any rights of ownership in the Software. All right, title, and interest in the Software and in any ideas, know-how, and programs which are developed by Licensor in the course of providing any technical services, including any enhancements or modifications made to the Software, shall at all times remain the property of Licensor. You acknowledge and agree that the Software is licensed, not sold. You shall not permit the Software to be accessed or used by anyone other than your employees whose duties require such access or use. You will not remove, modify or alter any of Licensor’s copyright, trademark or proprietary rights from any part of the Software.
 
 # TRANSFER OF SOFTWARE
 
