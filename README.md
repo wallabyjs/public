@@ -2,7 +2,7 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 
 *Wallaby.js plugin is action*
 
-![wallaby plugin](http://wallabyjs.com/assets/img/wallaby.gif)
+![wallaby plugin](http://wallabyjs.com/assets/img/wallabyInAction.gif)
 
 *Wallaby.js app is action*
 
