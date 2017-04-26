@@ -1,3 +1,60 @@
+<a name="Core 1.0.415, IntelliJ 1.0.86, VS 1.0.31, Atom 1.0.33, VS Code 1.0.50, Sublime 1.0.36"></a>
+# Core 1.0.415, IntelliJ 1.0.86, Visual Studio 2013, 2015, 2017 1.0.31, Atom 1.0.33, Visual Studio Code 1.0.50, Sublime Text 1.0.36 (2017-04-26)
+
+## Changes and Bug Fixes
+
+- [Live Comments for logging](https://medium.com/@artem.govorov/live-code-comments-the-fastest-way-to-inspect-javascript-object-values-with-wallaby-js-894b9c806450).
+- [Live Comments for benchmarking](https://medium.com/@artem.govorov/using-live-code-comments-to-quickly-measure-code-performance-with-wallaby-js-and-quokka-js-7931a896133).
+- [Quokka.js](https://medium.com/@artem.govorov/introducing-quokka-the-live-scratchpad-for-javascript-free-developer-tool-a0eb15bb4f54).
+- [Advanced support for Jest snapshot testing](https://medium.com/@artem.govorov/jest-snapshot-testing-on-steroids-with-wallaby-js-a53008f619f0).
+- [Improved value logging](https://twitter.com/wallabyjs/status/844032526012227584).
+- [JetBrains Rider support](https://twitter.com/wallabyjs/status/824164222657589250).
+- [Advanced context for console logging](https://twitter.com/wallabyjs/status/829923244308205568).
+- [Scroll lock support](https://twitter.com/wallabyjs/status/825968233140277249) for the Wallaby Tests view in VS Code.
+- Typescript v2.2, v2.3 support.
+- VS Code v1.10, v1.11, v1.12 support.
+- Atom v1.16, v1.17 support.
+- Visual Studio 2017 support.
+- Sublime Text v3129 support.
+- Jest v19 support, performance improvements.
+- AVA v0.18, v0.19 support, performance improvements.
+- Improved Webpack support, performance improvements (dynamic bundles).
+- Wallaby App advanced context reporting support, Jest snapshots support, color theme fixes.
+- Using locally installed mocha (in project) by default for node.
+- Angular CLI and create-react-app generated projects better support and examples.
+- ES6 `new.target` support in code generator [#1098](https://github.com/wallabyjs/public/issues/1098).
+- ES6 spread/rest property support wallaby parser.
+- Electron runner [window resizing support](https://github.com/wallabyjs/public/issues/965#issuecomment-274323608).
+- Improved Jest runner behaviour for the scenario when multiple versions of Jest are installed.
+- Improved multi-line error messages handling (not just the first line).
+- Improved test name detection for babel: sequence expressions like `(0, it(...))`.
+- Automatically configuring Jest from `package.json` by default.
+- Improved wallaby core/dependencies update mechanism.
+- Increased the default `stackTraceLimit` for V8 environments.
+- Added [`glob` setting](https://github.com/wallabyjs/public/issues/1113#issuecomment-293942774) for advanced patterns.
+- Added [custom JavaScript file extensions support](https://github.com/wallabyjs/public/issues/1120).
+- AVA snapshot testing support [#996](https://github.com/wallabyjs/public/issues/996).
+- Fixed mocha tags/grep support [#1041](https://github.com/wallabyjs/public/issues/1041).
+- Notification about `editor.glyphMargin` setting for VS Code [#1070](https://github.com/wallabyjs/public/issues/1070).
+- Fixed ES6 syntax in `setup` function [#1029](https://github.com/wallabyjs/public/issues/1029).
+- Fixed babel source mapping for JSX [#977](https://github.com/wallabyjs/public/issues/977).
+- Improved babel configuration defaults.
+- Allowed TS compiler to lookup not only matching files, but all files [#1050](https://github.com/wallabyjs/public/issues/1050).
+- Improved wallaby app service start error reporting.
+- Avoid overriding jasmine's internal spec IDs in order not to conflict with other test reporters.
+- Fixed module resolution issue in Jest runner [#973](https://github.com/wallabyjs/public/issues/973).
+- Fixed `testPathDirs` overriding in Jest runner [#983](https://github.com/wallabyjs/public/issues/983).
+- Fixed array logging.
+- Fixed test runner instance reuse in Jest runner [#1072](https://github.com/wallabyjs/public/issues/1072).
+- Avoid changing console.log if the code region [is hinted](https://wallabyjs.com/docs/config/coverage.html).
+- Fixed hanging async test run in Tape runner [#995](https://github.com/wallabyjs/public/issues/995).
+- Fixed AVA context reuse scenario [#1012](https://github.com/wallabyjs/public/issues/1012), [#1034](https://github.com/wallabyjs/public/issues/1034).
+- Fixed rendering inline messages in VS Code [#1003](https://github.com/wallabyjs/public/issues/1003), [#1004](https://github.com/wallabyjs/public/issues/1004).
+- Fixed rendering test report in VS Code [#1023](https://github.com/wallabyjs/public/issues/1023).
+- Fixed test running status reporting in IntelliJ [#1096](https://github.com/wallabyjs/public/issues/1096).
+- Fixed test results reporting in Atom [#58](https://github.com/wallabyjs/atom-wallaby/issues/58).
+- Made core parametrisation logic more predictable for the case when `workers.regular` > `workers.initial` + it's a full test run.
+
 <a name="Core 1.0.359, IntelliJ 1.0.79, VS 1.0.29, Atom 1.0.31, VS Code 1.0.39, Sublime 1.0.30"></a>
 # Core 1.0.359, IntelliJ 1.0.79, Visual Studio 2013, 2015, 2017 1.0.29, Atom 1.0.31, Visual Studio Code 1.0.39, Sublime Text 1.0.30 (2017-01-24)
 
