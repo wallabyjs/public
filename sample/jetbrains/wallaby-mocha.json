@@ -3,10 +3,11 @@
     "style/calculator.css",
     { "pattern" : "lib/jquery.js", "instrument": false },
     "src/*.js",
+    "test/lib/chai.js",
     "test/helper/template.js"
   ],
   "tests": [
-    "test/*JasmineSpec.js"
+    "test/*MochaSpec.js"
   ],
-  "testFramework": "jasmine@2.1.3"
+  "testFramework": "mocha"
 }

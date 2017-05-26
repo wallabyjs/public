@@ -6,7 +6,7 @@
     "test/helper/template.js"
   ],
   "tests": [
-    "test/*QUnitSpec.js"
+    "test/*JasmineSpec.js"
   ],
-  "testFramework": "qunit@1.16.0"
+  "testFramework": "jasmine"
 }
