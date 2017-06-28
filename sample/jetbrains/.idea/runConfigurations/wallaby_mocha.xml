@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="wallaby-mocha-2.0.1" type="wallaby" factoryName="Wallaby.js" config="$PROJECT_DIR$/wallaby-mocha.json">
+  <configuration default="false" name="wallaby-mocha" type="wallaby" factoryName="Wallaby.js" config="$PROJECT_DIR$/wallaby-mocha.js">
     <RunnerSettings RunnerId="wallaby" />
     <ConfigurationWrapper RunnerId="wallaby" />
     <method />

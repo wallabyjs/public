@@ -49,10 +49,10 @@
     <Content Include="test\lib\chai.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="wallaby-jasmine-1.3.json" />
-    <Content Include="wallaby-jasmine-2.json" />
-    <Content Include="wallaby-mocha.json" />
-    <Content Include="wallaby-qunit.json" />
+    <Content Include="wallaby-jasmine-1.3.js" />
+    <Content Include="wallaby-jasmine-2.js" />
+    <Content Include="wallaby-mocha.js" />
+    <Content Include="wallaby-qunit.js" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

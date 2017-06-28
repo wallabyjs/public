@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="wallaby-qunit-1.16.0" type="wallaby" factoryName="Wallaby.js" config="$PROJECT_DIR$/wallaby-qunit.json">
+  <configuration default="false" name="wallaby-jasmine-2" type="wallaby" factoryName="Wallaby.js" config="$PROJECT_DIR$/wallaby-jasmine-2.js">
     <RunnerSettings RunnerId="wallaby" />
     <ConfigurationWrapper RunnerId="wallaby" />
     <method />
