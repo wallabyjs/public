@@ -14,3 +14,13 @@ Wallaby.js is an intelligent **test runner for JavaScript** that continuously ru
 - [Wallaby.js in action video](https://www.youtube.com/watch?v=uUmF16R9JNs)
 - [Wallaby.js motivation blog post](http://dm.gl/2015/01/30/wallaby/)
 - [Download wallaby.js](http://wallabyjs.com/#download)
+
+# Badges
+
+Let the world know your project is using wallaby.js to test with this badge:
+
+[![Wallaby.js](https://img.shields.io/badge/wallaby.js-configured-green.svg)](https://wallabyjs.com)
+
+```
+[![Wallaby.js](https://img.shields.io/badge/wallaby.js-configured-green.svg)](https://wallabyjs.com)
+```
