@@ -1,11 +1,70 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release some notable features.
 
+<a name="Core 1.0.519, Wallaby App 1.0.34, IntelliJ 1.0.99, VS 1.0.33, Atom 1.0.37, VS Code 1.0.67, Sublime 1.0.37"></a>
+# Core 1.0.519, Wallaby App 1.0.34, IntelliJ 1.0.99, Visual Studio 2013, 2015, 2017 1.0.33, Atom 1.0.37, Visual Studio Code 1.0.67, Sublime Text 1.0.37 (2017-11-22)
+
+## Changes and Bug Fixes
+
+- [Headless Chrome runner (official, will be making it default for browser environment soon)](https://wallabyjs.com/docs/integration/chrome.html).
+- ES modules (without transpilation) support for browser environment (Chrome) ([sample repo](https://github.com/wallabyjs/wallaby)).
+- [Compact diff view](https://twitter.com/wallabyjs/status/917631895873007616).
+- [Side-by-side diff for VS Code](https://twitter.com/wallabyjs/status/917634773874442246).
+- [Quokka.js for Atom](https://medium.com/@artem.govorov/quokka-live-javascript-scratchpad-for-atom-editor-a4edd27b7d91).
+- [Quokka.js Pro](https://medium.com/@artem.govorov/introducing-quokka-js-pro-edition-de0a7919b404).
+- Chrome 62 support.
+- Typescript v2.5 support.
+- Babel 7 beta support.
+- IntelliJ platform 2017.3 support.
+- VS Code v1.15, v1.16, v1.17, v1.18 support.
+- Atom v1.20, v1.21, v1.22 support.
+- Jest v21.0, v21.1, v21.2 support.
+- Mocha 4 support.
+- QUnit 2.4 support.
+- Improved initial file scan performance in the extended core.
+- Added symlinks support in extended core.
+- Added TypeScript compilation via Babel support.
+- `Jump to error` command now jumps to a failing test if the error source is not found.
+- TypeScript compiler option `noResolve: false` support.
+- TypeScript compiler now does a full file lookup (not only in listed files) if the `useStandardDefaults` option is set.
+- TypeScript custom transformers support [#1251](https://github.com/wallabyjs/public/issues/1261).
+- Updated bundled TypeScript version to 2.5.
+- Fixed test run scheduling issue when a new session could be started in a worker before the previous one had been stopped/cleaned up the worker. This addresses a whole class of issue related to sudden hanging during incrementl test runs.
+- Stubbing `process.exit` for node test runner (to prevent the scenario of hanging test runner for an unknown reason).
+- Unhandled promise rejections are thrown as errors now to allow testing framework to handle them.
+- Force setting `BABEL_ENV` to `test` if it is set to `"undefined"` string.
+- Automatically loading babel `regeneratorRuntime` [1289](https://github.com/wallabyjs/public/issues/1289#issuecomment-329019968).
+- System.js API change support.
+- Relative node module resolution for TypeScript, Babel (and presets), Electron.
+- Added custom test framework path support for Jasmine in node.
+- Made `docBlockComment` a persistent property (if TS cached files are not processed, doc blocks are not re-attached).
+- Trimming spaces in `env.params` [#1312](https://github.com/wallabyjs/public/issues/1312).
+- Removing ANSI codes from all error messages, if expected/actual values don't contain any ANSI codes.
+- Multi-project workspaces support in VS Code.
+- Excluding node_modules folders from the wallaby config file search in VS Code.
+- Added `wallaby.showUpdateNotifications` setting in VS Code.
+- Updated bundled node to 8.5 for IntelliJ platform and VS.
+- Fixed single test file change handling in VS.
+- Displaying currently selected config file in the config selection selector [#1396](https://github.com/wallabyjs/public/issues/1396).
+- Fixed a few issues with `allowJs` TypeScript option.
+- Fixed Jest manual mocks issue [#1306](https://github.com/wallabyjs/public/issues/1306#issuecomment-330044415).
+- Fixed Wallaby App test name collision issue.
+- Added `fileScanTimeout` setting.
+- Fixed exponentiation operator precedence in code generator.
+- Fixed code coverage ignore comment issue [#1275](https://github.com/wallabyjs/public/issues/1275).
+- Fixed sinon spy messages (removed ANSI).
+- Improved promises logging, fixed issue with Promise.prototype logging.
+- Added Quibble support.
+- Fixed pre-run dependency tracking issue [#1296](https://github.com/wallabyjs/public/issues/1296).
+- Fixed Jest module resolution issue [#1292](https://github.com/wallabyjs/public/issues/1292).
+- Fixed Jest result reporting issue [#1293](https://github.com/wallabyjs/public/issues/1293).
+- Fixed tests view un-focusing issue in Atom.
+
 <a name="Core 1.0.466, Wallaby App 1.0.29, IntelliJ 1.0.92, VS 1.0.32, Atom 1.0.35, VS Code 1.0.56, Sublime 1.0.37"></a>
 # Core 1.0.466, Wallaby App 1.0.29, IntelliJ 1.0.92, Visual Studio 2013, 2015, 2017 1.0.32, Atom 1.0.35, Visual Studio Code 1.0.56, Sublime Text 1.0.37 (2017-08-10)
 
 ## Changes and Bug Fixes
 
-- [Headless Chrome runner](https://wallabyjs.com/docs/integration/chrome.html).
+- [Headless Chrome runner (experimental)](https://wallabyjs.com/docs/integration/chrome.html).
 - Mixed (none/some/all) script content compiler support, [enables Vue.js support](https://twitter.com/wallabyjs/status/887196471929430017).
 - Advanced logging [support for Promises and Observables](https://twitter.com/wallabyjs/status/890110946173210625).
 - Display [test execution time](https://twitter.com/wallabyjs/status/875290980609474560).
