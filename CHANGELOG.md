@@ -1,5 +1,62 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release some notable features.
 
+<a name="Core 1.0.566, Wallaby App 1.0.36, IntelliJ 1.0.108, VS 1.0.33, Atom 1.0.39, VS Code 1.0.78, Sublime 1.0.39"></a>
+# Core 1.0.566, Wallaby App 1.0.36, IntelliJ 1.0.108, Visual Studio 2013, 2015, 2017 1.0.33, Atom 1.0.39, Visual Studio Code 1.0.78, Sublime Text 1.0.39 (2018-03-09)
+
+## Changes and Bug Fixes
+
+- Webpack 4 support.
+- Babel 7.0.0-beta.40 support.
+- [@std/esm](https://github.com/standard-things/esm) support.
+- JSX fragments support.
+- Time and auto-log within a [single live comment](https://twitter.com/wallabyjs/status/955716471195287553).
+- Added `Update snapshot` actions/commands.
+- Added `Open Wallaby App` command.
+- VS Code v1.19, v1.20 support.
+- Atom v1.23, v1.24 support.
+- Sublime Text v3157 support.
+- Jest v22.1, v22.2, v22.3, v22.4 support.
+- Jasmine v2.8, v2.9, v3.0, v3.1 support.
+- Ava v1.0.0-beta.3 support.
+- Automatically adding Jest snapshots to `files`.
+- `binary` flag support in JetBrains IDEs.
+- Hi-dpi icons support in JetBrains IDEs [#1443](https://github.com/wallabyjs/public/issues/1443).
+- Allowing any number whitespaces between an expression and a live comment attached to it.
+- Added `hints.allowIgnoringCoverageInTests` setting.
+- Various instrumentation related performance optimizations.
+- Using babel version from package.json `dependencies`/`devDependencies` by default.
+- Performance optimization for cases with many promises (like lots of file reads/writes).
+- Support [custom inspection functions](https://nodejs.org/api/util.html#util_custom_inspection_functions_on_objects).
+- `.mjs` file extension support.
+- Support `SourceMapGenerator` instance passed as a source map to a preprocessor.
+- Automatically mapping Jest `<rootDir>` to local folder for local files.
+- Using special token to display empty strings inline.
+- Improved Files and Tests trees hover styles in Wallaby App.
+- `JSXText` support [#1448](https://github.com/wallabyjs/public/issues/1448).
+- Chrome launcher `--deterministic-fetch` is on by default [#1514](https://github.com/wallabyjs/public/issues/1514).
+- Improved range of the line mapping algorithm.
+- Fixed test start links [#1547](https://github.com/wallabyjs/public/issues/1547).
+- Fixed line marker click events to display tests for a correct line in Atom.
+- Fixed symlink resolution [#1425](https://github.com/wallabyjs/public/issues/1425).
+- `react-native/jest/assetFileTransformer` patch [#1436](https://github.com/wallabyjs/public/issues/1436#issuecomment-358214325).
+- Fixed Jest verbose error loggig issue [#1513](https://github.com/wallabyjs/public/issues/1513).
+- Fixed Jest `rootDir` path resolution [#1517](https://github.com/wallabyjs/public/issues/1517#issuecomment-366550870).
+- File navigation should consider view column of an already opened file in VS Code [#1540](https://github.com/wallabyjs/public/issues/1540).
+- Added `suppressExpirationNotifications` setting for VS Code.
+- Using markdown by default for hover messages in VS Code.
+- Update snapshot command links in hover messages and output in VS Code.
+- Avoid patching `process.exit` for newer versions of VS Code.
+- Automatically start Wallaby if config selection is requested from a start command.
+- Fixed unavailable `localStorage` scenario in Wallaby App.
+- Fixing the order of resolved node modules not only for local node modules, but also for `NODE_PATH` [#1442](https://github.com/wallabyjs/public/issues/1442).
+- Bundle file should be included before all files it contains [#1404](https://github.com/wallabyjs/public/issues/1404).
+- Synchronized access to a shared collection in JetBrains IDEs.
+- Fixed missing theme colors issue in JetBrains IDEs.
+- Storing TS compilation line map to support a scenario when Webpack changes TS file without user changes (ES6 exports/imports) [#1414](https://github.com/wallabyjs/public/issues/1414).
+- Fixed line uncovered range mapping issue [#1530](https://github.com/wallabyjs/public/issues/1530).
+- Moved TS visitor creation to a later  execution stage [#1532](https://github.com/wallabyjs/public/issues/1532).
+- Fixed QUnit issue with not running tests with tariling spaces in their names.
+
 <a name="Core 1.0.519, Wallaby App 1.0.34, IntelliJ 1.0.99, VS 1.0.33, Atom 1.0.37, VS Code 1.0.67, Sublime 1.0.37"></a>
 # Core 1.0.519, Wallaby App 1.0.34, IntelliJ 1.0.99, Visual Studio 2013, 2015, 2017 1.0.33, Atom 1.0.37, Visual Studio Code 1.0.67, Sublime Text 1.0.37 (2017-11-22)
 
