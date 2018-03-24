@@ -9,6 +9,9 @@ module.exports = function () {
     "tests": [
       "test/*QUnitSpec.js"
     ],
-    "testFramework": "qunit"
+    "testFramework": "qunit",
+    "env": {
+      "kind": "chrome"
+    }
   };
 };
