@@ -10,6 +10,9 @@ module.exports = function () {
     "tests": [
       "test/*MochaSpec.js"
     ],
-    "testFramework": "mocha"
+    "testFramework": "mocha",
+    "env": {
+      "kind": "chrome"
+    }
   };
 };
