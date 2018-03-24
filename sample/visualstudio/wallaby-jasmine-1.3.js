@@ -9,6 +9,9 @@ module.exports = function () {
     "tests": [
       "test/*JasmineSpec.js"
     ],
-    "testFramework": "jasmine@1.3.1"
+    "testFramework": "jasmine@1.3.1",
+    "env": {
+      "kind": "chrome"
+    }
   };
 };
