@@ -1,5 +1,61 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release some notable features.
 
+<a name="Core 1.0.601, Wallaby App 1.0.40, IntelliJ 1.0.114, VS 1.0.33, Atom 1.0.42, VS Code 1.0.86, Sublime 1.0.42"></a>
+# Core 1.0.601, Wallaby App 1.0.40, IntelliJ 1.0.114, Visual Studio 2013, 2015, 2017 1.0.33, Atom 1.0.42, Visual Studio Code 1.0.86, Sublime Text 1.0.42 (2018-06-09)
+
+## Changes and Bug Fixes
+
+- [Test/test file selection](https://wallabyjs.com/docs/intro/selected-tests.html), both automatic for `.only/`.fit` and with special comments.
+- Jest v23.0, v23.1 support.
+- Electron 2 support.
+- Jasmine 3 support.
+- Ava 1.0.0-beta.5.1 support.
+- Sinon 4 support.
+- VS Code v1.21, v1.22, v1.23, v1.24 support.
+- IntelliJ platform 2018.2 EA support.
+- Atom v1.25, v1.26, v1.27 support.
+- Added `Update snapshot(s)` actions to Wallaby App Tests tree.
+- Reporting current file code coverage in VS Code.
+- Support for multiple live comments from different lines of the same statement.
+- Dynamic import statement parsing fix.
+- Enabled compression for large files served to browser.
+- Support for `console.debug` and `console.info` logging.
+- Avoid replacing `rootDir` in Jest settings folders if they are above the project cache root [#1590](https://github.com/wallabyjs/public/issues/1590).
+- Patching `resolve` module to take `NODE_PATH` value into account.
+- Removed node modules above instrumented root from Jest module lookup algorithm.
+- Added long console text messages support for wallaby extended core.
+- Jest `globalSetup` and `globalTeardown` support [#1618](https://github.com/wallabyjs/public/issues/1618).
+- Better [`Symbol` output](https://github.com/wallabyjs/quokka/issues/201).
+- Jasmine 2.8.0 by default for browser environment.
+- Disabled `chalk` for Jest.
+- Cleaning up Jest stack traces.
+- Jasmine custom specFilter support.
+- Support for `jest.config.json`.
+- Reporting Jest console errors back to wallaby, enables support for `reportConsoleErrorAsError` for Jest [#1686](https://github.com/wallabyjs/public/issues/1686).
+- Fixed Atom and VS Code plugin core update concurrency issues.
+- Made `jest.config.js` to have a higher priority over `package.json` Jest config.
+- Fixed missing `jest-util` resolution path [#1553](https://github.com/wallabyjs/public/issues/1553).
+- Jasmine 2 regression fix [#1597](https://github.com/wallabyjs/public/issues/1597).
+- In newer `jest-resolve` versions paths are correctly appended to dirs, not the other way around like in older Jest versions, so no need to remove/deduplicate paths from above [#1626](https://github.com/wallabyjs/public/issues/1626).
+- Adding local node modules to the generated lookup list of (instrumented) node modules [#1620](https://github.com/wallabyjs/public/issues/1620).
+- Applying `outDir` options after merging user option with `tsconfig` options to allow user to set `outDir` in user options.
+- Added documentation for available wallaby settings in VS Code.
+- Normalizing drive letter for a manually selected wallaby config in VS Code.
+- Correctly finding project root for workspace project roots stating with the same substring in VS Code [#1624](https://github.com/wallabyjs/public/issues/1624).
+- Faster file scan for the case of excluded subfolders in IntelliJ platform IDEs.
+- Improved ways of connecting to wallaby core in IntelliJ platform IDEs.
+- Trying to kill child node process when closing IntelliJ platform IDEs unexpectedly.
+- Fixed Linux support for Sublime plugin update/install.
+- Support for console.log mocking in Jest [#1692](https://github.com/wallabyjs/public/issues/1692).
+- Stop enforcing strict mode.
+- Disable pausing after a single test for any runner but PhantomJs, fixes [#1666](https://github.com/wallabyjs/public/issues/1666).
+- Fixed chokidar to avoid globbing for the base path.
+- Normalizing drive letter for project cache and config path.
+- Avoid running postprocessor if an editor requests a (manual) test run.
+- Correctly handling empty `NODE_PATH` [#1570](https://github.com/wallabyjs/public/issues/1570).
+- Ava 0.25.0 regression fix [#1689](https://github.com/wallabyjs/public/issues/1689).
+- Fixed test selection regular expression [#1604](https://github.com/wallabyjs/public/issues/1604).
+
 <a name="Core 1.0.566, Wallaby App 1.0.36, IntelliJ 1.0.108, VS 1.0.33, Atom 1.0.39, VS Code 1.0.78, Sublime 1.0.39"></a>
 # Core 1.0.566, Wallaby App 1.0.36, IntelliJ 1.0.108, Visual Studio 2013, 2015, 2017 1.0.33, Atom 1.0.39, Visual Studio Code 1.0.78, Sublime Text 1.0.39 (2018-03-09)
 
