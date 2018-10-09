@@ -1,7 +1,48 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release some notable features.
 
-<a name="Core 1.0.601, Wallaby App 1.0.40, IntelliJ 1.0.114, VS 1.0.33, Atom 1.0.42, VS Code 1.0.86, Sublime 1.0.42"></a>
-# Core 1.0.601, Wallaby App 1.0.40, IntelliJ 1.0.114, Visual Studio 2013, 2015, 2017 1.0.33, Atom 1.0.42, Visual Studio Code 1.0.86, Sublime Text 1.0.42 (2018-06-09)
+<a name="Core 1.0.622, Wallaby App 1.0.41, IntelliJ 1.0.118, VS 1.0.34, Atom 1.0.42, VS Code 1.0.96, Sublime 1.0.43"></a>
+# Core 1.0.622, Wallaby App 1.0.41, IntelliJ 1.0.118, Visual Studio 2013, 2015, 2017 1.0.34, Atom 1.0.42, Visual Studio Code 1.0.96, Sublime Text 1.0.43 (2018-10-09)
+
+## Changes and Bug Fixes
+
+- [Live Value Display](https://wallabyjs.com/docs/intro/advanced-logging.html#live-value-display).
+- Added TypeScript [isolated modules support](https://wallabyjs.com/docs/integration/typescript.html#isolated-modules).
+- Added [`ignoreCoverageForFile` setting](https://wallabyjs.com/docs/config/coverage.html#stopping-code-coverage-calculation-for-a-file) to ignore file coverage via a comment.
+- Jest v23.4, v23.5, v23.6 support.
+- Jest inline snapshots initial support.
+- Jasmine 3 support for browser environment.
+- `create-react-app` v2 generated projects support.
+- ``@vue/cli` v3 generated projects support.
+- VS Code v1.25, v1.26, v1.27, v1.28 support.
+- IntelliJ platform 2018.2, 2018.3 EAP (branch 183) support.
+- Atom v1.28, v1.29, v1.30 support.
+- Improved Wallaby parser performance.
+- Improved Webpack 4 integration performance.
+- Improved rejected promises reporting for auto-log comments.
+- Added support for `AwaitExpression` auto-log comments.
+- Improved Jest for Angular projects support.
+- Transient file changes support (temporary changes that are not saved but trigger file changed events in core).
+- Added `testFramework.path` setting support for Jest runner.
+- Adding `util.promisify.custom` property to the global setTimeout in node test environment.
+- Fixed Chrome runner issue in certain Linux environments (passing `no-sandbox` by default).
+- Added `process.env.CI` support for Jest to set `config.updateSnapshot = 'none'`.
+- Removed ANSI encoding from global errors.
+- Turning off `ts-jest` diagnostics by default.
+- Improved live value logging for node Buffers.
+- Support `./` as `rootDir` in Jest configs.
+- Added support for `~` in node paths.
+- Fixed ES Tree spec breaking change [#1846](https://github.com/wallabyjs/public/issues/1846).
+- Support for Jest's `console.log` implementation to be triggered.
+- Prioritize Jest from `react-scripts` over other Jest installations [#1839](https://github.com/wallabyjs/public/issues/1839).
+- Fixed Jest `CommonGlobals` util file resolution issue for the scenario when Jest framework path is specified [#1790]( https://github.com/wallabyjs/public/issues/1790#issuecomment-416717159).
+- Support updating coverage type (not covered to covered and the other way around) in coverage tree and opened folder details in Wallaby App [#1861](https://github.com/wallabyjs/public/issues/1861).
+- Fixed IntelliJ header component access issue.
+- Updated `adm-zip` to latest for VS Code.
+- Added support for `editDelay` for VS Code.
+- Fixed output channel grammar for VS Code.
+
+<a name="Core 1.0.601, Wallaby App 1.0.40, IntelliJ 1.0.114, VS 1.0.33, Atom 1.0.41, VS Code 1.0.86, Sublime 1.0.42"></a>
+# Core 1.0.601, Wallaby App 1.0.40, IntelliJ 1.0.114, Visual Studio 2013, 2015, 2017 1.0.33, Atom 1.0.41, Visual Studio Code 1.0.86, Sublime Text 1.0.42 (2018-06-09)
 
 ## Changes and Bug Fixes
 
