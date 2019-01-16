@@ -1,5 +1,49 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release some notable features.
 
+<a name="Core 1.0.645, Wallaby App 1.0.42, IntelliJ 1.0.122, VS 1.0.35, Atom 1.0.42, VS Code 1.0.107, Sublime 1.0.44"></a>
+# Core 1.0.645, Wallaby App 1.0.42, IntelliJ 1.0.122, Visual Studio 2013, 2015, 2017 1.0.35, Atom 1.0.42, Visual Studio Code 1.0.107, Sublime Text 1.0.44 (2019-01-15)
+
+## Changes and Bug Fixes
+
+- [Value Explorer](https://wallabyjs.com/docs/intro/value-explorer.html).
+- [Live Comment to expand Value Explorer properties](https://wallabyjs.com/docs/intro/value-explorer.html#live-comment-hint-to-auto-expand).
+- Improved TypeScript isolated modules support (including performance).
+- Support for [preserving comments](https://wallabyjs.com/docs/config/overview.html#preserve-comments-setting) in instrumented code.
+- Support async generator methods instrumentation.
+- Support Symbols as property names for live logging.
+- Added `Go to Source` action for value explorer.
+- Jest 24 alpha support.
+- Ava 1.x support.
+- VS Code v1.29, v1.30, v1.31-insiders support.
+- IntelliJ platform 2018.3.x support.
+- Atom v1.31, v1.32, v1.33, 1.34 support.
+- Added `dot` setting for config path matching with `minimatch` (Quokka is using `dot: true` setting for minimatch by default).
+- Improved node shebang support [#1933](https://github.com/wallabyjs/public/issues/1933).
+- Improved live logging to display primitive values for primitive type wrappers.
+- Changed `reportUnhandledPromises` setting to be `false` by default in browser.
+- Improved source maps support for Vue projects.
+- Fixed Wallaby App multiple projects selection on Windows (made WallabyApp Service start WebSocket server on Http server error).
+- Patched ts-jest to use CommonJs for TS compilation if root `tsconfig.json` is being used.
+- Made live logging with comments, identifier expressions and `console.log` more consistent in terms of output limits.
+- Exposed `Show line tests` command as editor context command.
+- Fixed issue with new license key location lookup for version check purposes.
+- Fixed modules package.json files resolution in standard (`noResolve: false`) mode for TypeScript compiler.
+- Avoid replacing % placeholders if no arguments are passed, addresses [#275](https://github.com/wallabyjs/quokka/issues/275).
+- Fixed symbol properties iteration issue [#1885](https://github.com/wallabyjs/public/issues/1885).
+- Patching Jest haste module map to include local modules (folders with package.json) in Wallaby cache, fixes [#1964](https://github.com/wallabyjs/public/issues/1964).
+- Improved Wallaby config checks - checking if all specified `files`/`tests` paths don't exist and showing a warning about it, addresses [#1874](https://github.com/wallabyjs/public/issues/1874).
+- Improved CRA TypeScript support.
+- Fixed Babel 7 'register' module integration (`ignore` setting format).
+- Fixed Jasmine 3 `xdescribe` issue [#1880](https://github.com/wallabyjs/public/issues/1880).
+- Fixed `length` property access errors handling for live logging/value explorer object traversal.
+- Normalizing paths in TS compiler, fixes [#1950](https://github.com/wallabyjs/public/issues/1950).
+- Ignoring console.log '%c' parameters, addresses [#1954](https://github.com/wallabyjs/public/issues/1954).
+- Fixed a few TypeScript compiler compatibility issues.
+- Switched to use webview API instead of `previewHtml` command in VS Code.
+- Separated logging limits for live logging and value explorer.
+- Added `https.proxy` setting support in VS Code.
+- Added support for `sublime-color-scheme` format, addresses [#1952](https://github.com/wallabyjs/public/issues/1952).
+
 <a name="Core 1.0.622, Wallaby App 1.0.41, IntelliJ 1.0.118, VS 1.0.34, Atom 1.0.42, VS Code 1.0.96, Sublime 1.0.43"></a>
 # Core 1.0.622, Wallaby App 1.0.41, IntelliJ 1.0.118, Visual Studio 2013, 2015, 2017 1.0.34, Atom 1.0.42, Visual Studio Code 1.0.96, Sublime Text 1.0.43 (2018-10-09)
 
