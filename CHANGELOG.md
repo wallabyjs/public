@@ -12,7 +12,7 @@ Please note that while the changelog is updated every few months, we release new
 - Added support for Jest 24.x.
 - Improved Jest inline snapshots support.
 - Added Auto-Expand feature for Live Value Comments for Wallaby and Quokka Value Explorer.
-- Added new `runSelectedTestsOnly` wallaby configuration setting to run zero tests if none are selected (https://wallabyjs.com/docs/intro/selected-tests.html#test-file-selection).
+- Added new `runSelectedTestsOnly` wallaby [configuration setting to run zero tests if none are selected](https://wallabyjs.com/docs/intro/selected-tests.html#test-file-selection).
 - Added WSL support to Wallaby.js for VS Code and JetBrains IDEs.
 - Improved editor line marker behavior when adding/removing lines for our products that use: VS Code, IntelliJ or Visual Studio.
 - Wallaby App tests tree filtering [#724](https://github.com/wallabyjs/public/issues/724).
