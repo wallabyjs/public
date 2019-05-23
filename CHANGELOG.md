@@ -1,5 +1,67 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release some notable features.
 
+<a name="Core 1.0.689, Wallaby App 1.0.57, IntelliJ 1.0.130, VS 1.0.37, Atom 1.0.43, VS Code 1.0.127, Sublime 1.0.44"></a>
+# Core 1.0.689, Wallaby App 1.0.57, IntelliJ 1.0.130, Visual Studio 2017, 2019 1.0.37, Atom 1.0.43, Visual Studio Code 1.0.127, Sublime Text 1.0.44 (2019-05-23)
+
+## Changes and Bug Fixes
+- JetBrains IDEs and Visual Studio [performance improvements and better change tracking (20%-40% execution time memory footprint improvements)](https://medium.com/@wallabyjs/new-wallaby-js-for-jetbrains-editors-496da2c30d34).
+- IntelliJ platform 2019.1.x support.
+- Visual Studio 2019.x support.
+- VS Code v1.31, v1.32, v1.33, v1.34, v1.35-insiders support.
+- Atom v1.35, v1.36, v1.37 support.
+- Added support for Jest 24.x.
+- Improved Jest inline snapshots support.
+- Added Auto-Expand feature for Live Value Comments for Wallaby and Quokka Value Explorer.
+- Added new `runSelectedTestsOnly` wallaby configuration setting to run zero tests if none are selected (https://wallabyjs.com/docs/intro/selected-tests.html#test-file-selection).
+- Added WSL support to Wallaby.js for VS Code and JetBrains IDEs.
+- Improved editor line marker behavior when adding/removing lines for our products that use: VS Code, IntelliJ or Visual Studio.
+- Wallaby App tests tree filtering [#724](https://github.com/wallabyjs/public/issues/724).
+- Wallaby App better keyboard support [1989](https://github.com/wallabyjs/public/issues/1989).
+- Wallaby App progress indicator [#1388](https://github.com/wallabyjs/public/issues/1388) [#1257](https://github.com/wallabyjs/public/issues/1257).
+- Wallaby App tests tree UX improvements [#1482](https://github.com/wallabyjs/public/issues/1482) [#1575](https://github.com/wallabyjs/public/issues/1575) [#1479](https://github.com/wallabyjs/public/issues/1479).
+- Various improvements to Wallaby website (updated samples and documentation); includes complete restructure [docs](https://wallabyjs.com/docs/).
+- Optimized Jest integration to use Jest watchman and to use Jest cache.
+- Added BigInt support [#2056](https://github.com/wallabyjs/public/issues/2056).
+- Enhanced Live Value Display to log `update` in `for` statements and all conditions in `if` and `while` statements.
+- Updated JavaScript parser to support ecma version 10 empty `catch` blocks [#1988](https://github.com/wallabyjs/public/issues/1988#issuecomment-460588077).
+- Added support for Jest `setupFilesAfterEnv` setting.
+- Improved handling of node worker processes so that they are automatically terminated when disconnected from the editor.
+- Added warning for PhantomJs deprecation as default browser runner.
+- Improved resolution of conflicting Jest versions within a given project.
+- Fixed bug with Wallaby cache where changes to unsaved files would remain after editor was closed and opened.
+- Fixed bug with global errors were not removed from unchanged files, causing errors to be reported after they were fixed.
+- Fixed bug with reported number of tests not being updated when deleting a test file with passing tests.
+- Update Quokka TypeScript default `jsx` setting to be `react`.
+- Fixed bug where Value Explorer expansion would update Jest Snapshot tests.
+- Improved instrumentation failure error reporting to display the code frame that cannot be parsed.
+- Force TypeScript `noEmitOnError` setting to be `false` [#342](https://github.com/wallabyjs/quokka/issues/342).
+- Fixed bug with compiling/processing Quokka files outside of project working directory.
+- Fixed Jest module map matching to use `rootDir` to resolve mocks [#2026](https://github.com/wallabyjs/public/issues/20260).
+- Removed `useFileNameMatchForPathMatching` setting from Quokka [#343](https://github.com/wallabyjs/quokka/issues/343).
+- Fixed bug mapping object spread when on a new line for a return statement.
+- Force TypeScript `composite` setting to `false` as a hard default [#2030](https://github.com/wallabyjs/public/issues/2030).
+- Improved File System handling for Windows to account for editors performing partial file writes without properly flushing.
+- Updated `esm` package to latest and added support for top-level `await` for Quokka JavaScript files.
+- Fixed bug when adding and removing newline characters would cause indicators to be incorrectly removed.
+- Improved performance and reliability of test execution when changes are made before and during an existing test run.
+- Updated display of test suites and paths to remove newlines and excess white space.
+- Fix quokka files not running outside of a path that is relative to project root [#354](https://github.com/wallabyjs/quokka/issues/354).
+- Updated Quokka to automatically set `process.env.VUE_CLI_BABEL_TRANSPILE_MODULES = true;` when processing JavaScript files in babel.
+- Fixed bug where test statistics were refreshed even though a document had not changed (causing UI flickering).
+- Fixed bug where Jest inline snapshots would not work properly for TypeScript [#2060](https://github.com/wallabyjs/public/issues/2060).
+- Improved integration with Jasmine to handle `jasmineDone` errors [#2063](https://github.com/wallabyjs/public/issues/2063).
+- Added node.js version to Wallaby console output on startup.
+- Fixed bug where test re-run would fail after multiple editors when Wallaby App was open [#2070](https://github.com/wallabyjs/public/issues/2070).
+- Fixed bug when updates would not be processed if they were made before an empty Quokka file had finished running.
+- Various updates to Quokka website.
+- Fixed Quokka-IntelliJ issue using WSL on 32-bit editor versions.
+- Fixed bug where Quokka would not show multiple session output windows at the same time in IntelliJ.
+- Added the ability to override Quokka-VSCode colors for coverage indicators and inline messages.
+- Improved Quokka-VSCode output formatting to avoid copying invisible UTF characters.
+- Added "compact" message setting for Quokka-VSCode to minimize newline characters in console output.
+- Added Jest snapshot and diff viewing commands to Visual Studio.
+- Wallaby App monaco update [#718](https://github.com/wallabyjs/public/issues/718).
+
 <a name="Core 1.0.645, Wallaby App 1.0.42, IntelliJ 1.0.122, VS 1.0.35, Atom 1.0.42, VS Code 1.0.107, Sublime 1.0.44"></a>
 # Core 1.0.645, Wallaby App 1.0.42, IntelliJ 1.0.122, Visual Studio 2013, 2015, 2017 1.0.35, Atom 1.0.42, Visual Studio Code 1.0.107, Sublime Text 1.0.44 (2019-01-15)
 
