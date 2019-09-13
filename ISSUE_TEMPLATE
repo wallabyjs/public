@@ -6,7 +6,7 @@
 
 <!--
 Wallaby Diagnostics Report is a simple JSON text report that contains some basic information
-about your Wallaby config that is required to start troubleshooting most of Wallaby issues.
+about your Wallaby config and project that is required to start troubleshooting most of Wallaby issues.
 
 To share the report:
 
