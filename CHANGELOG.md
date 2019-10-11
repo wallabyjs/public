@@ -6,7 +6,6 @@ Please note that while the changelog is updated every few months, we release new
 ## Changes and Bug Fixes
 * New [Automatic Configuration](https://wallabyjs.com/docs/intro/config.html#automatic-configuration) feature for Jest v24+.
 * New [Automatic Configuration](https://wallabyjs.com/docs/intro/config.html#automatic-configuration) feature for Angular CLI v8.2+ projects.
-* New Visual Studio extensions for [VS 2017](https://marketplace.visualstudio.com/items?itemName=vs-publisher-999439.WallabyjsforVisualStudio2017) and [VS 2019](https://marketplace.visualstudio.com/items?itemName=vs-publisher-999439.WallabyjsforVisualStudio2015).
 * New [Quokka Editor plugin for Sublime Text](https://medium.com/@wallabyjs/quokka-js-for-sublime-text-1572b47bf2c6).
 * New [run modes for Wallaby](https://medium.com/@wallabyjs/run-tests-only-on-file-save-91415c00c179): run on any change (default) and run only on save.
 * New [Copy Value command](https://medium.com/@wallabyjs/copy-value-for-wallaby-and-quokka-bbbd59bcac6) for all editors for both Wallaby and Quokka.
@@ -14,6 +13,7 @@ Please note that while the changelog is updated every few months, we release new
 * New option for Quokka to allow [babel to process TypeScript files](https://quokkajs.com/docs/configuration.html#using-babel-to-compile-typescript).
 * New [Webpack integration](https://medium.com/@wallabyjs/new-webpack-integration-b790debf2a04).
 * Improved TypeScript compilation performance (up to 100x+ for larger projects).
+* New shortcuts and menu options for Visual Studio extensions for [VS 2017](https://marketplace.visualstudio.com/items?itemName=vs-publisher-999439.WallabyjsforVisualStudio2017) and [VS 2019](https://marketplace.visualstudio.com/items?itemName=vs-publisher-999439.WallabyjsforVisualStudio2015).
 * Major improvements to Wallaby's internal file cache mechansim to speed up start up times.
 * Improved support for Nx/Nrwl including new [documentation page](https://wallabyjs.com/docs/integration/nrwl.html).
 * Support for Chrome headless test runners to be able to show last screenshot ([must be enabled in config](https://wallabyjs.com/docs/config/overview.html#show-last-run-screen-shot)).
