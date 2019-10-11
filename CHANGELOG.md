@@ -1,5 +1,73 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release some notable features.
 
+<a name="Core 1.0.766, Wallaby App 1.0.63, IntelliJ 1.0.143, VS 1.0.50, Atom 1.0.54, VS Code 1.0.146, Sublime 1.0.50"></a>
+# Core 1.0.766, Wallaby App 1.0.63, IntelliJ 1.0.143, Visual Studio 2017, 2019 1.0.49, Atom 1.0.54, Visual Studio Code 1.0.146, Sublime Text 1.0.50 (2019-10-11)
+
+## Changes and Bug Fixes
+* New [Automatic Configuration](https://wallabyjs.com/docs/intro/config.html#automatic-configuration) feature for Jest v24+.
+* New [Automatic Configuration](https://wallabyjs.com/docs/intro/config.html#automatic-configuration) feature for Angular CLI v8.2+ projects.
+* New Visual Studio extensions for [VS 2017](https://marketplace.visualstudio.com/items?itemName=vs-publisher-999439.WallabyjsforVisualStudio2017) and [VS 2019](https://marketplace.visualstudio.com/items?itemName=vs-publisher-999439.WallabyjsforVisualStudio2015).
+* New [Quokka Editor plugin for Sublime Text](https://medium.com/@wallabyjs/quokka-js-for-sublime-text-1572b47bf2c6).
+* New [run modes for Wallaby](https://medium.com/@wallabyjs/run-tests-only-on-file-save-91415c00c179): run on any change (default) and run only on save.
+* New [Copy Value command](https://medium.com/@wallabyjs/copy-value-for-wallaby-and-quokka-bbbd59bcac6) for all editors for both Wallaby and Quokka.
+* New [Copy Diagnostics report](https://wallabyjs.com/docs/intro/troubleshooting.html#diagnostics-report) feature to speeds up issue creation/resolution times.
+* New option for Quokka to allow [babel to process TypeScript files](https://quokkajs.com/docs/configuration.html#using-babel-to-compile-typescript).
+* New [Webpack integration](https://medium.com/@wallabyjs/new-webpack-integration-b790debf2a04).
+* Improved TypeScript compilation performance (up to 100x+ for larger projects).
+* Major improvements to Wallaby's internal file cache mechansim to speed up start up times.
+* Improved support for Nx/Nrwl including new [documentation page](https://wallabyjs.com/docs/integration/nrwl.html).
+* Support for Chrome headless test runners to be able to show last screenshot ([must be enabled in config](https://wallabyjs.com/docs/config/overview.html#show-last-run-screen-shot)).
+* New [maxLogEntrySize setting](https://wallabyjs.com/docs/config/overview.html#maximum-log-entry-size) to allow logging messages more than 16KB in size.
+* New [throwOnBeforeUnload setting](https://github.com/wallabyjs/public/issues/2170#issuecomment-518450064).
+* IntelliJ platform 2019.2.x support.
+* VS Code v1.36, v1.37, v1.38, v1.39.
+* Atom v1.38, v1.39, v1.40 support.
+* Wallaby App updated to include Pass/fail summary data on test group headers.
+* Updated chrome-launcher to support latest MacOS version (Catalina).
+* New `server` parameter for Wallaby App to support use of WSL ([#2136](https://github.com/wallabyjs/public/issues/2136)).
+* Support to allow Quokka to use `esm` with Babel.
+* Support to allow Quokka to use `await` outside of functions ([#345](https://github.com/wallabyjs/quokka/issues/345)).
+* Support for Multi-user license keys.
+* Support for AVA 2.0 ([#2106](https://github.com/wallabyjs/public/issues/2106)).
+* Support for Jasmine 3.4.x.
+* Default testFramework for browser tests changed to use Jasmine 3.4.x.
+* Default browser runner change from PhantomJS to Chrome headless.
+* Deprecation of PhantomJS as runtime dependency.
+* Execution time added to test report.
+* Support for using await outside of functions.
+* Support for Mocha 3rd Party UIs ([#2200](https://github.com/wallabyjs/public/issues/2200)).
+* Support for public and private class fields ([#407](https://github.com/wallabyjs/quokka/issues/407)).
+* Support for defining test names using Template literals.
+* Improved network reconnect handling between Wallaby test sessions.
+* Improved stack trace display for Quokka (no longer shows unmapped stack lines).
+* Support for breaking changes in the latest versions of JetBrains editors ([#2223](https://github.com/wallabyjs/public/issues/2223), [#373](https://github.com/wallabyjs/quokka/issues/373), [#390](https://github.com/wallabyjs/quokka/issues/390), [#395](https://github.com/wallabyjs/quokka/issues/395), [#416](https://github.com/wallabyjs/quokka/issues/416)).
+* Support for combined usage of sequence expressions converted to diffs and live comments ([#419](https://github.com/wallabyjs/quokka/issues/419)).
+* Support for using symlinks inside project root directory ([#2166](https://github.com/wallabyjs/public/issues/2166)).
+* Patch Mocha at runtime when used with Wallaby to fix default Mocha package behavior where tests are not reported correctly after a test failure ([#2130](https://github.com/wallabyjs/public/issues/2130#issuecomment-509184401)).
+* Improved instrumentation and reporting within extended class' constructors.
+* Improved test run logic to only run last affected test files when no tests are found for a file change outside of editor.
+* Improved Wallaby logging (is now buffered, and can dynamically contribute to Diagnostics report).
+* Improved Quokka diff messaging for incompatible object types ([#412](https://github.com/wallabyjs/quokka/issues/412), [#419](https://github.com/wallabyjs/quokka/issues/419)).
+* Improved logic for Wallaby worker processes to no longer run initialization logic when no ranges or tests need to be processed.
+* Improved editor notifications for Wallaby Sublime.
+* Bug fix for when compilation/post-processor fails and tests would execute on previously compiled code.
+* Bug fix for instrumentation reporting incorrectly when semicolons are located on subsequent lines with additional ranges ([#408](https://github.com/wallabyjs/quokka/issues/408)).
+* Bug fix for Quokka running on an empty file before any code has been written.
+* Bug fix for "Jest" testFramework when Wallaby extension and project are on located on different Windows drives ([#2090](https://github.com/wallabyjs/public/issues/2090)).
+* Bug fix for "QUnit" testFramework when more than one test has the same name.
+* Bug fix for "describe()" and "it()" not being instrumented correctly in test helper files ([#2122](https://github.com/wallabyjs/public/issues/2122), [#2200](https://github.com/wallabyjs/public/issues/2200)).
+* Bug fix for processing changes to code unassociated with tests resulting in a more tests being run than necessary.
+* Bug fix for Live Value messages displaying on subsequent test runs when that code is no longer executed.
+* Bug fix for multiple Live Value messages for a given line sometimes displaying in an inconsistent order ([#411](https://github.com/wallabyjs/quokka/issues/411)).
+* Bug fix for node 12.x to clear "console.time()" timers between execution runs ([#413](https://github.com/wallabyjs/quokka/issues/413)).
+* Bug fix for non-reportable files being sent to Wallaby app resulting in Wallaby app errors ([#2219](https://github.com/wallabyjs/public/issues/2219)).
+* Bug fix for Jest "update test snapshot" updating all snapshots in file instead of just one test when file is not opened in editor.
+* Bug fix for VS Code output window not displaying any additional messages if logged user value contains NULL character ([#375](https://github.com/wallabyjs/quokka/issues/375)).
+* Bug fix for VS Code output window not correctly highlight output when other 3rd party extensions set output window syntax.
+* Bug fix for Quokka VS Code where Run on Save would run on every change.
+* Bug fix for when deleted files did not correctly trigger recalculation of error messages ([#2183](https://github.com/wallabyjs/public/issues/2183)).
+* Bug fix for Quokka IntelliJ not working with `nvm` ([#376](https://github.com/wallabyjs/quokka/issues/376)).
+
 <a name="Core 1.0.689, Wallaby App 1.0.57, IntelliJ 1.0.130, VS 1.0.37, Atom 1.0.43, VS Code 1.0.127, Sublime 1.0.44"></a>
 # Core 1.0.689, Wallaby App 1.0.57, IntelliJ 1.0.130, Visual Studio 2017, 2019 1.0.37, Atom 1.0.43, Visual Studio Code 1.0.127, Sublime Text 1.0.44 (2019-05-23)
 
