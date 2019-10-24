@@ -1,5 +1,10 @@
 ### Issue description or question
 
+PLEASE NOTE: If you are using If you are using Jest >= v24 or Angular CLI >= v8.2, you may use
+automatic configuration that allows you to start Wallaby without any configuration.
+
+  https://wallabyjs.com/docs/intro/config.html#automatic-configuration
+
 <!-- Describe your issue/question -->
 
 ### Wallaby diagnostics report
