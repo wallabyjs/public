@@ -1,5 +1,72 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release some notable features.
 
+<a name="Core 1.0.833, Wallaby App 1.0.66, IntelliJ 1.0.156, VS 1.0.54, Atom 1.0.56, VS Code 1.0.172, Sublime 1.0.55"></a>
+# Core 1.0.833, Wallaby App 1.0.66, IntelliJ 1.0.156, Visual Studio 2017, 2019 1.0.54, Atom 1.0.56, Visual Studio Code 1.0.172, Sublime Text 1.0.54 (2020-02-07)
+
+## Changes and Bug Fixes
+* [New Time Travel Debugger](https://wallabyjs.com/docs/intro/time-travel-debugger.html) for VS Code and IntelliJ Editors.
+* [New Test Filtering feature](https://medium.com/@wallabyjs/new-test-filtering-feature-7435e2c50279) for Wallaby for all editors to only show results + coverage for the test(s) you are working on.
+* [New Object Proxy Logging](https://wallabyjs.com/docs/intro/advanced-logging.html#object-proxy) to quickly see where the object properties are being accessed from and what values are returned/set.
+* [New Interactive Examples for Quokka VS Code](https://quokkajs.com/docs/index.html#interactive-examples).
+* New feature "Jump To Test" feature for VS Code and IntelliJ to quickly search for tests without leaving the editor.
+* New feature to switch between projects in [Wallaby App](https://wallabyjs.com/docs/intro/get-started-wallaby-app.html) with the `Select project (Alt + 3)` icon.
+* New feature for Wallaby VS Code to [automatically start for a folder/workspace](https://wallabyjs.com/docs/intro/get-started-vscode.html#changing-wallabys-start-mode) if it was last running when the VS Code window was closed.
+* New Show/Copy Values internal mechanism (Show/Copy value can no longer result in run-time errors).
+* New feature for Quokka to automatically display values on text selection ('Pro' edition).
+* IntelliJ platform 2019.3.x support.
+* VS Code v1.40, v1.41, v1.42.
+* Atom v1.41, v1.42, v1.43, v1.44 support.
+* Added support to Wallaby for projects that use Jest v25.x.
+* Added support to Wallaby for projects that use Angular v9.x.
+* Added support for Live Value Display to log function parameters.
+* Added support for Live Value Display to log catch statement parameters.
+* Added support for the Optional Chaining operator (fixes [#2309](https://github.com/wallabyjs/public/issues/2309)).
+* Added support for nested OptionalMemberExpressions (fixes [#2313](https://github.com/wallabyjs/public/issues/2312)).
+* Added support for [`import.meta` tc39 proposal](https://github.com/tc39/proposal-import-meta).
+* Added support for [`numeric separator` tc39 proposal](https://github.com/tc39/proposal-numeric-separator).
+* Added support for dynamic imports used inside inside generator functions with `yield` ([#2269](https://github.com/wallabyjs/public/issues/2269)).
+* Added support for Webpack [context modules](https://webpack.js.org/guides/dependency-management/#context-module-api) (fixes [#2248](https://github.com/wallabyjs/public/issues/2248)).
+* Added [config option to override Jest path and Jest config file](https://wallabyjs.com/docs/integration/jest.html#overriding-automatic-configuration) for Automatic Configuration.
+* Added support for using Wallaby App in offline mode.
+* Updated Wallaby for VS Code core download algorithm to cache core update between VS Code version updates.
+* Updated Wallaby for VS Code default configuration mechanism to consider automatic configuration for Jest and Angular projects.
+* Updated Wallaby's Angular automatic configuration to treat `sourceRoot` as optional (fixes [#2305](https://github.com/wallabyjs/public/issues/2305)).
+* Updated Wallaby's Jest integration to support using TypeScript files for setup/teardown ([#2244](https://github.com/wallabyjs/public/issues/2244)).
+* Updated Quokka default TypeScript compiler settings to set the `jsx` setting to `react`.
+* Updated Quokka for VS Code to hide invalid commands when Quokka is not running.
+* Updated Quokka extenion API to pass Quokka `filePath`.
+* Updated Wallaby App to use [prefers-colors-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) for default color.
+* Updated Wallaby's AVA test runner to support setting options via the [setup function's](https://wallabyjs.com/docs/config/bootstrap.html) `testFramework` property ([#2243](https://github.com/wallabyjs/public/issues/2243)).
+* Updated the minimum system node version to run Wallaby and Quokka to node 8.x.
+* Updated file system watcher to ignore react-native project non-JavaScript components (fixes [#2313](https://github.com/wallabyjs/public/issues/2313)).
+* Improved Wallaby and Quokka source mapping for transpiled/transformed files.
+* Improved line mapping for Quokka files that live outside of opened project root.
+* Improved error handling for invalid configuration files (fixes [#2302](https://github.com/wallabyjs/public/issues/2302), [#2325](https://github.com/wallabyjs/public/issues/2325)).
+* Improved file system monitoring and handling (reduced memory footprint and CPU consumption).
+* Various updates to Wallaby and Quokka websites.
+* Various minor bug fixes for Wallaby Sublime (plugin initialization race condition, line marker cleanup).
+* Bug fix for Quokka VS Code that would cause a Quokka file to be executed multiple times when auto-save is enabled.
+* Bug fix for IntelliJ editors to send changed file content with correct line endings (i.e. '\r\n') on Windows.
+* Bug fix for TypeScript files using `<any>` keyword that resulted in incorrect line mappings for subsequent lines.
+* Bug fix for Wallaby using Jest automatic configuration where Wallaby and Jest cache are misaligned after non-saved changes.
+* Bug fix to clear uncovered regions if using Run on Save and code is changed but not saved.
+* Bug fix to send all line markers when using Run on Save and a full test run occurs.
+* Bug fix for Wallaby `jest` `testFramework` to only report `console.error` if `reportConsoleErrorAsError` is set.
+* Bug fix for excessive Chrome test runner tabs being created.
+* Bug fix for project paths containing accents/diacritics that were not being normalized (fixes [#2329](https://github.com/wallabyjs/public/issues/2329)).
+* Bug fix for Wallaby using Jest's automatic configuration where react-scripts were incorrectly used to configure jest for react-native projects.
+* Bug fix for IntelliJ editors when both Wallaby and Quokka are running at the same time where line markers would swap positions (fixes [#2314](https://github.com/wallabyjs/public/issues/2314)).
+* Bug fix for Wallaby Angular automatic configuration not working when project only consists only of libraries ([#2290](https://github.com/wallabyjs/public/issues/2290)).
+* Bug fix for Wallaby using Jest's automatic configuration not working properly when project is on a different drive to the Wallaby extension. ([#2307](https://github.com/wallabyjs/public/issues/2307)).
+* Bug fix for Wallaby and Quokka diffs highlighting re-ordered properties ([#2237](https://github.com/wallabyjs/public/issues/2237)).
+* Bug fix for Wallaby status indicator not visible in the latest version of Visual Studio 2019 ([#2240](https://github.com/wallabyjs/public/issues/2240)).
+* Bug fix for Wallaby VS Code extension reporting "The 'data' argument must be of type string." ([#2247](https://github.com/wallabyjs/public/issues/2247)).
+* Bug fix for `reportConsoleErrorAsError` not working when `testFramework` is set to `jest`  ([#2251](https://github.com/wallabyjs/public/issues/2251)).
+* Bug fix for Wallaby causing `java.lang.NullPointerException` in the latest version of WebStorm ([#2252](https://github.com/wallabyjs/public/issues/2252)).
+* Bug fix for Jest automatic configuration for monorepo not running all projects ([#2255](https://github.com/wallabyjs/public/issues/2252)].
+* Bug fix for Mocha dependency using Wallaby's Mocha default dependency instead of project's `node_modules` directory ([#2258](https://github.com/wallabyjs/public/issues/2258)).
+* Bug fix for Angular automatic configuration showing indicators on the wrong line when `codeCoverage` is `true` in `angular.json` ([#2265](https://github.com/wallabyjs/public/issues/2265)).
+
 <a name="Core 1.0.766, Wallaby App 1.0.63, IntelliJ 1.0.143, VS 1.0.50, Atom 1.0.54, VS Code 1.0.146, Sublime 1.0.50"></a>
 # Core 1.0.766, Wallaby App 1.0.63, IntelliJ 1.0.143, Visual Studio 2017, 2019 1.0.49, Atom 1.0.54, Visual Studio Code 1.0.146, Sublime Text 1.0.50 (2019-10-11)
 
