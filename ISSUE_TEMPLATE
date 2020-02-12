@@ -18,7 +18,7 @@ To share the report:
 - start Wallaby in your project;
 - wait until it reports some results (finishes running tests);
 - run `Copy Diagnostics Report` command:
-  - in VS Code, Atom, or Sublime editor execute Wallaby `Copy Diagnostics Report` command; 
+  - in VS Code, Atom, or Sublime editor execute Wallaby `Copy Diagnostics Report` command from your editor command palette; 
   - in JetBrains IDEs or VS use Wallaby `Help | Wallaby.js | Copy Diagnostics Report` menu item;
 - paste generated report from your clipboard below (feel free to review and edit the report if required).
 -->
