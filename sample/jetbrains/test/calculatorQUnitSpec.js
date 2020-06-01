@@ -1,4 +1,4 @@
-module('calculator model', {
+QUnit.module('calculator model', {
     beforeEach: function () {
         this.calculator = new Calculator();
     },
@@ -7,16 +7,16 @@ module('calculator model', {
     }
 });
 
-test('should add numbers', function () {
+QUnit.test('should add numbers', function (assert) {
     console.log(this.calculator.add(Infinity, NaN));
     console.log(this.calculator.add(2, 3));
-    equal(this.calculator.add(2, 3), 5);
+    assert.equal(this.calculator.add(2, 3), 5);
 });
 
-test('should throw error when dividing by zero', function () {
+QUnit.test('should throw error when dividing by zero', function (assert) {
     var calculator = this.calculator;
 
-    throws(
+    assert.throws(
         function () {
             calculator.divide(1, 0);
         },
@@ -28,21 +28,21 @@ test('should throw error when dividing by zero', function () {
     console.log(this.calculator.divide(2, -3));
 });
 
-test('should divide number', function () {
-    equal(this.calculator.divide(6, 2), 3);
+QUnit.test('should divide number', function (assert) {
+    assert.equal(this.calculator.divide(6, 2), 3);
 });
 
-test('should subtract positive numbers', function () {
-    equal(this.calculator.subtract(4, 2), 2);
+QUnit.test('should subtract positive numbers', function (assert) {
+    assert.equal(this.calculator.subtract(4, 2), 2);
 });
 
-test('should multiply numbers', function () {
-    equal(this.calculator.multiply(0, 3), 0);
-    equal(this.calculator.multiply(3, 0), 0);
+QUnit.test('should multiply numbers', function (assert) {
+    assert.equal(this.calculator.multiply(0, 3), 0);
+    assert.equal(this.calculator.multiply(3, 0), 0);
 });
 
 
-module('calculator view', {
+QUnit.module('calculator view', {
     beforeEach: function () {
         $('body').append("<div id=\"calculator\"/>");
         $('#calculator').html(calculatorTemplate);
@@ -53,7 +53,7 @@ module('calculator view', {
     }
 });
 
-test('should multiply numbers', function () {
+QUnit.test('should multiply numbers', function (assert) {
 
     console.log(window.document.body.clientHeight);
 
@@ -62,34 +62,34 @@ test('should multiply numbers', function () {
     $('#9').click();
     $('#eval').click();
 
-    equal($('.screen').text(), '16');
+    assert.equal($('.screen').text(), '16');
 });
 
-test('should divide numbers', function () {
+QUnit.test('should divide numbers', function (assert) {
     $('#6').click();
     $('#divide').click();
     $('#3').click();
     $('#eval').click();
 
-    equal($('.screen').text(), '2');
+    assert.equal($('.screen').text(), '2');
 });
 
 
-test('should multiply numbers', function () {
+QUnit.test('should multiply numbers', function (assert) {
     $('#7').click();
     $('#multiply').click();
     $('#8').click();
     $('#eval').click();
 
-    equal($('.screen').text(), '56');
+    assert.equal($('.screen').text(), '56');
 });
 
 
-test('should subtract numbers', function () {
+QUnit.test('should subtract numbers', function (assert) {
     $('#7').click();
     $('#minus').click();
     $('#8').click();
     $('#eval').click();
 
-    equal($('.screen').text(), '-1');
+    assert.equal($('.screen').text(), '-1');
 });
