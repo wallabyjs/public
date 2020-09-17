@@ -36,7 +36,7 @@ For the purposes of this license agreement, an open source software project is d
 * publicly available on https://github.com with an open source license, and
 * is not commercialized, meaning that there is no paid version available and creators/maintainers do not provide commercial services around the project (e.g. paid support, consulting, etc.).
 
-The Licensee agrees for Wallaby to remotely analyze local project source code to ensure their project matches the publicly available version.
+The Licensee agrees for Wallaby to analyze local project data to ensure their project matches the publicly available version.
 
 The Licensee agrees for Wallaby to collect telemetry data on the use of Wallaby for their open source project.
 
