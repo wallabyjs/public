@@ -28,6 +28,18 @@ Upon expiration of Evaluation Period, Licensee must obtain License Certificate f
 
 Software contains a feature that will automatically disable Software upon expiration of a short period of time while Software is used during Evaluation Period. Licensee may not disable, destroy, or remove this feature of Software, and any attempt to do so will be in violation of this Agreement and will terminate Licensee's rights to use Software.
 
+# RESTRICTED USE FOR OPEN SOURCE SOFTWARE PROJECTS
+
+Subject to the terms of this Agreement, Licensee is granted a right to use Software for open source projects without charge. The license may be revoked at any time and for any reason by the Licensor.
+
+For the purposes of this license agreement, an open source software project is defined as any project that is:
+* publicly available on https://github.com with an open source license, and
+* is not commercialized, meaning that there is no paid version available and creators/maintainers do not provide commercial services around the project (e.g. paid support, consulting, etc.).
+
+The Licensee agrees for Wallaby to remotely analyze local project source code to ensure their project matches the publicly available version.
+
+The Licensee agrees for Wallaby to collect telemetry data on the use of Wallaby for their open source project.
+
 # TYPES OF LICENSE
 
 During the ordering process, you will be asked to select the type and quantity of license(s) you require:
