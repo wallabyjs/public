@@ -62,7 +62,7 @@ The Software is licensed to provide an automated testing tool. It is intended fo
 
 If you purchase a Named User License: You may install and use the Software only for your individual internal business or non-business purposes. If you are purchasing a license under the name of a company, you may not purchase a named user license.
 
-If you purchase a Company Seat License: A Permitted Number of personnel may use the software for your internal business purposes. "Permitted Number" means a number less than or equal to the number of seats you have purchased and paid for when acquiring the Company Seat License. Different employees or members of your organisation may use the Software, provided that no more than the Permitted Number of employees is using it at any one time.
+If you purchase a Company Seat License: A Permitted Number of personnel may use the software for your internal business purposes. "Permitted Number" means a number less than or equal to the number of seats you have purchased and paid for when acquiring the Company Seat License. Different employees or members of your organisation may use the Software, provided that no more than the Permitted Number of employees is using it at any one time. "Organisation" includes any entity which controls, is controlled by, or is under common control by the legal entity that purchased the license. For the purposes of this definition, "control" means (i) the power, directly or indirectly, to direct or manage such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares or beneficial ownership of such entity.
 
 # LICENSE KEY
 
