@@ -1,5 +1,83 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features.
 
+<a name="Core 1.0.968, Wallaby App 1.0.74, IntelliJ 1.0.198, VS 1.0.58, Atom 1.0.61, VS Code 1.0.244, Sublime 1.0.61"></a>
+# Core 1.0.968, Wallaby App 1.0.74, IntelliJ 1.0.198, VS 1.0.58, Atom 1.0.61, VS Code 1.0.244, Sublime 1.0.61 (2020-09-30)
+
+## Changes and Bug Fixes
+* [New Test Stories feature](https://wallabyjs.com/docs/intro/test-stories.html) for IntelliJ Editors.
+* [New Open Source Licensing Model](https://wallabyjs.com/oss/).
+* [New Detatch Test Story](https://wallabyjs.com/docs/intro/test-stories.html#detaching-test-story-file-from-the-debugger-and-source-code) feature for read-only snapshot of test execution path.
+* [New Quokka support for native ES modules](https://quokkajs.com/docs/configuration.html#es-modules-and-top-level-await).
+* [New Quokka support for top-level await](https://quokkajs.com/docs/configuration.html#es-modules-and-top-level-await).
+* [New Quokka support for create-react-app projects](https://quokkajs.com/docs/configuration.html#create-react-app).
+* VS Code v1.47, v1.48, v1.49 support.
+* IntelliJ 2020.2.x, 2020.3.x support.
+* Atom v1.49, v1.50, v1.51 support.
+* Added support for latest version of NX Workspace (v10.2.x).
+* Added support for latest version of Angular CLI (v10.1.3).
+* Added language support for logical assignment operators (||=, &&=, ??=, |=, &=).
+* Added language support for static class fields.
+* Added language support for nullish coalescing [#2473](https://github.com/wallabyjs/public/issues/2473).
+* Added language support for [private methods](https://github.com/tc39/proposal-private-methods).
+* Added support for `@testing-library` `screen.debug()` output [#2510](https://github.com/wallabyjs/public/issues/2510).
+* Added warning for when time-travel debugger cannot execute correctly because there is more than one test with the same name [#2518](https://github.com/wallabyjs/public/issues/2518).
+* Added additional support for `.only` usages within Jest.
+* Added patch for `alert`, `confirm`, and `prompt` browser globals if they exist and are still native methods [2519](https://github.com/wallabyjs/public/issues/2519).
+* Added Quokka built-in support for TypeScript paths/aliases.
+* Added Quokka built-in support for JSDOM instead of using 3rd party package.
+* Added visual indicator to show when a test is included in the current set of filtered tests.
+* Added support for Webpack's `@stylable/webpack-plugin` plugin.
+* Added new Wallaby `preservePaths` setting to not replace the instrumented file paths with the relative path in any messages reported by Wallaby [#2492](https://github.com/wallabyjs/public/issues/2492).
+* Added emoji rendering support for Sublime Text inline comments and values.
+* Added global error stack trace for browser-based tests.
+* Added support for WSL2 for Intellij Editors by detecting and using project cache on WSL2 file system [#2454](https://github.com/wallabyjs/public/issues/2454).
+* Added code lens options to Wallaby for VS Code to make commands more discoverable.
+* Added support for using Wallaby App from VS Code Remote workspaces [#2136](https://github.com/wallabyjs/public/issues/2136).
+* Added [Wallaby docs](https://wallabyjs.com/docs/intro/get-started-vscode.html#remote-containers) and [sample](https://github.com/wallabyjs/wallaby-vscode-remote-containers) for setting up Wallaby to work with VS Code containers 
+* Added compact view mode for Wallaby App test details view [#2438](https://github.com/wallabyjs/public/issues/2438).
+* Added new context actions to Wallaby for VS Code extension to `show assertion data diff` and `jump to error source`.
+* Updated Wallaby App to load project immediately (instead of port scanning) when launched using editor commands and links.
+* Updated Wallaby App to fall back to use https://wallabyjs.com/app/ when Wallaby localhost web server port (port 51245) is not available.
+* Updated Wallaby App to use a random port to connect to project if all well-known ports are unavailable.
+* Updated Quokka for VS Code extension to improve initial load times [#536](https://github.com/wallabyjs/quokka/issues/536).
+* Updated Wallaby to ignore all dot folders for automatic configuration for Jest to improve performance [#2470](https://github.com/wallabyjs/public/issues/2470#issuecomment-653497803).
+* Updated Advanced Logging to include system generated information messages (in their own color), and to indicate where a value was logged value but the line of code was never executed.
+* Updated Quokka for VS Code to minimize initial load dependencies to improve load times [#536](https://github.com/wallabyjs/quokka/issues/536).
+* Updated Wallaby to merge global errors across all worker processes.
+* Updated Quokka to clear any intervals that were created in Quokka file before re-using node process.
+* Updated test execution behavior to re-execute tests after a runtime error or global error occurs.
+* Updated Wallaby's worker process reuse and recycling to allow more time for first test execution before attempting to recycle test to improve performance on project startup.
+* Updated inline formatted object to be consistent with console.log.
+* Updated automatic configuration for Angular CLI so that behaviour aligns with `ng test` and so that any scripts/styles with `bundleName` property is ignored.
+* Updated Quokka JSDOM to correctly reset globals (e.g. previously `setTimeout` was not being reset).
+* Updated Quokka JSDOM defaults to pretendToBeVisual and runScripts `dangerously`.
+* Updated Wallaby and Quokka inline logging with support for a lot more expression types, and a more intuitive user experience (more than doubled the number of supported scenarios for variable and expressions).
+* Updated source mapping for babel compilers to be more accurate.
+* Updated Wallaby to not show commands for new features that are not supported by expired licenses.
+* Updated Wallaby for VS Code update mechanism to update in the background and not require VS Code restart before Wallaby changes are available.
+* Updated Wallaby for IntelliJ Editors to support updating snapshopts from the console for an entire file.
+* Updated Quokka for IntelliJ to not set project path for scratch files (fixes import paths and tsconfig.json paths not working correctly in scratch files).
+* Bug fix for test file selection where `.only` in commented code would limit which tests were executed [#2509](https://github.com/wallabyjs/public/issues/2509).
+* Bug fix for incorrect coverage reporting when destructuring a nullable React prop [#2513](https://github.com/wallabyjs/public/issues/2513).
+* Bug fix for setup and teardown not always working properly with automatic configuration for Jest because Wallaby was instrumenting imported code files [#2517](https://github.com/wallabyjs/public/issues/2517).
+* Bug fix for Angular projects that used sass and stylus loaders [#2504](https://github.com/wallabyjs/public/issues/2504).
+* Bug fix for Wallaby not starting in Angular 10 projects with plugins that are not compatible with test environments [#2508](https://github.com/wallabyjs/public/issues/2508).
+* Bug fix for VS Code where Wallaby.js output window conflicts with Quokka resulting in output window highlighting being removed [#2505](https://github.com/wallabyjs/public/issues/2505).
+* Bug fix for automatic configuration for jest that would result in empty stack trace when a global error occurred.
+* Bug fix for Wallaby for VS Code where Value Explorer would allow infinitely expanding an empty file node.
+* Bug fixes for various minor test stories issues.
+* Bug fixes for various minor time travel debugger issues.
+* Bug fix for failure to instrument code where line breaks occur between static class method names and function parameters [#2481](https://github.com/wallabyjs/public/issues/2481).
+* Bug fix for a file being ignored by webpack when compilation fails.
+* Bug fix for automatic configuration for Angular CLI projects when `tsconfig.json` file includes comments [#2482](https://github.com/wallabyjs/public/issues/2482)
+* Bug Fix for Jest < v21 whose supported had been broken because of more recent updates.
+* Bug fix for nx workspaces that resulted in nested projects not loading config properly [#2461](https://github.com/wallabyjs/public/issues/2461).
+* Bug fix for VS Code in remote workspace where file:line:column links do not open correctly [#2515](https://github.com/wallabyjs/public/issues/2515).
+* Bug fix bug for automatic configurating for Jest that was excluding all directories named `build` [#2452](https://github.com/wallabyjs/public/issues/2452).
+* Bug fix for automatic configuration for Jest where a configuration file outside of the root directory was specified and `<rootDir>` folders were not correctly set.
+* Bug fix for Wallaby for VS Code having incorrect output window hyperlink positions.
+* Bug fix where Wallaby would stop working with Jest if an exception was thrown after test execution finished (i.e. because of async action) [#2149](https://github.com/wallabyjs/public/issues/2149).
+
 <a name="Core 1.0.915, Wallaby App 1.0.72, IntelliJ 1.0.177, VS 1.0.58, Atom 1.0.59, VS Code 1.0.211, Sublime 1.0.61"></a>
 # Core 1.0.915, Wallaby App 1.0.72, IntelliJ 1.0.177, VS 1.0.58, Atom 1.0.59, VS Code 1.0.211, Sublime 1.0.61 (2020-06-19)
 
