@@ -22,7 +22,7 @@ Please note that while the changelog is updated every few months, we release new
 * Added support for `@testing-library` `screen.debug()` output [#2510](https://github.com/wallabyjs/public/issues/2510).
 * Added warning for when time-travel debugger cannot execute correctly because there is more than one test with the same name [#2518](https://github.com/wallabyjs/public/issues/2518).
 * Added additional support for `.only` usages within Jest.
-* Added patch for `alert`, `confirm`, and `prompt` browser globals if they exist and are still native methods [2519](https://github.com/wallabyjs/public/issues/2519).
+* Added patch for `alert`, `confirm`, and `prompt` browser globals if they exist and are still native methods [#2519](https://github.com/wallabyjs/public/issues/2519).
 * Added Quokka built-in support for TypeScript paths/aliases.
 * Added Quokka built-in support for JSDOM instead of using 3rd party package.
 * Added visual indicator to show when a test is included in the current set of filtered tests.
