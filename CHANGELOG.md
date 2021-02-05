@@ -1,5 +1,67 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features.
 
+<a name="Core 1.0.1023, Wallaby App 1.0.75, IntelliJ 1.0.210, VS 1.0.61, Atom 1.0.62, VS Code 1.0.262, Sublime 1.0.62"></a>
+# Core 1.0.1023, Wallaby App 1.0.75, IntelliJ 1.0.210, VS 1.0.61, Atom 1.0.62, VS Code 1.0.262, Sublime 1.0.62 (2020-02-05)
+## Changes and Bug Fixes
+* [New CPU Profiler feature](https://twitter.com/wallabyjs/status/1349627313584021505) ([Wallaby](https://wallabyjs.com/docs/intro/test-profiler.html), [Quokka](https://quokkajs.com/docs/#cpu-profiler)).
+* [New multiple sticky/removable values feature](https://twitter.com/wallabyjs/status/1356875072435347456).
+* [New "Run to breakpoint" Time Travel Debugger feature](https://wallabyjs.com/docs/intro/time-travel-debugger.html#debug-actions).
+* Significantly [improved Wallaby Jest incremental run performance](https://twitter.com/wallabyjs/status/1354338355819933696) (up to **5 times** faster now for auto-config Jest).
+* Significantly improved Wallaby and Quokka show/copy/debug value selection; allows fuzzy selection; enhanced support for TypeScript and Babel, and additional syntax selection.
+* Significantly improved Wallaby file watcher CPU consumption on Mac.
+* VS Code v1.50, v1.51, v1.52 support.
+* Atom v1.52, v1.53, v1.54 support.
+* Added [Wallaby plugin](https://plugins.jetbrains.com/plugin/15742-wallaby) to JetBrains Marketplace.
+* Added support for latest version of Angular CLI (v11).
+* Added support for Jest v26.6.2.
+* Added support for Jasmine v3.6.
+* Added support for vue-jest v5.x.
+* Added support for react-app-rewired.
+* Added support for the latest version of Webpack 5.
+* Added support for `coveragePathIgnorePatterns` in addition to existing support for `collectCoverageFrom` setting in auto-config Jest.
+* Added support for `defaultIgnorePaths` setting in auto-config Jest.
+* Added [negative zero reporting support](https://discord.com/channels/694023081168994355/694774723778838558/785428903493107722).
+* Added new `wallaby.compactMessageOutput` setting (similar to Quokka) to not add new lines between test messages or test errors in Wallaby output.
+* Added `symlinkNodeModules` setting (set to true if tested package is ES module) that makes node test runner symlink local node modules from Wallaby cache to correctly support ES modules resolution.
+* Added support for projects with indirect cross-references to another project via `includePaths` in Angular CLI integration.
+* Added `angular-cli/excludedProjects` setting to allow Wallaby to ignore specified projects for Angular CLI generated workspaces.
+* Added `alwaysOpenLocalWallabyAppUrl` [setting in VS Code](https://discordapp.com/channels/694023081168994355/694035930541064293/767710649563742248).
+* Added support for re-mapping ports in remote workspaces for Wallaby App and websockets in case they don't automatically map to the host in VS Code.
+* Added support for selecting multiple files for exclusive test run from context menu [#2562](https://github.com/wallabyjs/public/issues/2562).
+* Improved testing-library support.
+* Improved Wallaby Jest startup time.
+* Improved source mapping for transformed ranges resulting in better and more reliable display of expression evaluation results.
+* Improved VS Code CodeLens behavior.
+* Improved Value Explorer performance in IntelliJ based editors.
+* Updated automatic configuration for Jest to log console messages the same as other testing frameworks.
+* Improved Wallaby Jest startup time.
+* Improved global errors handling in tracer
+* Improved core download/update experience in VS Code. Updated Wallaby extension auto-update mechanism.
+* Updated automatic configuration for Jest to log console messages the same as other testing frameworks.
+* Various improvements and fixes in [Wallaby Open Source Licensing Model](https://wallabyjs.com/oss/).
+* Improved Wallaby App test tree user experience when using test text filter [#2552](https://github.com/wallabyjs/public/issues/2552).
+* Added context menu item to select a folder as automatic configuration and start Wallaby in VS Code.
+* Changed TypeScript `declaration` setting from a soft default to a hard default.
+* Fixed displaying coverage indicators or tracking on un-editable git files that may be displayed in VS Code diff view.
+* Stopped keyboard shortcut for changing tabs from getting stuck on Debugger tab for JetBrains editors [#2565](https://github.com/wallabyjs/public/issues/2565).
+* Fixed IntelliJ based editors plugin to resolve symlinks if the project path or config path is a symlinked directory [#2543](https://github.com/wallabyjs/public/issues/2543).
+* Bug fix for static field name check [#2586](https://github.com/wallabyjs/public/issues/2586).
+* Bug fix for calculating files with no code coverage [#2587](https://github.com/wallabyjs/public/issues/2587).
+* Bug fix for incorrectly sorting object properties before displaying them in editor.
+* Bug fix for `collectCoverageFrom` pattern generation when a single module file extension is specified [#2530](https://github.com/wallabyjs/public/issues/2530).
+* Bug fix to make original range uncovered only if the range is not the only range on its line [#547](https://github.com/wallabyjs/quokka/issues/547).
+* Bug fix for Jest global setup on first load to ensure env changes are correctly communicated to workers when they are recycled.
+* Fixed manual config Jest compatibility issue (snapshots were not updated in project directory).
+* Fixed `process.cwd()` for Windows when `cwd()` case returned by node.js doesn't match the on-disk directory casing.
+* Fixed mocha dispose when previous test run is still running [#2564](https://github.com/wallabyjs/public/issues/2564).
+* Fixed race condition in tracer caused test run to be skipped when global errors occurred and tests are loaded in `setup` function.
+* Bug fix for Quokka `stdEsm` flag that was not respecting `false` value without `nativeEsm` flag.
+* Bug fix in `console.info` incorrectly inspecting object instead of using tracer's API like other similar functions (warn, error, log).
+* Bug fix for a warning to always display on Quokka first load for TypeScript files when tsconfig.paths is not configured.
+* Bug fix for when escaped properties (space, single quote or double quote) would not be copied to clipboard properly.
+* Bug fix for built-in @babel/register not being used.
+* Bug fix for loading `tsconfigPaths` and merging `tsconfig.json` compiler options [#553](https://github.com/wallabyjs/quokka/issues/553).
+
 <a name="Core 1.0.968, Wallaby App 1.0.74, IntelliJ 1.0.198, VS 1.0.58, Atom 1.0.61, VS Code 1.0.244, Sublime 1.0.61"></a>
 # Core 1.0.968, Wallaby App 1.0.74, IntelliJ 1.0.198, VS 1.0.58, Atom 1.0.61, VS Code 1.0.244, Sublime 1.0.61 (2020-09-30)
 
