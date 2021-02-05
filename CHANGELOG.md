@@ -1,7 +1,7 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features.
 
 <a name="Core 1.0.1023, Wallaby App 1.0.75, IntelliJ 1.0.210, VS 1.0.61, Atom 1.0.62, VS Code 1.0.262, Sublime 1.0.62"></a>
-# Core 1.0.1023, Wallaby App 1.0.75, IntelliJ 1.0.210, VS 1.0.61, Atom 1.0.62, VS Code 1.0.262, Sublime 1.0.62 (2020-02-05)
+# Core 1.0.1023, Wallaby App 1.0.75, IntelliJ 1.0.210, VS 1.0.61, Atom 1.0.62, VS Code 1.0.262, Sublime 1.0.62 (2021-02-05)
 ## Changes and Bug Fixes
 * [New CPU Profiler feature](https://twitter.com/wallabyjs/status/1349627313584021505) ([Wallaby](https://wallabyjs.com/docs/intro/test-profiler.html), [Quokka](https://quokkajs.com/docs/#cpu-profiler)).
 * [New multiple sticky/removable values feature](https://twitter.com/wallabyjs/status/1356875072435347456).
