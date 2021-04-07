@@ -15,7 +15,7 @@ Wallaby.js consists of **editor plugin** to provide features such as
 
 ![wallaby plugin](http://wallabyjs.com/assets/img/wallabyInActionLarge.gif)
 
-- and **[wallaby web app](/docs/intro/get-started-wallaby-app.html)** to provide strategic level features, such as the realtime bird's eye view of your project's tests connected to your editor:
+- and **[wallaby web app](http://wallabyjs.com/docs/intro/get-started-wallaby-app.html)** to provide strategic level features, such as the realtime bird's eye view of your project's tests connected to your editor:
 
 ![wallaby app](http://wallabyjs.com/assets/img/wallabyapp1.gif)
 
