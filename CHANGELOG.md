@@ -1,4 +1,56 @@
-Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features.
+Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
+
+<a name="Core 1.0.1064, Wallaby App 1.0.77, IntelliJ 1.0.216, VS 1.0.63, Atom 1.0.63, VS Code 1.0.286, Sublime 1.0.64"></a>
+# Core 1.0.1064, Wallaby App 1.0.77, IntelliJ 1.0.216, VS 1.0.63, Atom 1.0.63, VS Code 1.0.286, Sublime 1.0.64 (2021-04-20)
+## Changes and Bug Fixes
+* [New Wallaby Output Inspector feature](https://wallabyjs.com/docs/intro/output-inspector.html).
+* New Wallaby Test Story Viewer [`hide repeated code`](https://wallabyjs.com/whatsnew/test-story-hide-repeated-code.html) feature.
+* [New Quokka `Auto Log` feature](https://quokkajs.com/whatsnew/auto-log.html).
+* [New Quokka for VS Code Automatic Start settings](https://quokkajs.com/docs/index.html#configuration).
+* [New Quokka for VS Code Recent Files feature](https://quokkajs.com/whatsnew/vscode-recent-files.html).
+* [New Quokka for JetBrains Editors Auto Start Setting](https://quokkajs.com/whatsnew/jetbrains-autostart-scratchfiles.html).
+* New Wallaby VS Code Start View.
+* [New Wallaby What's New page](https://wallabyjs.com/whatsnew/).
+* New Quokka VS Code Start View.
+* [New Quokka What's New Page](https://quokkajs.com/whatsnew/).
+* New Quokka settings to allow 'Pro' users to define Show Value behavior: [`Show Value on Selection`](https://quokkajs.com/docs/configuration.html#show-value-on-selection) and [`Show All Values`](https://quokkajs.com/docs/configuration.html#show-all-selected-values).
+* Added [support for `.svelte`](https://wallabyjs.com/whatsnew/svelte-file-support.html) files (showing coverage and logged values inside script blocks).
+* Added first class support for [`Yarn 2`](https://wallabyjs.com/docs/integration/yarn2.html) (was previous possible with a customized node-runner).
+* Changed behavior of Wallaby `Run Line Test`, `Run File Tests` and `Run Project Tests`; these commands no longer update snapshots, instead use the `Update Test Snapshots`, `Update File Snapshots` and `Update Project Snapshots` commands [#2678](https://github.com/wallabyjs/public/issues/2678).
+* Improved Exclusive Test run behavior to automatically add any modified test files to the current exclusive test run; can be disabled with `addModifiedTestFileToExclusiveTestRun: false` setting [#2630](https://github.com/wallabyjs/public/issues/2630).
+* Improved Wallaby/Jest integration when loading multi-project files ([#2687](https://github.com/wallabyjs/public/issues/2687), [#2689](https://github.com/wallabyjs/public/issues/2689)).
+* Improved Wallaby [`setup` and `teardown` functions](https://wallabyjs.com/docs/config/bootstrap.html) to await for a returned Promise.
+* Improved Quokka support for react projects; now sets `React` global with React object to better replicate browser runtime.
+* Improved webpack 5 integration to deal with multi-chunk outputs ([#2651](https://github.com/wallabyjs/public/issues/2651), [#2652](https://github.com/wallabyjs/public/issues/2652), [#2674](https://github.com/wallabyjs/public/issues/2674)).
+* Improved Wallaby App filter toggles (now checkboxes instead of switches).
+* Updated Wallaby to read `.env` files on startup for `create-react-app` applications [#2636](https://github.com/wallabyjs/public/issues/2636#issuecomment-786195135).
+* Added new Wallaby `mapConsoleMessagesStackTrace` to map stack trace within console.log messages back to original lines [#2677](https://github.com/wallabyjs/public/issues/2677#issuecomment-814560966).
+* Added more Wallaby for VS Code settings to control Code Lens behavior.
+* Added `Run Test` code lens for Wallaby for VS Code (off by default) [#2664](https://github.com/wallabyjs/public/issues/2664#issuecomment-805385826).
+* VS Code v1.53, v1.54, v1.55 support.
+* Atom v1.55, v1.56 support.
+* IntelliJ 2021.1.x support.
+* Added support for the latest version of Jest (v26.6.3).
+* Added support for `create-react-app` with `react-app-rewired` integration.
+* Added support for the latest version of webpack (v5.34.x) ([#2659](https://github.com/wallabyjs/public/issues/2659), [#2667](https://github.com/wallabyjs/public/issues/2667), [#2679](https://github.com/wallabyjs/public/issues/2679)).  
+* Added support for the latest version of Angular CLI (v11.2.x).
+* Added support for the latest version of NX Workspace (v12.0.x) [#2639](https://github.com/wallabyjs/public/issues/2639).
+* Added support for the latest version of Jasmine (v3.7.x) [#2673](https://github.com/wallabyjs/public/issues/2673).
+* Added new `logLimit` Quokka setting (defaults to 100) to limit how many values are logged for a given expression (e.g. when value is logged in a loop).
+* Added new `testRunComplete` hook to allow Wallaby to perform some processing after a test run completes [#2627](https://github.com/wallabyjs/public/issues/2627#issuecomment-793396305).
+* Bug Fix for Value Explorer with Wallaby `Run on Save`, previously was not working [#2670](https://github.com/wallabyjs/public/issues/2670)
+* Bug Fix for Wallaby ignoring any file names containing `[...` [#2655](https://github.com/wallabyjs/public/issues/2655).
+* Bug Fix for Quokka for JetBrains editors reporting a fatal error on startup [#585](https://github.com/wallabyjs/quokka/issues/585).
+* Bug Fix for Quokka for JetBrains editors reporting an `Already disposed` exception [#599](https://github.com/wallabyjs/quokka/issues/599).
+* Bug Fix for Wallaby and Quokka causing JetBrains editors to freeze sometimes when used together [#610](https://github.com/wallabyjs/quokka/issues/610).
+* Bug Fix for Windows file system casing issues when the path of the folder opened in editor casing does not match the on-disk case.
+* Bug Fix for Quokka scratch file not loading when `nativeEsm` setting is `true`.
+* Bug Fix for Quokka not using customized node path when `nativeEsm` setting is `true`.
+* Bug Fix for Wallaby not starting when using WSL2 with JetBrains Editors.
+* Bug Fix for Quokka not correctly expanding Value Explorer when previous run finishes in less than 1 second.
+* Bug Fix for Quokka Scratch files not working in latest version of JetBrains editors (v2021.1+).
+* Bug Fix for Value Explorer incorrectly sorting range nodes alphabetically instead of numerically.
+* Various Wallaby Diagnostics Report improvements to help diagnose issues faster.
 
 <a name="Core 1.0.1023, Wallaby App 1.0.75, IntelliJ 1.0.210, VS 1.0.61, Atom 1.0.62, VS Code 1.0.262, Sublime 1.0.62"></a>
 # Core 1.0.1023, Wallaby App 1.0.75, IntelliJ 1.0.210, VS 1.0.61, Atom 1.0.62, VS Code 1.0.262, Sublime 1.0.62 (2021-02-05)
