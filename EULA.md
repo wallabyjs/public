@@ -68,7 +68,7 @@ If you purchase a Company Seat License: A Permitted Number of personnel may use 
 
 You will be issued with one or more License Keys when you purchase a license, which will allow you to download the Software. License Keys must not be shared or disclosed with any other person or organisation. You must keep all License Keys confidential and secure. If you disclose a License Key to any person or organisation, Licensor reserves the right to terminate this Agreement and revoke the license granted to you, without any refund of any license fees paid.
 
-The Licensee agrees for Wallaby to peridically detect use of license key(s) as a part of anti-counterfeiting and license abuse measures.
+The Licensee agrees for Wallaby to periodically detect use of license key(s) as a part of anti-counterfeiting and license abuse measures.
 
 # RESTRICTIONS ON USE OF THE SOFTWARE
 
