@@ -1,5 +1,74 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="Core 1.0.1296, Wallaby App 1.0.85, Wallaby IntelliJ 1.0.250, Wallaby VS 1.0.66, Wallaby VS Code 1.0.343, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.351, Quokka VS Code 1.0.486, Quokka Sublime 1.0.157"></a>
+# Core 1.0.1296, Wallaby App 1.0.85, Wallaby IntelliJ 1.0.250, Wallaby VS 1.0.66, Wallaby VS Code 1.0.343, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.351, Quokka VS Code 1.0.486, Quokka Sublime 1.0.157 (2022-06-30)
+
+* New for Wallaby - [Vitest Testing Framework support](https://wallabyjs.com/whatsnew/vitest-integration.html).
+* New for Wallaby - [Smart Start](https://wallabyjs.com/whatsnew/smart-start.html).
+* New for Quokka - [Codeclip feature to share an online recording of your code execution](https://quokkajs.com/whatsnew/codeclip.html).
+* New for Wallaby/Quokka - [HTML output highlighted for logged values using your editor theme and colors](https://wallabyjs.com/whatsnew/html-highlighting.html).
+* New for Wallaby/Quokka - [Resolve getters during logging](https://wallabyjs.com/whatsnew/resolve-getters.html).
+* New for Wallaby/Quokka - [Show Line Value(s) / Timing(s)](https://wallabyjs.com/whatsnew/show-line-values.html).
+* New for Wallaby - [Configurable Log Limits](https://wallabyjs.com/docs/config/overview.html#log-limits) ([#2108](https://github.com/wallabyjs/public/issues/2108)).
+* New for Wallaby - VS Code setting to control the click-through behavior of Test Explorer failing tests, `wallaby.testExplorerFeature.showErrorLocation` ([#2993](https://github.com/wallabyjs/public/issues/2993)).
+* VS Code v1.65, v1.66, v1.67, v1.68, v1.69 support.
+* Drop support for Atom editors, now [end-of-life / deprecated](https://github.blog/2022-06-08-sunsetting-atom/).
+* JetBrains Editors 2022.2.x support ([#2956](https://github.com/wallabyjs/public/issues/2956)).
+* Added support to Wallaby for the latest versions of Webpack.
+* Added support to Wallaby for the latest version of Angular CLI (v14) ([#2951](https://github.com/wallabyjs/public/issues/2951)).
+* Added support to Quokka for `node:*` imports when using `stdEsm`.
+* Added support to Wallaby/Quokka for logging promises in `console.log`.
+* Added support to Wallaby for the latest version of swc jest-transformer.
+* Added support to Wallaby for Jest v28.
+* Added support to Wallaby for Ava projects using ESM.
+* Added support to Wallaby/Quokka for node 18.x ([3780](https://github.com/wallabyjs/quokka/issues/780)).
+* Added support to Wallaby for the latest version of `react-app-rewired` ([#2991](https://github.com/wallabyjs/public/issues/2991)).
+* Added support to Wallaby for override which automatic configuration providers will be used ([#2992](https://github.com/wallabyjs/public/issues/2992)).
+* Added support to Wallaby/Quokka for latest version of Sublime Text 4.
+* Added support to Wallaby for breaking changes to Angular CLI v14.x.
+* Added support to Quokka for the latest version of `ts-node` v10.8.x ([#789](https://github.com/wallabyjs/quokka/issues/789)).
+* Added support to Wallaby for the latest version of Chrome (breaking change on Linux environments).
+* Added support to Quokka for TypeScript ESM to resolve workspace modules.
+* Added support to Quokka TypeScript paths when using ESM ([#794](https://github.com/wallabyjs/quokka/issues/794)).
+* Improved Wallaby/Quokka support for VS Code remote development; now automatically synchronizes license information on startup ([#2937](https://github.com/wallabyjs/public/issues/2937)).
+* Improved Wallaby support for yarn 3 workspaces ([#2979](https://github.com/wallabyjs/public/issues/2979)).
+* Improved Wallaby/Quokka debugging for transpiled files.
+* Improved Wallaby test selection to sort filtered tests at the top of test selection ([#2985](https://github.com/wallabyjs/public/issues/2985)).
+* Improved Wallaby/Quokka - performance when mapping transformed files to original source code.
+* Improved Wallaby for JetBrains Run Configuration to automatically set WSL to "Yes" when node path contains the WSL file/folder marker ([#2882](https://github.com/wallabyjs/public/issues/2882)).
+* Updated Wallaby/Quokka to load comment hints directly from source files instead of transformed files; means support for transpilers that do not emit comments (e.g. esbuild, some vite plugins).
+* Updated Wallaby to set `autoDetect: true` if `files` and `tests` sections are not explicitly set (and not using `override` option).
+* Updated Wallaby/Quokka to automatically resolve getters when using Value Explorer auto expand mode.
+* Updated Wallaby Webpack 5 integration to use memory cache if it is not explicitly configured ([#2954](https://github.com/wallabyjs/public/issues/2954)).
+* Updated Quokka automatically use native ESM if `package.json` has `"type": "module"` and configuration does not explicitly use `stdEsm`.
+* Updated Wallaby/Quokka to never display Live Values (i.e. `undefined`) for `console.log` return values.
+* Updated Quokka to not use `--experimental-top-level-await` from node version 18.0.0 ([#780](https://github.com/wallabyjs/quokka/issues/780)).
+* Updated Quokka to include Quokka window icon for JetBrains editors ([#569](https://github.com/wallabyjs/quokka/issues/569)).
+* Updated Quokka to set TypeScript `compilerOption.target` to `ES6` if not set in TypeScript configuration file ([#788](https://github.com/wallabyjs/quokka/issues/788)).
+* Updated Wallaby to make hyperlinks clickable in Wallaby App console log messages.
+* Updated Quokka for JetBrains editors to show filenames instead of Quokka #1, Quokka #2, etc. ([#551](https://github.com/wallabyjs/quokka/issues/551)).
+* Updated Wallaby to show filename above file preview screen content viewer in Wallaby App ([#3002](https://github.com/wallabyjs/public/issues/3002)).
+* Bug fix for Wallaby with jest cache where file would not be processed when added/removed from project.
+* Bug fix for Quokka with TypeScript, was not working when `tsconfig.json` uses `emitDeclarationOnly` ([#755](https://github.com/wallabyjs/quokka/issues/755)).
+* Bug fix for Wallaby where error message from Testing Library would be truncated ([#2961](https://github.com/wallabyjs/public/issues/2961)).
+* Bug fix for Wallaby where updating jest inline snapshots would update the wrong part of the file ([#2963](https://github.com/wallabyjs/public/issues/2963)).
+* Bug fix for Wallaby where VS Code Test Explorer UI would not find tests ([#2962](https://github.com/wallabyjs/public/issues/2962)).
+* Bug fix for Wallaby/Quokka where random cache-breaker comment would cause re-execution of unchanged files.
+* Bug fix for Wallaby's Output Inspector not showing values when using `node` earlier than v11.0.0 ([#2967](https://github.com/wallabyjs/public/issues/2967)).
+* Bug fix for Quokka using TypeScript where `typeRoots` were not correctly processed ([#772](https://github.com/wallabyjs/quokka/issues/772)).
+* Bug fix for Wallaby/Quokka where active line log in Test/Code Stories would not display in VS Code if was no longer the active editor ([#436](https://github.com/wallabyjs/quokka/issues/436)).
+* Bug fix for Wallaby where focus on a test is lost when a syntax error is encountered ([#2987](https://github.com/wallabyjs/public/issues/2987)).
+* Bug fix for Wallaby where Live Comments and Identifier Expressions would be ignored after debugger selection, or after stopping/starting the debugger.
+* Bug fix for Wallaby where jest global error handled was being removed resulting in unhandled exceptions ([#2968](https://github.com/wallabyjs/public/issues/2968), [#2988](https://github.com/wallabyjs/public/issues/2988)).
+* Bug fix for Quokka when using ESM where Quokka file would sometimes not be re-executed.
+* Bug fix for Wallaby where caret (^) character in file paths would cause browser-based tests to fail ([#3001](https://github.com/wallabyjs/public/issues/3001)).
+* Bug fix for Wallaby where Wallaby App `Update Snapshot` was not working ([#3004](https://github.com/wallabyjs/public/issues/3004)).
+* Bug fix for Wallaby where line number would not be reported correctly for error source ([#3011](https://github.com/wallabyjs/public/issues/3011)).
+* Bug fix for Quokka where missing imports in ESM modules would not be reported properly.
+* Bug fix for Wallaby for various minor Webpack integration issues.
+* Bug fix for Wallaby using Vitest/Vitesse where importing files would file if they were renamed by Wallaby's rollup plugin ([#3020](https://github.com/wallabyjs/public/issues/3020)).
+* Bug fix for Wallaby not starting properly for some projects ([#3014](https://github.com/wallabyjs/public/issues/3014)).
+
 <a name="Core 1.0.1237, Wallaby App 1.0.82, IntelliJ 1.0.233, VS 1.0.65, Atom 1.0.63, VS Code 1.0.327, Sublime 1.0.66"></a>
 # Core 1.0.1237, Wallaby App 1.0.82, IntelliJ 1.0.233, VS 1.0.65, Atom 1.0.63, VS Code 1.0.327, Sublime 1.0.66 (2022-03-07)
 
