@@ -1,5 +1,15 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1403, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.263, Wallaby VS 1.0.66, Wallaby VS Code 1.0.351, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.373, Quokka VS Code 1.0.529, Quokka Sublime 1.0.158 (2023-04-01)">
+# Core 1.0.1403, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.263, Wallaby VS 1.0.66, Wallaby VS Code 1.0.351, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.373, Quokka VS Code 1.0.529, Quokka Sublime 1.0.158 (2023-04-01)
+
+* Added support for new `captureConsoleLog` setting to control console log capture; defaults to true. ([#3189](https://github.com/wallabyjs/public/issues/3189)).
+* Enhanced Vitest integration to use custom hooks if registered in configuration (`config.deps.registerNodeLoader` setting).
+* Bug fix for debug icons not appearing in JetBrains new UI ([#3172](https://github.com/wallabyjs/public/issues/3172)).
+* Bug fix for latest version of JetBrains editors with UI update now being dispatched from non-UI thread ([#3191](https://github.com/wallabyjs/public/issues/3191)).
+* Bug fix for vitest that caused the same file to be processed by Wallaby multiple times when changing an imported dependency.
+* Bug fix for latest version of Vitest to accommodate changed mock hoisting behavior.
+
 <a name="Core 1.0.1398, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.261, Wallaby VS 1.0.66, Wallaby VS Code 1.0.351, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.373, Quokka VS Code 1.0.529, Quokka Sublime 1.0.158"></a>
 # Core 1.0.1398, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.261, Wallaby VS 1.0.66, Wallaby VS Code 1.0.351, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.373, Quokka VS Code 1.0.529, Quokka Sublime 1.0.158 (2023-03-23)
 
