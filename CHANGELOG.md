@@ -1,6 +1,18 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
-<a name="# Core 1.0.1403, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.263, Wallaby VS 1.0.66, Wallaby VS Code 1.0.351, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.373, Quokka VS Code 1.0.529, Quokka Sublime 1.0.158 (2023-04-01)">
+<a name="# Core 1.0.1407, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.267, Wallaby VS 1.0.66, Wallaby VS Code 1.0.352, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.379, Quokka VS Code 1.0.533, Quokka Sublime 1.0.158 (2023-05-01)
+"></a>
+# Core 1.0.1407, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.267, Wallaby VS 1.0.66, Wallaby VS Code 1.0.352, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.379, Quokka VS Code 1.0.533, Quokka Sublime 1.0.158 (2023-05-01)
+
+* Added support for use of yarn workspaces for Angular CLI projects.
+* Added support for latest version of Vitest (v0.30.0+) with the introduction of workspace configuration.
+* Improved text selection behavior for live value display to work when entire line is selected and selection spans multiple lines.
+* Bug fix for latest version of VS Code where gutter indicators no longer appear correctly when breakpoints are set in the gutter.
+* Bug fix for issue with class declaration superclass instrumentation where superclass is not a simple identifier ([#3196](https://github.com/wallabyjs/public/issues/3196)).
+* Bug fix for Wallaby warning about old dependency patch that is now optional ([#3197](https://github.com/wallabyjs/public/issues/3197)).
+* Bug fix for JetBrains editors where Show/Copy Value action was available when it should not have been.
+
+<a name="# Core 1.0.1403, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.263, Wallaby VS 1.0.66, Wallaby VS Code 1.0.351, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.373, Quokka VS Code 1.0.529, Quokka Sublime 1.0.158 (2023-04-01)"></a>
 # Core 1.0.1403, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.263, Wallaby VS 1.0.66, Wallaby VS Code 1.0.351, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.373, Quokka VS Code 1.0.529, Quokka Sublime 1.0.158 (2023-04-01)
 
 * Added support for new `captureConsoleLog` setting to control console log capture; defaults to true. ([#3189](https://github.com/wallabyjs/public/issues/3189)).
@@ -25,7 +37,7 @@ Please note that while the changelog is updated every few months, we release new
 * Added support to Wallaby/Quokka for breaking changes to latest version of node's ESM hooks API.
 * Added support to Wallaby for latest version of NX workspaces ([#3038](https://github.com/wallabyjs/public/issues/3038)).
 * Added support to Wallaby for overriding `files` and `tests` configuration for vitest projects ([#3054](https://github.com/wallabyjs/public/issues/3054)).
-* Added support to Wallaby for the latest version of vitest (v0.23.0).
+* Added support to Wallaby for the latest version of vitest (v0.23.0).fatal: invalid date format: 2023-04-01T-08:30:00
 * Added support to Wallaby for latest version of Babel to fix scenario where Time Travel Debugger would not work properly ([#3079](https://github.com/wallabyjs/public/issues/3079)).
 * Added support to Wallaby for Webpack custom `moduleArgument` and `exportsArgument` parameters ([#3076](https://github.com/wallabyjs/public/issues/3076)).
 * Added support to Wallaby for Angular CLI `@angular-builders/custom-webpack:karma` builder.
