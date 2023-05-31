@@ -1,5 +1,26 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1427, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.268, Wallaby VS 1.0.66, Wallaby VS Code 1.0.355, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.388, Quokka VS Code 1.0.542, Quokka Sublime 1.0.158 (2023-06-01)"></a>
+# Core 1.0.1427, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.268, Wallaby VS 1.0.66, Wallaby VS Code 1.0.355, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.388, Quokka VS Code 1.0.542, Quokka Sublime 1.0.158 (2023-06-01)
+
+* Added support for Windows Subsystem for Linux with GUI.
+* Added support for Wallaby Vitest projects using Node.js 20+.
+* Added support for Quokka when using ES Modules in Node.js 20+.
+* Added support for Wallaby and Quokka when logging BitInt values.
+* Added support for the latest version of NX (v16+).
+* Added support for Angular CLI 16+.
+* Added support for the latest version of Jasmine with Node.js.
+* Added support for Vitest 0.31.0+.
+* Added support for Quokka for resolving pnp dependencies when using ES Modules.
+* Updated Wallaby default coverage ignore hints to include `/c8 ignore/` comment.
+* Added copy to clipboard functionality for actual and expected code in output inspector error output via codelens ([#3201](https://github.com/wallabyjs/public/issues/3201)).
+* Updated Wallaby with WSL to automatically detect local and use local Chrome instance when it is available.
+* Bug fix for Jest with global setup handlers, where Wallaby was not handling when incorrect arguments are passed to the setup handler ([#3212](https://github.com/wallabyjs/public/issues/3212)).
+* Bug fix for vitest when using `isolate: false` where multiple threads may be scheduled on the same worker thread at the same time.
+* Bug fix for Wallaby with Angular version 15+ compatibility issue where polyfills may be an array.
+* Bug fix for Wallaby with Vitest not completing when async tasks are still running at the end of the test run.
+* Bug fix for Wallaby with Jest when using `ts-node` not correctly loading jest configuration ([#3221](https://github.com/wallabyjs/public/issues/3221)).
+
 <a name="# Core 1.0.1407, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.267, Wallaby VS 1.0.66, Wallaby VS Code 1.0.352, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.379, Quokka VS Code 1.0.533, Quokka Sublime 1.0.158 (2023-05-01)
 "></a>
 # Core 1.0.1407, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.267, Wallaby VS 1.0.66, Wallaby VS Code 1.0.352, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.379, Quokka VS Code 1.0.533, Quokka Sublime 1.0.158 (2023-05-01)
