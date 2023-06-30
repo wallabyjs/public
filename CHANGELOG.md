@@ -1,5 +1,23 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1437, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.269, Wallaby VS 1.0.66, Wallaby VS Code 1.0.362, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.389, Quokka VS Code 1.0.547, Quokka Sublime 1.0.158 (2023-07-01)"></a>
+# Core 1.0.1437, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.269, Wallaby VS 1.0.66, Wallaby VS Code 1.0.362, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.389, Quokka VS Code 1.0.547, Quokka Sublime 1.0.158 (2023-07-01)
+
+* Added support for custom input/output in Angular build options ([#3238](https://github.com/wallabyjs/public/issues/3238)).
+* Added support for breaking changes in Angular v16.1.0+
+* Added support for Wallaby processing `testing-library` output when loaded via ESM.
+* Updated Wallaby/Quokka VS Code Value Explorer hover behavior to reduce redundant information that is displayed in child nodes ([#3237](https://github.com/wallabyjs/public/issues/3237)).
+* Bug fix for Wallaby for VS Code where test explorer actions would not work after a global error ([#3209](https://github.com/wallabyjs/public/issues/3209)).
+* Bug fix for Quokka using TypeScript with ESM compiler options when using node 20+ ([#878](https://github.com/wallabyjs/quokka/issues/878)).
+* Bug fix for Wallaby when using Ava test runner on Windows with ESM imports ([#3231](https://github.com/wallabyjs/public/issues/3231)).
+* Bug fix for Wallaby when using Ava to always run in serial mode to stop tests within a single file from running in parallel, which can cause issues with Wallaby.
+* Bug fix for Wallaby for latest version of JetBrains editors where diff view was no longer working.
+* Bug fix for Wallaby where startup file scan can report READY before finishing the scan, which can cause tests to be reexecuted after the initial run.
+* Bug fix for Wallaby when changing filename case in VS Code when the on-disk filename is not reported correctly ([#3224](https://github.com/wallabyjs/public/issues/3224)).
+* Bug fix for Quokka for VS Code where output inspector bug line navigation fails for logged values at column 0.
+* Bug fix for Wallaby where hover values were not being properly cleared.
+* Bug fix for Wallaby/Quokka auto log sometimes not selecting a value to log.
+
 <a name="# Core 1.0.1427, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.268, Wallaby VS 1.0.66, Wallaby VS Code 1.0.355, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.388, Quokka VS Code 1.0.542, Quokka Sublime 1.0.158 (2023-06-01)"></a>
 # Core 1.0.1427, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.268, Wallaby VS 1.0.66, Wallaby VS Code 1.0.355, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.388, Quokka VS Code 1.0.542, Quokka Sublime 1.0.158 (2023-06-01)
 
