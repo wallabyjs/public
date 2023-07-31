@@ -1,5 +1,21 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1451, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.270, Wallaby VS 1.0.66, Wallaby VS Code 1.0.364, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.390, Quokka VS Code 1.0.549, Quokka Sublime 1.0.158 (2023-08-01)"></a>
+# Core 1.0.1451, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.270, Wallaby VS 1.0.66, Wallaby VS Code 1.0.364, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.390, Quokka VS Code 1.0.549, Quokka Sublime 1.0.158 (2023-08-01)
+
+* Added support for Wallaby for Vitest when using new spawned child process test runner mode.
+* Added support for latest version of Chrome that introduced a breaking change that causes Profiler output to fail.
+* Added support for Wallaby Vitest for configurations with include/exclude patterns that start apply to specific projects of a vitest workspace configuration.
+* Updated hover behavior and output in Wallaby and Quokka for VS Code for log values, errors, inline diffs, and snapshots.
+* Improved Wallaby/Quokka `Show Value` logic to better select values to log (improved handling of zero-width selections followed by whitespace).
+* Improved error reporting for Wallaby with Vitest.
+* Improved Wallaby/Quokka for VS Code icon colors.
+* Bug fix for Wallaby when selecting to profile a test run when the time travel debugger timeline is visible.
+* Bug fix for Wallaby when using Vitest where Wallaby could fail with unsupported version error when attempting to patch functionality that is not actually used at runtime ([#3248](https://github.com/wallabyjs/public/issues/3248)).
+* Bug fix for Wallaby where source maps could sometimes be applied multiple times, shifting the line numbers that would be reported for errors and logged values.
+* Bug fix for Wallaby for Vitest where custom `env.params.env` setting would result in an error when running tests.
+* Bug fix for Wallaby for Vitest where file pattern may be either a string or an array of strings, but Wallaby was only handling the array case.
+
 <a name="# Core 1.0.1437, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.269, Wallaby VS 1.0.66, Wallaby VS Code 1.0.362, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.389, Quokka VS Code 1.0.547, Quokka Sublime 1.0.158 (2023-07-01)"></a>
 # Core 1.0.1437, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.269, Wallaby VS 1.0.66, Wallaby VS Code 1.0.362, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.389, Quokka VS Code 1.0.547, Quokka Sublime 1.0.158 (2023-07-01)
 
