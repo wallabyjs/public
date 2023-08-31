@@ -1,5 +1,27 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1465, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.274, Wallaby VS 1.0.66, Wallaby VS Code 1.0.366, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.394, Quokka VS Code 1.0.562, Quokka Sublime 1.0.158 (2023-09-01)"></a>
+# Core 1.0.1465, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.274, Wallaby VS 1.0.66, Wallaby VS Code 1.0.366, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.394, Quokka VS Code 1.0.562, Quokka Sublime 1.0.158 (2023-09-01)
+
+* New for Quokka - [LogPoints for VS Code](https://quokkajs.com/whatsnew/logpoints.html): a new way to log values in your code without modifying the source code, set a breakpoint and the value at the breakpoint will be logged whenever the breakpoint is hit.
+* Added support to Wallaby for new VS Code gutter context menu capability.
+* Added support for logging the `@testing-library/react-native` screen.debug() function.
+* Added support for the latest version of Vitest (v0.34.0+).
+* Updated Wallaby/Quokka for VS Code `Escape` key available to avoid conflicts with the marketplace VIM extension.
+* Improved Wallaby for Vitest error reporting.
+* Improved Quokka handling of Create React App projects.
+* Improved Wallaby Vitest error reporting when transitive dependencies cannot be found.
+* Bug fix for Wallaby when using ts-jest on Windows when could encounter EPERM concurrency issue; Wallaby not retries the operation when this occurs.
+* Bug fix for Wallaby/Quokka when encountering code that contains both an iterator and a private field within a class ([#885](https://github.com/wallabyjs/quokka/issues/885)).
+* Bug fix for Wallaby for VS Code when falling back to use VS Code's electron rendered to run tests; this would often fail due to electron node compatibility issues; now Wallaby will never use the VS Code electron renderer to run tests.
+* Bug fix for Quokka for VS Code when Quokka would sometimes stop running in an existing Quokka files when starting on a new file.
+* Bug fix for Quokka for VS Code when some commands would not be correctly available when there are multiple active Quokka files.
+* Bug fix for Wallaby when using `Jump To Line Test` and `Jump To Error Source` commands when a test filter is active; could previously navigate to the incorrect test.
+* Bug fix for Quokka for VS Code re-executing all active Quokka files when a breakpoint is set in a file that is not currently active.
+* Bug fix for Wallaby for Jest inline snapshots not working on Windows.
+* Bug fix for Wallaby for Jest to handle new message format for inline snapshot detection and processing.
+* Bug fix for Wallaby where recursive file system delete results in incorrect processing of files that were deleted ([#3256](https://github.com/wallabyjs/public/issues/3256)).
+
 <a name="# Core 1.0.1451, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.270, Wallaby VS 1.0.66, Wallaby VS Code 1.0.364, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.390, Quokka VS Code 1.0.549, Quokka Sublime 1.0.158 (2023-08-01)"></a>
 # Core 1.0.1451, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.270, Wallaby VS 1.0.66, Wallaby VS Code 1.0.364, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.390, Quokka VS Code 1.0.549, Quokka Sublime 1.0.158 (2023-08-01)
 
