@@ -1,5 +1,18 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1475, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.274, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.395, Quokka VS Code 1.0.566, Quokka Sublime 1.0.158 (2023-10-01)"></a>
+# Core 1.0.1475, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.274, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.395, Quokka VS Code 1.0.566, Quokka Sublime 1.0.158 (2023-10-01)
+
+* New for Wallaby - [real-time side-by-side diffs](https://wallabyjs.com/whatsnew/vscode-realtime-diff.html) that update as you type and Wallaby re-runs tests.
+* New for Wallaby - [LogPoints for VS Code](https://wallabyjs.com/whatsnew/logpoints.html): a new way to log values in your code without modifying the source code, set a breakpoint and the value at the breakpoint will be logged whenever the breakpoint is hit.
+* Improved Wallaby to not unnecessarily re-run tests under certain scenarios when using Logpoints and Show Value commands.
+* Improved Wallaby runtime error reporting.
+* Improved Wallaby snapshot error messaging.
+* Bug fix for Wallaby with vitest when resolving projects for a vitest workspace where Wallaby would sometimes incorrectly identify additional files to run that are not part of the workspace.
+* Bug fix for Wallaby with Vitest on Windows where sometimes paths would not be correctly normalized to unix format.
+* Bug fix for various Vitest related issues when using Wallaby with Vitest ([#3268](https://github.com/wallabyjs/public/issues/3268)).
+* Bug fix for Jest cache key where on first start Wallaby would show `Show Value` and `Log Point` values when it should not have.
+
 <a name="# Core 1.0.1465, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.274, Wallaby VS 1.0.66, Wallaby VS Code 1.0.366, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.394, Quokka VS Code 1.0.562, Quokka Sublime 1.0.158 (2023-09-01)"></a>
 # Core 1.0.1465, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.274, Wallaby VS 1.0.66, Wallaby VS Code 1.0.366, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.394, Quokka VS Code 1.0.562, Quokka Sublime 1.0.158 (2023-09-01)
 
