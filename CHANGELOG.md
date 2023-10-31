@@ -1,5 +1,26 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1488, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.281, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.405, Quokka VS Code 1.0.575, Quokka Sublime 1.0.158 (2023-11-01)"></a>
+# Core 1.0.1488, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.281, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.405, Quokka VS Code 1.0.575, Quokka Sublime 1.0.158 (2023-11-01)
+
+* New for Wallaby/Quokka - [LogPoints for JetBrains Editors](https://wallabyjs.com/whatsnew/jb-logpoints.html).
+* Added support for the latest version of NX workspaces (17.0.1+) ([#3284](https://github.com/wallabyjs/public/issues/3284))
+* Added support for Jest mono-repo configurations with different transformer configurations per project for files shared between projects.
+* Added support for the latest version of NX angular-devkit.
+* Added support for the latest versions of JetBrains editors.
+* Added support to Wallaby for node 21.x.
+* Updated Quokka for JetBrains editors to automatically open the Quokka tool window when a new Quokka session is started.
+* Improved Wallaby for Vitest unhandled rejection error reporting to align with Vitest CLI behavior.
+* Improved support for Yarn 2 workspaces with PnP resolvers.
+* Improved error reporting for Wallaby with Vitest.
+* Bug fix for Quokka for VS Code where Quokka would get stuck in an infinite loop when expanding values in Value Explorer.
+* Bug fix for Quokka when running with vite-node that could sometimes cause Quokka to not run correctly.
+* Bug fix for Wallaby Vitest with custom test file resolution for Vitest, preventing incorrect configuration loading ([#3283](https://github.com/wallabyjs/public/issues/3283)).
+* Bug fix for Jest with mono-repo workspaces where tests would not be correctly filtered based on the workspace configuration.
+* Bug fix for Quokka for VS Code where select workspace folder command would only be available when there are 3 or more workspace folders.
+* Bug fix for Wallaby's pnpm integration where would not load mono-repo parent node modules when running in a sub-project.
+* Bug fix for Wallaby custom Webpack configurations not working when running in Angular workspaces.
+
 <a name="# Core 1.0.1475, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.274, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.395, Quokka VS Code 1.0.566, Quokka Sublime 1.0.158 (2023-10-01)"></a>
 # Core 1.0.1475, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.274, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.395, Quokka VS Code 1.0.566, Quokka Sublime 1.0.158 (2023-10-01)
 
