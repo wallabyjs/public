@@ -1,5 +1,27 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1505, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.282, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.415, Quokka VS Code 1.0.598, Quokka Sublime 1.0.158 (2023-12-01)"></a>
+# Core 1.0.1505, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.282, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.415, Quokka VS Code 1.0.598, Quokka Sublime 1.0.158 (2023-12-01)
+
+* New for Quokka - [Snaps feature](https://quokkajs.com/whatsnew/snaps.html) that allows you to run snippets of code within an existing file without running the entire file.
+* Added support for Jasmine 4.6+ and 5.1.x+ for node projects.
+* Added support for Wallaby with Vitest when using node@20.6.0+ where ESM hooks API has changed.
+* Added new feature for Wallaby for JetBrains editors to enable/disable automatic updates.
+* Improved range mapping for Wallaby and Quokka to be more accurate and account for specific start/end symbol matching.
+* Improved various aspects to Quokka Snaps feature.
+* Improved Quokka error reporting when using `ts-node with ESM.
+* Bug fix for Quokka using vite-node where would not work correctly on Windows.
+* Bug fix for Wallaby with Vitest when could encounter `register not found` when using older versions of Node.js.
+* Bug fix for Wallaby with Vitest when processing `.only` tests; would not correctly consider parent suites and would encounter a runtime error for test failures ([#3165](https://github.com/wallabyjs/public/issues/3165)).
+* Bug fix for Quokka Snaps to support ES6.
+* Bug fix for Quokka to support node 21.x ([#903](https://github.com/wallabyjs/quokka/issues/903))
+* Bug fix for Logpoints being incorrectly promoted to compound logpoints when the value is not a function.
+* Bug fix for Wallaby with Angular using Wallaby's jasmine version instead of the one provided by the Angular project.
+* Bug fix for Quokka with ESM where sometimes Quokka would load cached version of an imported dependency when the file had been modified since the last run.
+* Bug fix for Wallaby with NX projects where the NX daemon would cause Wallaby to hand during startup.
+* Bug fix for Quokka for JetBrains editors where Quokka could sometimes subscribe to event handlers after a session has been disposed ([#908](https://github.com/wallabyjs/quokka/issues/908)).
+* Bug fix for Quokka outputting TypeScript compiler warnings ([#910](https://github.com/wallabyjs/quokka/issues/910)).
+
 <a name="# Core 1.0.1488, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.281, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.405, Quokka VS Code 1.0.575, Quokka Sublime 1.0.158 (2023-11-01)"></a>
 # Core 1.0.1488, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.281, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.405, Quokka VS Code 1.0.575, Quokka Sublime 1.0.158 (2023-11-01)
 
