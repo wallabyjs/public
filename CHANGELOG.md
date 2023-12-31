@@ -1,5 +1,23 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1516, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.422, Quokka VS Code 1.0.609, Quokka Sublime 1.0.158 (2024-01-01)"></a>
+# Core 1.0.1516, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.422, Quokka VS Code 1.0.609, Quokka Sublime 1.0.158 (2024-01-01)
+
+* New for Quokka - ability to use ts-node with SWC compiler for faster TypeScript compilation.
+* Added support for Vitest 1.x+.
+* Added support for new JavaScript language features.
+* Added support for latest version of Next.js.
+* Added support for latest version of Chrome (v120) which introduced a breaking change that causes Profiler output to fail.
+* Added support for Wallaby with Vitest when using node@18.19.0+ where ESM hooks API has changed.
+* Added support for Yarn 2 running with ESM on Node.js versions 18.19+, latest 20, and 21 ([#3311](https://github.com/wallabyjs/public/issues/3311)).
+* Improved Vitest error message reporting by excluding prototype information for plain objects and arrays.
+* Improved Jest integration to align Jest worker id with built-in Jest behavior (as per their documentation).
+* Bug fix for Quokka using node.js 20.6+ ([#920](https://github.com/wallabyjs/quokka/issues/920)).
+* Bug fix for Wallaby with Angular workspaces with projects sourceRoot being the root folder ([#3309](https://github.com/wallabyjs/public/issues/3309)).
+* Bug fix for Angular workspaces projects when using a combination of ESM and CommonJS modules.
+* Bug fix for Wallaby with Vitest when using Yarn2 and ESM where would not load correctly due to Yarn2 lazy file system patching logic.
+* Bug fix for NX workspaces using Yarn2 not correctly resolving workspace dependencies.
+
 <a name="# Core 1.0.1505, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.282, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.415, Quokka VS Code 1.0.598, Quokka Sublime 1.0.158 (2023-12-01)"></a>
 # Core 1.0.1505, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.282, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.415, Quokka VS Code 1.0.598, Quokka Sublime 1.0.158 (2023-12-01)
 
