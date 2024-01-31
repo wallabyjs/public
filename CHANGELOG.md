@@ -1,5 +1,22 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1520, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.430, Quokka VS Code 1.0.622, Quokka Sublime 1.0.158 (2024-02-01)"></a>
+# Core 1.0.1520, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.430, Quokka VS Code 1.0.622, Quokka Sublime 1.0.158 (2024-02-01)
+
+* New for Quokka - support for [Vue and Svelte files](https://quokkajs.com/whatsnew/vsc-vue-svelte.html).
+* Added support for Vitest 1.2.0+.
+* Added support for Vitest 1.1.2+ ([#3313](https://github.com/wallabyjs/public/issues/3313))
+* Added support to Quokka for node 19.x ([#924](https://github.com/wallabyjs/quokka/issues/924))
+* Added support for the latest version of JSDOM with Quokka ([#928](https://github.com/wallabyjs/quokka/issues/928)).
+* Updated Quokka to ship with the latest version of `tsconfig-paths` for resolving TypeScript path aliases.
+* Improved Quokka VS Code integration to use updated VS Code APIs to better keep track of terminating Quokka sessions (results in less sessions that may be eagerly terminated).
+* Improved Live Comment detection for Wallaby and Quokka to better handle comments that contain whitespace characters.
+* Bug fix for compatibility issue with Quokka using swc with TypeScript for ts-node versions earlier than 10.9.2.
+* Bug fix for Wallaby with Vitest sometimes not invalidating a file when it has been modified ([#3318](https://github.com/wallabyjs/public/issues/3318)).
+* Bug fix for Wallaby with Show Value and Logpoints not working on coffeescript files.
+* Bug fix for Wallaby with Electron 12+ runner - disable context isolation between preload files and the rest of the page.
+* Bug fix for Wallaby with Vitest on Windows with the use of various rollup plugins ([#3318](https://github.com/wallabyjs/public/issues/3318)).
+
 <a name="# Core 1.0.1516, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.422, Quokka VS Code 1.0.609, Quokka Sublime 1.0.158 (2024-01-01)"></a>
 # Core 1.0.1516, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.422, Quokka VS Code 1.0.609, Quokka Sublime 1.0.158 (2024-01-01)
 
