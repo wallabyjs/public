@@ -1,5 +1,20 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1531, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.433, Quokka VS Code 1.0.627, Quokka Sublime 1.0.158 (2024-03-01)"></a>
+# Core 1.0.1531, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.433, Quokka VS Code 1.0.627, Quokka Sublime 1.0.158 (2024-03-01)
+
+* Added support for Vitest 1.3.1+.
+* Added support for the latest version of `@testing-library`
+* Added support for new JavaScript language features (import assertions and attributes).
+* Added support for Wallaby mocha when encountering asynchronous errors during initialization.
+* Added support to Quokka for latest version of JetBrains editors ([#932](https://github.com/wallabyjs/quokka/issues/932)).
+* Improved Quokka support when using ESM without fully qualified file names; will now automatically add extensions to imports to allow for ESM imports to work the same as CommonJS.
+* Improved Quokka Svelte/Vue support to automatically initialize component instances when running a file that contains a Svelte or Vue component.
+* Bug fix for Wallaby with Vitest when using `unplugin-swc`; required patching as the plugin did not correctly process Wallaby's cachebreaker.
+* Bug fix for Wallaby with Vitest when extracting large configuration settings ([#3328](https://github.com/wallabyjs/public/issues/3328)).
+* Bug fix for Wallaby with Vitest when using `vmThreads` and `jsdom`; globals were not being passed to the jsdom instance ([#3335](https://github.com/wallabyjs/public/issues/3335)).
+* Bug fix for Wallaby with Webpack projects; was incorrectly handling `module` usage.
+
 <a name="# Core 1.0.1520, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.430, Quokka VS Code 1.0.622, Quokka Sublime 1.0.158 (2024-02-01)"></a>
 # Core 1.0.1520, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.430, Quokka VS Code 1.0.622, Quokka Sublime 1.0.158 (2024-02-01)
 
