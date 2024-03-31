@@ -1,5 +1,23 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1550, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.374, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.441, Quokka VS Code 1.0.634, Quokka Sublime 1.0.158 (2024-04-01)"></a>
+# Core 1.0.1550, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.374, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.441, Quokka VS Code 1.0.634, Quokka Sublime 1.0.158 (2024-04-01)
+
+* Added support for Vitest 1.4.x+.
+* Added support for the latest version of Ava (6.1.2+); snapshots were not working correctly.
+* Added support for Wallaby with Vitest projects that use solidjs ([#3350](https://github.com/wallabyjs/public/issues/3350)).
+* Added support for Vitest in Yarn 2 mono-repos by resolving parent folder `.pnp.loader.mjs` files.
+* Improved Wallaby for VS Code's `Start on closest project in mono-repo` logic to better detect the closest project based on well-known configuration files.
+* Improved processing limits of large logged values for Wallaby and Quokka.
+* Improved ESM package.json exports when using stdEsm with Quokka ([#939](https://github.com/wallabyjs/quokka/issues/939)).
+* Updated Wallaby log limit defaults for large strings, increased from 200 bytes to 8192 bytes.
+* Updated Wallaby live comments to use configuration settings for inline output ([#3344](https://github.com/wallabyjs/public/issues/3344)).
+* Updated Wallaby to prioritize automatic detection of Vitest when it exists as an explicit project dependency or devDependency (previously would try after Jest and Angular projects).
+* Updated Wallaby and Quokka for VS Code to use `onStartupFinished` activation event instead of `*` to not slow down VS Code startup.
+* Bug fix for Wallaby with Vitest where the first line of a file is always reported as a coverable region; was introduced by Vitest to support breakpoints on the first line of a file.
+* Bug fix for Wallaby with Vitest when processing actual vs. expected values; strings were not being escaped correctly.
+* Bug fix for Logpoints interfering with Wallaby's logic to calculate the minimal number of tests to execute on a file change; this could result in Wallaby running more tests than necessary.
+
 <a name="# Core 1.0.1531, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.433, Quokka VS Code 1.0.627, Quokka Sublime 1.0.158 (2024-03-01)"></a>
 # Core 1.0.1531, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.371, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.433, Quokka VS Code 1.0.627, Quokka Sublime 1.0.158 (2024-03-01)
 
