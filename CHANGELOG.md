@@ -1,5 +1,22 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1560, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.286, Wallaby VS 1.0.66, Wallaby VS Code 1.0.376, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.444, Quokka VS Code 1.0.637, Quokka Sublime 1.0.158 (2024-05-01)"></a>
+# Core 1.0.1560, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.286, Wallaby VS 1.0.66, Wallaby VS Code 1.0.376, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.444, Quokka VS Code 1.0.637, Quokka Sublime 1.0.158 (2024-05-01)
+
+* New for Wallaby - pause command that allows you to temporarily pause Wallaby's test execution and resume it later.
+* Added support for Jest 30 alpha3.
+* Added to Wallaby for VS Code - "Smart Start on closest project in mono-repo" command that works the same way as "Start on closest project in mono-repo", but then runs in Smart Start mode
+* Added support the latest version of JetBrains editors for Wallaby and Quokka.
+* Improved Wallaby with Vitest error reporting when transform errors (syntax errors) occur.
+* Improved Wallaby for Jest startup performance by using `@swc/wasm` to process TypeScript configuration files.
+* Improved Wallaby for Jest integration to load test contexts on demand to improve startup performance.
+* Updated stack reporting to ignore vitest and jest internals in Wallaby error reports.
+* Updated Wallaby for Linux environments to use the native Linux file system watcher to improve performance on large projects; new options are now available to configure the file system watcher behavior and if appropriate scan / poll intervals.
+* Improved Wallaby for Jest to optimize performance when running a single project (vs. multiple projects in a mono-repo).
+* Bug fix for Wallaby where the debugger would not navigate to the correct frame when the runner uses the `restart` flag.
+* Bug fix for Quokka where tsconfig paths would not resolve correctly for non-root baseUrl ([#946](https://github.com/wallabyjs/quokka/issues/946)).
+* Bug fix for Wallaby with Vitest - various issues with using Vitest workspaces.
+
 <a name="# Core 1.0.1550, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.374, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.441, Quokka VS Code 1.0.634, Quokka Sublime 1.0.158 (2024-04-01)"></a>
 # Core 1.0.1550, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.284, Wallaby VS 1.0.66, Wallaby VS Code 1.0.374, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.441, Quokka VS Code 1.0.634, Quokka Sublime 1.0.158 (2024-04-01)
 
