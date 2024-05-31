@@ -1,5 +1,22 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1567, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.289, Wallaby VS 1.0.66, Wallaby VS Code 1.0.379, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.450, Quokka VS Code 1.0.644, Quokka Sublime 1.0.158 (2024-06-01)
+"></a>
+# Core 1.0.1567, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.289, Wallaby VS 1.0.66, Wallaby VS Code 1.0.379, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.450, Quokka VS Code 1.0.644, Quokka Sublime 1.0.158 (2024-06-01)
+
+* Added support for the latest version of Sublime Text editor.
+* Added support for the latest version of Vitest (1.6.x).
+* Added support for Quokka to use directory imports with ESM.
+* Updated Quokka with vite-node to use vitest server settings (when they exist) for externalizing node module dependencies and vite transformations.
+* Improved various aspects of how runtime values are displayed in Wallaby and Quokka.
+* Improved Wallaby's diagnostic error reporting.
+* Improved Wallaby for Vitest high priority message processing.
+* Bug fix for issues with copying unicode characters ([#953](https://github.com/wallabyjs/quokka/issues/953)).
+* Bug fix for progress reporting when running synchronous tests in Wallaby with Vitest.
+* Bug fix to support sequence expressions within property definitions ([#3374](https://github.com/wallabyjs/public/issues/3374)).
+* Bug fix for Sublime Text to use automatic configuration detection when a configuration file is not present.
+* Bug fix for Wallaby for Jest to correctly handle older supported versions of Jest where some patches are not applicable.
+
 <a name="# Core 1.0.1560, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.286, Wallaby VS 1.0.66, Wallaby VS Code 1.0.376, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.444, Quokka VS Code 1.0.637, Quokka Sublime 1.0.158 (2024-05-01)"></a>
 # Core 1.0.1560, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.286, Wallaby VS 1.0.66, Wallaby VS Code 1.0.376, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.444, Quokka VS Code 1.0.637, Quokka Sublime 1.0.158 (2024-05-01)
 
