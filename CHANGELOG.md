@@ -1,5 +1,19 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1575, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.290, Wallaby VS 1.0.66, Wallaby VS Code 1.0.379, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.451, Quokka VS Code 1.0.646, Quokka Sublime 1.0.158 (2024-07-01)
+"></a>
+# Core 1.0.1575, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.290, Wallaby VS 1.0.66, Wallaby VS Code 1.0.379, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.451, Quokka VS Code 1.0.646, Quokka Sublime 1.0.158 (2024-07-01)
+
+* Added support for breaking changes in node 22 when using ESM.
+* Added support for latest version of `unplugin-swc` for Wallaby with Vitest.
+* Added support for Angular workspaces using the `excludedProjects` setting.
+* Improved Wallaby for Jest to better cancel in-progress Jest test runs that are no longer needed. 
+* Bug fix for Wallaby App when a nested test and describe block have the same name; now displays an extra node in the test explorer to differentiate between the two.
+* Bug fix for Jest sometimes reporting previous test run results for a subsequent test run.
+* Bug fix for broken source mapping for esbuild CommonJS imports.
+* Bug fix for issue with vitest workspaces due to changes in the latest versions of Vitest ([#3375](https://github.com/wallabyjs/public/issues/3375)).
+* Bug fix for Wallaby with Vitest when using vi.useFakeTimers().
+
 <a name="# Core 1.0.1567, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.289, Wallaby VS 1.0.66, Wallaby VS Code 1.0.379, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.450, Quokka VS Code 1.0.644, Quokka Sublime 1.0.158 (2024-06-01)
 "></a>
 # Core 1.0.1567, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.289, Wallaby VS 1.0.66, Wallaby VS Code 1.0.379, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.450, Quokka VS Code 1.0.644, Quokka Sublime 1.0.158 (2024-06-01)
