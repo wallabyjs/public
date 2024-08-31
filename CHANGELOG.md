@@ -1,5 +1,15 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1595, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.292, Wallaby VS 1.0.66, Wallaby VS Code 1.0.381, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.454, Quokka VS Code 1.0.649, Quokka Sublime 1.0.158 (2024-09-01)"></a>
+# Core 1.0.1595, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.292, Wallaby VS 1.0.66, Wallaby VS Code 1.0.381, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.454, Quokka VS Code 1.0.649, Quokka Sublime 1.0.158 (2024-09-01)
+
+* Added support for Vitest 2.0.5+.
+* Added support for the latest version of NX workspaces.
+* Added support for latest version of `unplugin-swc` for Wallaby with Vitest.
+* Bug fix for Wallaby automatically creating symlinked node_modules when they don't exist for ESM projects ([#3393](https://github.com/wallabyjs/public/issues/3393)).
+* Bug fix for Wallaby with Vitest when using Nuxt with autoImports used within .vue files.
+* Bug fixes for various node native testing framework issues ([#3386](https://github.com/wallabyjs/public/issues/3386)).
+
 <a name="# Core 1.0.1588, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.292, Wallaby VS 1.0.66, Wallaby VS Code 1.0.380, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.454, Quokka VS Code 1.0.649, Quokka Sublime 1.0.158 (2024-08-01)
 "></a>
 # Core 1.0.1588, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.292, Wallaby VS 1.0.66, Wallaby VS Code 1.0.380, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.454, Quokka VS Code 1.0.649, Quokka Sublime 1.0.158 (2024-08-01)
