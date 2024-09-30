@@ -1,5 +1,15 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1602, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.294, Wallaby VS 1.0.66, Wallaby VS Code 1.0.382, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.455, Quokka VS Code 1.0.653, Quokka Sublime 1.0.158 (2024-10-01)"></a>
+# Core 1.0.1602, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.294, Wallaby VS 1.0.66, Wallaby VS Code 1.0.382, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.455, Quokka VS Code 1.0.653, Quokka Sublime 1.0.158 (2024-10-01)
+
+* Added support for Vitest 2.1.0+.
+* Added support for new Chrome --headless mode
+* Updated Chrome integration to launch a separate process per tab resolving performance issues in the latest version when opening multiple tabs ([#3397](https://github.com/wallabyjs/public/issues/3397)).
+* Bug fix when logging object patterns with assignment expressions within for loops ([#964](https://github.com/wallabyjs/quokka/issues/964)).
+* Bug fix for node native testing framework always being automatically detected when there is no other testing framework available.
+* Bug fix for a Chrome runner bug causing pages to load multiple times due to initial tab load ([#3397](https://github.com/wallabyjs/public/issues/3397)).
+
 <a name="# Core 1.0.1595, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.292, Wallaby VS 1.0.66, Wallaby VS Code 1.0.381, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.454, Quokka VS Code 1.0.649, Quokka Sublime 1.0.158 (2024-09-01)"></a>
 # Core 1.0.1595, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.292, Wallaby VS 1.0.66, Wallaby VS Code 1.0.381, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.454, Quokka VS Code 1.0.649, Quokka Sublime 1.0.158 (2024-09-01)
 
