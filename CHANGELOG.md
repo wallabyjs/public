@@ -1,5 +1,32 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1623, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.309, Wallaby VS 1.0.67, Wallaby VS Code 1.0.390, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.456, Quokka VS Code 1.0.655, Quokka Sublime 1.0.158 (2024-11-01)"></a>
+# Core 1.0.1623, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.309, Wallaby VS 1.0.67, Wallaby VS Code 1.0.390, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.456, Quokka VS Code 1.0.655, Quokka Sublime 1.0.158 (2024-11-01)
+
+* New for Wallaby - major update with new UX - [Wallaby v2](https://wallabyjs.com/whatsnew/wallaby-v2.html).
+* New for Quokka - major update with new UX - [Quokka v2](https://quokkajs.com/whatsnew/quokka-2.html).
+* Added support for Vitest 2.1.4+.
+* Added support for external `console.log` calls from outside of a project test/source file ([#3410](https://github.com/wallabyjs/public/issues/3410)).
+* Added support for node custom inspect hooks.
+* Added support for the latest version of JetBrains editors.
+* Added support for Quokka using stdEsm in node 22.10.0+
+* Improved Vitest configuration extraction mechanism to prevent not terminating due to plugins with open sockets or references.
+* Improved Vitest invalid version error reporting details.
+* Improved error reporting for node global errors to be communicated as a high-priority message.
+* Updated Jest configuration handling with empty collectCoverageFrom settings; will now include everything that's not explicitly excluded in this case.
+* Bug fix for Wallaby for JetBrains editors when attempting to profile a line of source code that was covered by multiple tests; previously would result in a plugin error.
+* Bug fix for Wallaby for Jest not correctly handling globalSetup when defined at global level of a mono-repo.
+* Bug fix for Wallaby for JetBrains editors when hover in a Test Story could result in a plugin error.
+* Bug fix for not reporting testRunError on startup ([#3413](https://github.com/wallabyjs/public/issues/3413)).
+* Bug fix to address problem with Node v23 causing an infinite loop when processing file paths.
+* Bug fix for `runAllTestsWhenNoAffectedTests` setting not working correctly when using Wallaby with Vitest.
+* Bug fix for Wallaby incorrectly identifying a file change as originating from disk vs. in-editor.
+* Bug fix for Wallaby with Vitest when obsolete snapshots could be reported when only running a single test within a test file.
+* Bug fix for Wallaby for JetBrains editors when switching projects and Wallaby was still running; previously would not correctly stop/clean up resources from the previous project until the editor was restarted.
+* Bug fix for Wallaby/Quokka for JetBrains editors when using Test Story and splitting / moving to a different editor group; would previously stop functioning after being moved.
+* Bug fix for Jest configuration processing when globalConfig setting is omitted.
+* Bug fix for Wallaby for JetBrains editors intention actions when the wrong editor may be selected when multiple editors are opened at the same time; now uses the focused editor.
+
 <a name="# Core 1.0.1602, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.294, Wallaby VS 1.0.66, Wallaby VS Code 1.0.382, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.455, Quokka VS Code 1.0.653, Quokka Sublime 1.0.158 (2024-10-01)"></a>
 # Core 1.0.1602, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.294, Wallaby VS 1.0.66, Wallaby VS Code 1.0.382, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.455, Quokka VS Code 1.0.653, Quokka Sublime 1.0.158 (2024-10-01)
 
