@@ -1,5 +1,24 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1656, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.311, Wallaby VS 1.0.67, Wallaby VS Code 1.0.398, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.464, Quokka VS Code 1.0.672, Quokka Sublime 1.0.158 (2024-12-01)"></a>
+# Core 1.0.1656, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.311, Wallaby VS 1.0.67, Wallaby VS Code 1.0.398, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.464, Quokka VS Code 1.0.672, Quokka Sublime 1.0.158 (2024-12-01)
+
+* Added support for Angular CLI 19+.
+* Added support for latest version of Vitest.
+* Added support for latest version of `unplugin-swc` for Wallaby with Vitest.
+* Added support for VS Code remote workspaces for Wallaby and Quokka new UI.
+* Added support to Quokka for JetBrains editors for mjs and cjs file extensions.
+* Added support for rendering HTML content with HTML format in Wallaby logs.
+* Added support for the latest version of JetBrains editors.
+* Added support for assignment pattern instrumentation ([#3418](https://github.com/wallabyjs/public/issues/3418)).
+* Added new settings option for Wallaby Linked Mode to customize `Open Location` behavior.
+* Updated acorn parser to support shebang paths in source/test/Quokka files ([#3428](https://github.com/wallabyjs/public/issues/3428)).
+* Bug fix for Jest 3rd party transforms not working correctly with Wallaby.
+* Bug fix for Wallaby for Vitest to emit an abort signal when rescheduling a test run and an existing test run is still in progress.
+* Bug fix for Quokka Time Machine not working in mono-repo where package.json is discovered beneath project root.
+* Bug fix for assignment pattern expressions being incorrectly displayed as debug steps.
+* Bug fix for Wallaby for Vitest not logging `console.log` statements outside of instrumented code.
+
 <a name="# Core 1.0.1623, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.309, Wallaby VS 1.0.67, Wallaby VS Code 1.0.390, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.456, Quokka VS Code 1.0.655, Quokka Sublime 1.0.158 (2024-11-01)"></a>
 # Core 1.0.1623, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.309, Wallaby VS 1.0.67, Wallaby VS Code 1.0.390, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.456, Quokka VS Code 1.0.655, Quokka Sublime 1.0.158 (2024-11-01)
 
