@@ -1,5 +1,27 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1673, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.312, Wallaby VS 1.0.67, Wallaby VS Code 1.0.401, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.471, Quokka VS Code 1.0.681, Quokka Sublime 1.0.158 (2025-01-01)"></a>
+# Core 1.0.1673, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.312, Wallaby VS 1.0.67, Wallaby VS Code 1.0.401, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.471, Quokka VS Code 1.0.681, Quokka Sublime 1.0.158 (2025-01-01)
+
+* Added support for Ava 6+.
+* Added support for `@ngx-env/builder:karma` angular test builder
+* Added logs and errors panels to Wallaby new UI Side View Tests tab
+* Added support for reporting long-running operations to Wallaby's new UI.
+* Added support for reporting circular references when logging values ([#3435](https://github.com/wallabyjs/public/issues/3435)).
+* Added support for remembering per-test execution times to better report test execution progress on startup.
+* Added new VS Code settings for Wallaby/Quokka to override the base font-size in the new UI.
+* Added support for the latest version of `vite-plugin-babel-macros`.
+* Improved Wallaby for Vitest error reporting to handle application errors that terminate test run prematurely.
+* Improved Wallaby's mechanism for node native testing framework automatic hook/pre-load detection to prioritize dependencies that are explicitly listed in the project.json.
+* Bug fix for time travel debugger not working properly for Ava.
+* Bug fix when shutdown during long running tests can corrupt Wallaby's internal cache.
+* Bug fix to ignore file scan errors on node native start to prevent crashing ([#3430](https://github.com/wallabyjs/public/issues/3430)).
+* Bug fix for Wallaby with Vitest when encountering an infinite loop in test/source code.
+* Bug fix for Wallaby with Vitest when values continue to be logged after a test run has been completed (e.g. by asynchronous code that is still running).
+* Bug fix for NX workspace configuration not correctly handling default targets ([#3441](https://github.com/wallabyjs/public/issues/3441)).
+* Bug fix for node native testing framework not correctly handling `.only`, `.skip`, and `.todo` test modifiers.
+* Bug fixes for various issues with Wallaby/Quokka new UI.
+
 <a name="# Core 1.0.1656, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.311, Wallaby VS 1.0.67, Wallaby VS Code 1.0.398, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.464, Quokka VS Code 1.0.672, Quokka Sublime 1.0.158 (2024-12-01)"></a>
 # Core 1.0.1656, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.311, Wallaby VS 1.0.67, Wallaby VS Code 1.0.398, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.464, Quokka VS Code 1.0.672, Quokka Sublime 1.0.158 (2024-12-01)
 
