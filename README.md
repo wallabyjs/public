@@ -12,7 +12,9 @@ Wallaby provides the following features:
 - code coverage explorer and test explorer,
 - compact & side-by-side diff views, and much more.
 
-<img src="https://github.com/user-attachments/assets/60d1d6e6-3bf8-4ed1-b7aa-a16f5af4082a" width="800" />
+**Wallaby Time Travel Debugger In Action**
+
+<img src="https://wallabyjs.com/assets/img/ttd-vsc-main.gif" width="800" />
 
 
 # Wallaby.js quick links
