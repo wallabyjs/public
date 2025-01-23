@@ -1,4 +1,4 @@
-Wallaby is a continuous testing tool for JavaScript, designed to seamlessly integrate into your development environment. It automatically runs your tests as you code, providing real-time feedback on test results, code coverage, and errors, helping you quickly catch issues and stay focused on coding.
+Wallaby is a continuous testing tool for JavaScript, designed to seamlessly integrate into your development environment. It automatically **runs your tests as you code**, providing real-time feedback on test results, code coverage, and errors, helping you quickly catch issues and stay focused on coding.
 
 Wallaby provides the following features:
 
