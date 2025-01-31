@@ -1,5 +1,31 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1697, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.316, Wallaby VS 1.0.67, Wallaby VS Code 1.0.409, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.486, Quokka VS Code 1.0.699, Quokka Sublime 1.0.158 (2025-02-01)"></a>
+# Core 1.0.1697, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.316, Wallaby VS 1.0.67, Wallaby VS Code 1.0.409, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.486, Quokka VS Code 1.0.699, Quokka Sublime 1.0.158 (2025-02-01)
+
+* New for Wallaby/Quokka - [Value Peek feature](https://wallabyjs.com/whatsnew/value-peek.html) - a way to quickly see any value just by hovering over it.
+* New for Quokka - [support for Bun](https://quokkajs.com/whatsnew/bun.html).
+* Added support for Vitest 3.0.0+.
+* Added support for `@analogjs/vite-plugin-angular`.
+* Added new setting to automatically close diff view when there are no differences between the expected and actual values (off by default, Wallaby prompts to enable the setting).
+* Improved Wallaby's node runner startup and messaging performance.
+* Improved various display and usability aspects of Wallaby/Quokka new UI.
+* Updated error message processing to detect and extract diffs from error messages to improve error reporting.
+* Updated `Show Line Values` intention action to function without a selection (just using cursor position).
+* Updated Wallaby Side View Tests to restore search filter on tab layout / change.
+* Updated Wallaby Side View Tests to automatically select last executed/failed test when no manual selection has been made.
+* Updated Quokka using ESM when loading asset extensions (e.g. .png, .jpg, etc.) that are not supported by node; will no no-op instead of causing a runtime error.
+* Bug fix for node native testing framework when test name contains ` > ` character sequence ([#3450](https://github.com/wallabyjs/public/issues/3450)).
+* Bug fix for latest version of swc compiler to fix bug in swc ([#3449](https://github.com/wallabyjs/public/issues/3449)).
+* Bug fix for Wallaby with Vitest inline snapshots not correctly mapping to original file if file had been transformed (e.g. was a TypeScript file)..
+* Bug fix for an issue that prevented Wallaby from running properly when files were added or renamed.
+* Bug fix for JetBrains hover processing that could result in a plugin error.
+* Bug fix for latest version of Vitest.
+* Bug fix for Jest projects with TypeScript configuration files using TypeScript 5.3+ ([#3446](https://github.com/wallabyjs/public/issues/3446)).
+* Bug fix for Quokka inline settings not being applied after initial run.
+* Bug fix for Wallaby for JetBrains editor that resulted in a plugin error ([#3458](https://github.com/wallabyjs/public/issues/3458)).
+* Bug fixes for various issues with Wallaby/Quokka new UI.
+
 <a name="# Core 1.0.1673, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.312, Wallaby VS 1.0.67, Wallaby VS Code 1.0.401, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.471, Quokka VS Code 1.0.681, Quokka Sublime 1.0.158 (2025-01-01)"></a>
 # Core 1.0.1673, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.312, Wallaby VS 1.0.67, Wallaby VS Code 1.0.401, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.471, Quokka VS Code 1.0.681, Quokka Sublime 1.0.158 (2025-01-01)
 
