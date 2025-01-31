@@ -1,5 +1,33 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1976, Wallaby IntelliJ 1.0.343, Wallaby VS 1.0.84, Wallaby VS Code 1.0.487, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-02-01)"></a>
+# Core 1.0.1976, Wallaby IntelliJ 1.0.343, Wallaby VS 1.0.84, Wallaby VS Code 1.0.487, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-02-01)
+
+* New for Wallaby - [Zen Mode](https://wallabyjs.com/whatsnew/zen-mode.html) for distraction-free testing.
+* New for Wallaby - [Vitest Browser Mode](https://wallabyjs.com/whatsnew/vitest-vitest-browser-mode.html) support for running tests in browser environments.
+* New for Wallaby - [AI Testing Skill](https://wallabyjs.com/docs/features/mcp/#skillmd) included in Wallaby docs.
+* Added support for Jasmine 6.x, including handling of deprecation warnings and spec filtering.
+* Added support for the latest analog.js version.
+* Added static dependencies calculation for Vitest integration.
+* Added line length cap for log lines in code preview.
+* Improved keyboard navigation and focus handling in Wallaby UI output panel components.
+* Various improvements to Wallaby UI components.
+* Bug fix for console intercept not working with vi.spy() in Vitest - now works in both Node and browser environments [#3601](https://github.com/wallabyjs/public/issues/3601).
+* Bug fix for inline values skipping display of array function elements [#1028](https://github.com/wallabyjs/quokka/issues/1028).
+* Bug fix for ANSI strings in inline values - now escaped instead of stripped.
+* Bug fix for analogjs not resetting test file entry points after code change.
+* Bug fix for path resolution for tsconfig when set in Angular projects.
+* Bug fix for '.worktrees' not included in ignored paths for Jest, Vitest and Node Native configurations.
+* Bug fix for Vitest browser mode patches and transforms not being applied in multi-project environments.
+* Bug fix for redundant initialization of dependencies in Vitest browser tests.
+* Bug fix to resolve intermittent test failures by clearing file metadata fields after transformation.
+* Bug fix for Ava chained hook functions [#3596](https://github.com/wallabyjs/public/issues/3596).
+* Bug fix for Ava test.try inline attempts being reported as individual tests [#3595](https://github.com/wallabyjs/public/issues/3595).
+* Bug fix for details viewer and diff viewer conflict to ensure correct diff display in Wallaby UI.
+* Bug fix for entry not being removed from details when toggling selection with ctrl/cmd.
+* Bug fix for mcpClient state check to handle 'Unknown' value.
+* Bug fix for 'Toggle Zen Mode' command displayed on unsupported core versions.
+
 <a name="# Core 1.0.1955, Wallaby IntelliJ 1.0.343, Wallaby VS 1.0.84, Wallaby VS Code 1.0.484, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.531, Quokka VS Code 1.0.750, Quokka Sublime 1.0.232 (2026-01-01)"></a>
 # Core 1.0.1955, Wallaby IntelliJ 1.0.343, Wallaby VS 1.0.84, Wallaby VS Code 1.0.484, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.531, Quokka VS Code 1.0.750, Quokka Sublime 1.0.232 (2026-01-01)
 
