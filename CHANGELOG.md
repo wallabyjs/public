@@ -1,5 +1,24 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1718, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.321, Wallaby VS 1.0.70, Wallaby VS Code 1.0.427, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.495, Quokka VS Code 1.0.710, Quokka Sublime 1.0.158 (2025-03-01)"></a>
+# Core 1.0.1718, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.321, Wallaby VS 1.0.70, Wallaby VS Code 1.0.427, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.495, Quokka VS Code 1.0.710, Quokka Sublime 1.0.158 (2025-03-01)
+
+* New for Wallaby - [Copilot Chat Integration](https://wallabyjs.com/whatsnew/ai.html) to improve AI-assisted test writing and debugging.
+* New for Wallaby - [Keyboard shortcuts](https://wallabyjs.com/whatsnew/kbd-shortcuts.html) for Wallaby UI.
+* Added Wallaby/Quokka for Open VSX marketplace.
+* Added support for `@angular/build:karma` builder for Angular projects ([#3472](https://github.com/wallabyjs/public/issues/3472)).
+* Added zoneless testing support for Angular CLI 19 projects.
+* Improved log message suppression by marking messages as suppressed based on filters
+* Bug fix to address issue when loading Wallaby/Quokka new UI when VS Code is installed using a package manager (e.g. Scoop).
+* Bug fix for JetBrains editors where Wallaby would not update correctly on Windows due to file locking.
+* Bug fix for JetBrains editors missing font for error diff viewer in Wallaby/Quokka new UI.
+* Bug fix for JetBrains editor mousewheel scroll behavior.
+* Bug fix for Wallaby for Vitest sometimes not correctly appending cachebreaker in mono-repo nested projects.
+* Bug fix for not correctly identifying stack-less errors in Wallaby/Quokka new UI.
+* Bug fix for Jasmine 5.x not correctly reporting test execution progress in new Wallaby UI.
+* Bug fixes to address various Value Peek issues in Wallaby and Quokka.
+* Bug fixes for various issues with Wallaby/Quokka new UI.
+
 <a name="# Core 1.0.1697, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.316, Wallaby VS 1.0.67, Wallaby VS Code 1.0.409, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.486, Quokka VS Code 1.0.699, Quokka Sublime 1.0.158 (2025-02-01)"></a>
 # Core 1.0.1697, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.316, Wallaby VS 1.0.67, Wallaby VS Code 1.0.409, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.486, Quokka VS Code 1.0.699, Quokka Sublime 1.0.158 (2025-02-01)
 
