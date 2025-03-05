@@ -54,6 +54,8 @@ Specific license terms and conditions for each of these licenses are set out bel
 
 Upon your payment of the agreed license fees shown on the invoice and/or ordering page, and acceptance of this Agreement, Licensor grants you a limited, non-transferable, non-exclusive license to install and use the Software on the terms and conditions set forth herein in perpetuity.
 
+Company Seat Licenses may be transferred in the event of a sale or corporate restructuring where the acquiring entity holds majority ownership of the original licensee. Any such transfer must be reported to Licensor, and continued use of the Software remains subject to the terms of this Agreement.
+
 # INTENDED USERS OF THE SOFTWARE
 
 The Software is licensed to provide an automated testing tool. It is intended for use by experienced coding professionals, and all input and output should be reviewed carefully by suitably experienced personnel that are able to review, accept or reject any recommendations provided by the Software. For the avoidance of doubt you assume responsibility for the selection of the Software to achieve your intended results, and for the installation, use and results obtained from the Software.
