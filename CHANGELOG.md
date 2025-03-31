@@ -1,5 +1,23 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1731, Wallaby App 1.0.88, Wallaby IntelliJ 1.0.322, Wallaby VS 1.0.68, Wallaby VS Code 1.0.431, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.497, Quokka VS Code 1.0.710, Quokka Sublime 1.0.158 (2025-04-01)"></a>
+# Core 1.0.1731, Wallaby App 1.0.88, Wallaby IntelliJ 1.0.322, Wallaby VS 1.0.68, Wallaby VS Code 1.0.431, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.497, Quokka VS Code 1.0.710, Quokka Sublime 1.0.158 (2025-04-01)
+
+* Added support for Vitest 3.0.9+.
+* Added support for JetBrains editors to make the font-size configurable in the Wallaby/Quokka new UI.
+* Improved error reporting and Wallaby's cache handling when encountering compilation / instrumentation errors.
+* Bug fix for global errors not displaying correctly until file had successfully run at least once.
+* Bug fix for test results order being non-deterministic when displayed in the Wallaby/Quokka new UI.
+* Bug fix for handling malformed column segments in stack traces.
+* Bug fix for incorrectly capturing snapshot ranges.
+* Bug fix for test runner that use node.js not correctly handling when node process never starts correctly.
+* Bug fix for node native testing framework not working correctly on Windows with ESM.
+* Bug fix for node native testing framework not correctly handling when multiple ESM transformers are configured in the same project.
+* Bug fix for Wallaby with Vitest not terminating worker process when SIGTERM is received.
+* Bug fix for Wallaby with Vitest where could encounter a race condition reporting global errors ([#3473](https://github.com/wallabyjs/public/issues/3473)).
+* Bug fixes for various issues with Wallaby's new Time Travel Debugger timeline feature.
+* Bug fixes for various issues with Wallaby/Quokka new UI.
+
 <a name="# Core 1.0.1718, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.321, Wallaby VS 1.0.70, Wallaby VS Code 1.0.427, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.495, Quokka VS Code 1.0.710, Quokka Sublime 1.0.158 (2025-03-01)"></a>
 # Core 1.0.1718, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.321, Wallaby VS 1.0.70, Wallaby VS Code 1.0.427, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.495, Quokka VS Code 1.0.710, Quokka Sublime 1.0.158 (2025-03-01)
 
