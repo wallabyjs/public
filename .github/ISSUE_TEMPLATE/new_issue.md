@@ -1,4 +1,3 @@
-
 ---
 name: New Issue
 about: New Issue
