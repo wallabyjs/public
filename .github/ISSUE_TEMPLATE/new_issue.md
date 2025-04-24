@@ -1,3 +1,13 @@
+
+---
+name: New Issue
+about: New Issue
+title: ''
+labels: ''
+assignees: ''
+
+---
+
 ### Issue description or question
 
 <!--
