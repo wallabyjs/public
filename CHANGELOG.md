@@ -1,5 +1,27 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1746, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.324, Wallaby VS 1.0.68, Wallaby VS Code 1.0.437, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.499, Quokka VS Code 1.0.711, Quokka Sublime 1.0.158 (2025-05-01)"></a>
+# Core 1.0.1746, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.324, Wallaby VS 1.0.68, Wallaby VS Code 1.0.437, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.499, Quokka VS Code 1.0.711, Quokka Sublime 1.0.158 (2025-05-01)
+
+* New for Wallaby - [Copilot Agent and MCP support](https://wallabyjs.com/whatsnew/mcp.html) to provide runtime values, execution paths, and coverage data to AI agents.
+* New for Quokka - Snippets feature for VS Code that allows you to define and run reusable code snippets for Quokka files.
+* New for Quokka - ability to use tsx or swc for TypeScript compilation instead of ts-node.
+* Added support for Vitest 3.1.x.
+* Added support for latest version of `@emotion/babel-plugin`.
+* Added support for latest version of `@vitejs/plugin-react` with babel.
+* Added support for latest version of swc jest-transformer.
+* Added run all failing tests command ([#2779](https://github.com/wallabyjs/public/issues/2779)).
+* Improved various aspects of Wallaby's AI / MCP integration.
+* Improved various aspects of Wallaby/Quokka new UI.
+* Improved Angular processing for handling source maps, chunking, and file metadata.
+* Bug fix for JetBrains editors where intention actions could not be disabled using JetBrains built-in settings.
+* Bug fix for Wallaby for VS Code not resetting command contexts for command availability on restart.
+* Bug fix for Wallaby with Vitest; added missing configuration file names (cts, mts, cjs, mjs variants).
+* Bug fix for Wallaby with Vitest; could sometimes file when extracting custom configuration settings and would use default settings instead.
+* Bug fix for Wallaby with Vitest not handling custom `dir` configuration setting correctly.
+* Bug fix for Quokka not working with node 12.x.
+* Bug fixes for various issues with Wallaby/Quokka new UI.
+
 <a name="# Core 1.0.1731, Wallaby App 1.0.88, Wallaby IntelliJ 1.0.322, Wallaby VS 1.0.68, Wallaby VS Code 1.0.431, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.497, Quokka VS Code 1.0.710, Quokka Sublime 1.0.158 (2025-04-01)"></a>
 # Core 1.0.1731, Wallaby App 1.0.88, Wallaby IntelliJ 1.0.322, Wallaby VS 1.0.68, Wallaby VS Code 1.0.431, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.497, Quokka VS Code 1.0.710, Quokka Sublime 1.0.158 (2025-04-01)
 
