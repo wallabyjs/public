@@ -1,5 +1,33 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1779, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.324, Wallaby VS 1.0.68, Wallaby VS Code 1.0.444, Wallaby Sublime 1.0.80, Quokka IntelliJ 1.0.510, Quokka VS Code 1.0.723, Quokka Sublime 1.0.224 (2025-06-01)"></a>
+# Core 1.0.1779, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.324, Wallaby VS 1.0.68, Wallaby VS Code 1.0.444, Wallaby Sublime 1.0.80, Quokka IntelliJ 1.0.510, Quokka VS Code 1.0.723, Quokka Sublime 1.0.224 (2025-06-01)
+
+* New for Wallaby/Quokka - [Interactive Runtime Value Graphs](https://wallabyjs.com/whatsnew/diagrams.html) that allow you to visualize and explore runtime values in a graph format.
+* Added support for Jest 30-beta.3.
+* Added support for Babel 7.20+ ([#3499](https://github.com/wallabyjs/public/issues/3499)).
+* Added support for the latest version of `@vitejs/plugin-react`.
+* Added support for node native testing framework to be able to provide custom runner parameters.
+* Added support for node 24.x.
+* Added support for `vite-plugin-babel`.
+* Improved Quokka's support for cjs, cts, mjs, and mts files.
+* Improved Jasmine 4.x and 5.x support to better handle running minimum number of tests when a file changes.
+* Improved how babel transformed code source mapping is handled to better process transformed return statements.
+* Improved various aspects of how Wallaby schedules and processes test runs that improve performance and reduce memory usage.
+* Improved Wallaby for Vitest performance for snapshot mapping and processing.
+* Improved Wallaby for Vitest comment extraction processing to avoid processing comments until the file is first loaded.
+* Improved various aspects of Wallaby/Quokka new UI.
+* Improved comment extraction for Wallaby Angular projects to minimize processing time and improve performance.
+* Improved various aspects of Wallaby and Quokka's start pages.
+* Bug fix for Wallaby with Angular source mapping sometimes being removed by Webpack's build process.
+* Bug fix for Wallaby with Vitest that was causing nuxt projects to not run correctly ([#3505](https://github.com/wallabyjs/public/issues/3505)).
+* Bug fix for when test error message does not contain a location; would result in Wallaby's spinner indicator not being removed ([#3500](https://github.com/wallabyjs/public/issues/3500)).
+* Bug fix to escape special characters in errors and log messages.
+* Bug fix for Quokka when using tsx and swc where path aliases were not being resolved correctly.
+* Bug fix for Wallaby for Vitest to align exclude defaults behavior with Vitest's default behavior.
+* Bug fix for Jest to ensure process.env.NODE_ENV is correctly set when extracting configuration settings ([#3330](https://github.com/wallabyjs/public/issues/3330)).
+* Bug fixes for various issues with Wallaby/Quokka new UI.
+
 <a name="# Core 1.0.1746, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.324, Wallaby VS 1.0.68, Wallaby VS Code 1.0.437, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.499, Quokka VS Code 1.0.711, Quokka Sublime 1.0.158 (2025-05-01)"></a>
 # Core 1.0.1746, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.324, Wallaby VS 1.0.68, Wallaby VS Code 1.0.437, Wallaby Sublime 1.0.68, Quokka IntelliJ 1.0.499, Quokka VS Code 1.0.711, Quokka Sublime 1.0.158 (2025-05-01)
 
