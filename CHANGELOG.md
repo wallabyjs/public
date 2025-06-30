@@ -1,5 +1,24 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1803, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.328, Wallaby VS 1.0.68, Wallaby VS Code 1.0.450, Wallaby Sublime 1.0.82, Quokka IntelliJ 1.0.514, Quokka VS Code 1.0.731, Quokka Sublime 1.0.228 (2025-07-01)"></a>
+# Core 1.0.1803, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.328, Wallaby VS 1.0.68, Wallaby VS Code 1.0.450, Wallaby Sublime 1.0.82, Quokka IntelliJ 1.0.514, Quokka VS Code 1.0.731, Quokka Sublime 1.0.228 (2025-07-01)
+
+* New for Wallaby - Improved Side-by-Side and Compact Diffs for Jest/Vitest Asymmetric Matchers
+* New for Wallaby - Automatic Node.js Version Selection Based on Project Configuration
+* Added support for Jest 30.0.x+.
+* Added support for Vitest 3.2.x+.
+* Added Svelte v5 support for Quokka.
+* Added support for detecting URLs in raw console.log messages so that they can be launched from Wallaby/Quokka UI.
+* Added support for latest version of Chrome,; Profile Viewer did not automatically collapse developer tools sections.
+* Increased array copy limit from 100 elements to 1000 elements.
+* Improved various parts of Wallaby that have resulted in faster incremental runs, better handling of compute-heavy and path-rich tests, and quicker startup for small projects. At time uses ~10x-12x less CPU and memory for code insights, and now avoids spawning unnecessary workers.
+* Improved reporting and troubleshooting for Jest/Vitest pnpm projects.
+* Updated Wallaby integration with WSL to disable remote Chrome support (no longer supported by Chrome itself).
+* Bug fix for Jest configurations with escaped paths in testMatch glob patterns.
+* Bug fix for Wallaby with Vitest when worker exist before teardown has been scheduled; would result in an error.
+* Bug fix for Wallaby/Quokka for Sublime Text to allow the use of Sublime Text v3 themes with Sublime Text v4.
+* Bug fix to clear file coverage details on transformation errors.
+
 <a name="# Core 1.0.1779, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.324, Wallaby VS 1.0.68, Wallaby VS Code 1.0.444, Wallaby Sublime 1.0.80, Quokka IntelliJ 1.0.510, Quokka VS Code 1.0.723, Quokka Sublime 1.0.224 (2025-06-01)"></a>
 # Core 1.0.1779, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.324, Wallaby VS 1.0.68, Wallaby VS Code 1.0.444, Wallaby Sublime 1.0.80, Quokka IntelliJ 1.0.510, Quokka VS Code 1.0.723, Quokka Sublime 1.0.224 (2025-06-01)
 
