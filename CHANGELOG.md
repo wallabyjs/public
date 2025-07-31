@@ -1,5 +1,28 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1828, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.330, Wallaby VS 1.0.68, Wallaby VS Code 1.0.455, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.515, Quokka VS Code 1.0.734, Quokka Sublime 1.0.229 (2025-08-01)"></a>
+# Core 1.0.1828, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.330, Wallaby VS 1.0.68, Wallaby VS Code 1.0.455, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.515, Quokka VS Code 1.0.734, Quokka Sublime 1.0.229 (2025-08-01)
+
+* New for Wallaby - support for Angular 20+.
+* New for Wallaby for VS Code - now shows file coverage information in the Explorer view and Test Explorer view.
+* Added support for `unplugin-auto-import` [#3529](https://github.com/wallabyjs/public/issues/3529).
+* Added support for latest version of node@24.x.
+* Improved logging for Buffer objects; was displaying as `[object Object]` instead of the actual Buffer content; now no longer eagerly logs Buffer properties until they are explicitly requested by the user [#3529]( https://github.com/wallabyjs/quokka/issues/1013).
+* Improved performance of Wallaby's user interface.
+* Improved various aspects of logging related to Chrome test environments.
+* Improved test run progress reporting via Wallaby Status console output.
+* Bug fix to open the overview panel (if it's currently closed) when starting the debugger in Standalone mode [#3527](https://github.com/wallabyjs/public/issues/3527#issuecomment-3068646457).
+* Bug fix for Wallaby for VS Code status bar showing results from the previous test run when a test run is in progress.
+* Bug fix to correctly capture native ESM loading sequence; previously would not correctly associate source files with their tests files.
+* Bug fix when Chrome runner does not start correctly.
+* Bug fix for Chrome runner connection timeout during startup.
+* Bug fix for Vitest and Jest where test status would not be correctly reported for skipped tests.
+* Bug fix for when an error occurs running tests at startup; would show a spinner indefinitely instead of the troubleshooting screen and error details.
+* Bug fix for issue when expanding array buckets in Wallaby UI logs.
+* Bug fix for processing Logpoints at startup; would sometimes cause tests to re-execute after startup to process Logpoints.
+* Bug fix for Chrome Profile Viewer displaying development tools console when launched on latest version of Chrome.
+* Removed last screenshot feature from Wallaby.
+
 <a name="# Core 1.0.1803, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.328, Wallaby VS 1.0.68, Wallaby VS Code 1.0.450, Wallaby Sublime 1.0.82, Quokka IntelliJ 1.0.514, Quokka VS Code 1.0.731, Quokka Sublime 1.0.228 (2025-07-01)"></a>
 # Core 1.0.1803, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.328, Wallaby VS 1.0.68, Wallaby VS Code 1.0.450, Wallaby Sublime 1.0.82, Quokka IntelliJ 1.0.514, Quokka VS Code 1.0.731, Quokka Sublime 1.0.228 (2025-07-01)
 
