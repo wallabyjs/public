@@ -1,6 +1,35 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
-<a name="# Core 1.0.1828, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.330, Wallaby VS 1.0.68, Wallaby VS Code 1.0.455, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.515, Quokka VS Code 1.0.734, Quokka Sublime 1.0.229 (2025-08-01)"></a>
+<a name="# Core 1.0.1857, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.330, Wallaby VS 1.0.68, Wallaby VS Code 1.0.462, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.516, Quokka VS Code 1.0.737, Quokka Sublime 1.0.230 (2025-09-01)"></a>
+# Core 1.0.1857, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.330, Wallaby VS 1.0.68, Wallaby VS Code 1.0.462, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.516, Quokka VS Code 1.0.737, Quokka Sublime 1.0.230 (2025-09-01)
+
+* New for Wallaby / Quokka - ability to copy values and paths from log viewer entries.
+* New for Wallaby - support for Angular 20.2+
+* New for Wallaby - support for Jest@31.x.
+* New for Wallaby - support for Webpack@5.101.0+.
+* New for Quokka - support for Node.js 22.18.x+.
+* Enhanced Wallaby for VS Code `closest project in mono-repo` behavior to recalculate closest project when required and prompt for user to update selected project.
+* Added test-specific actions to VS Code testing view [#3538](https://github.com/wallabyjs/public/issues/3538).
+* Various improvements to Wallaby's internal project file metadata caching mechanism.
+* Various improvements and minor bug fixes for Wallaby's user interface.
+* Improved support for Angular projects that don't use Zone.js polyfills.
+* Improved error reporting for node native testing framework loader require/import failures.
+* Increased formatting limits for Wallaby's Diagnostics report (when copying to clipboard).
+* Bug fix for Vitest where spawned Vitest worker processes were not exiting when Wallaby was stopped.
+* Bug fix for Jest test run completing prematurely and causing Wallaby to return 0 test results [#3518](https://github.com/wallabyjs/public/issues/3518).
+* Bug fix for Jest not correctly handling execution errors in Jest components [#3534](https://github.com/wallabyjs/public/issues/3534).
+* Bug fix for Jest not reloading globalSetup / teardown imports correctly after changes.
+* Bug fix for Angular not working correctly after initial Webpack processing has failed.
+* Bug fix for errors not displaying correctly when a test is selected or being debugged. 
+* Bug fix to destroy Chrome temporary directory after test execution.
+* Bug fix for inadvertently clearing system 'n/a' message when logging code exists but is not executed.
+* Bug fix for node native testing framework diff reporting not working.
+* Bug fix for node native testing framework not correctly capturing file loading sequence to determine which tests are affected by changes.
+* Bug fix for node native node:assert sometimes not working correctly when errors cross serialization boundaries.
+* Bug fix for node native testing framework not supporting test/describe blocks missing a test/describe block name. 
+* Bug fix for node native testing framework not correctly loading for pnpm workspaces.
+
+<a name="# Core 1.0.1828, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.330, Wallaby VS 1.0.68, Wallaby VS Code 1.0.455, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.516, Quokka VS Code 1.0.734, Quokka Sublime 1.0.229 (2025-08-01)"></a>
 # Core 1.0.1828, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.330, Wallaby VS 1.0.68, Wallaby VS Code 1.0.455, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.515, Quokka VS Code 1.0.734, Quokka Sublime 1.0.229 (2025-08-01)
 
 * New for Wallaby - support for Angular 20+.
