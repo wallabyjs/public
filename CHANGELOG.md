@@ -1,5 +1,26 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1873, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.335, Wallaby VS 1.0.68, Wallaby VS Code 1.0.468, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.518, Quokka VS Code 1.0.742, Quokka Sublime 1.0.230 (2025-10-01)"></a>
+# Core 1.0.1873, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.335, Wallaby VS 1.0.68, Wallaby VS Code 1.0.468, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.518, Quokka VS Code 1.0.742, Quokka Sublime 1.0.230 (2025-10-01)
+
+* New for Wallaby - Wallaby v3 streams results in real time, starts instantly with cached results, and prioritizes test execution. [Learn more](https://wallabyjs.com/blog/wallaby-v3.html).
+* New for Wallaby - Test Explorer in Overview panel. [Learn more](https://wallabyjs.com/whatsnew/test-explorer-in-overview.html).
+* New for Wallaby - Coverage view now filters based on test filter and selected/watched tests. [Learn more](https://wallabyjs.com/whatsnew/coverage-improvements.html).
+* Added support for Jasmine 5.10.x+ for browser-based projects.
+* Added support for Jasmine 5.11.x+ for node projects.
+* Improved global error reporting when global error is reported after test execution has completed.
+* Improved ESM warnings and error reporting for node native testing framework.
+* Bug fix for Wallaby with Vitest inline snapshots not working correctly ([#1474](https://github.com/wallabyjs/wallaby/issues/1474))
+* Bug fix for when Webpack modules fails to reporting a source file/location correctly.
+* Bug fix for Ava with ESM sometimes not working correctly.
+* Bug fix for Wallaby with mocha not correctly reporting test results in the Status tab for tests not nested in a describe block.
+* Bug fix for node native testing framework not behaving correctly after encountering a global error in a test.
+* Bug fix for Wallaby/Quokka only showing first symbol property in logged objects.
+* Bug fix for Vitest global errors not being reported properly.
+* Bug fix for Wallaby with older  (< v1.x) versions of Vitest not working correctly.
+* Bug fix for Webpack where Wallaby would apply optimization settings that would cause issues with some projects.
+* Bug fix for Jasmine where Wallaby would sometimes not correctly identify which tests are associated with which test files
+
 <a name="# Core 1.0.1857, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.330, Wallaby VS 1.0.68, Wallaby VS Code 1.0.462, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.516, Quokka VS Code 1.0.737, Quokka Sublime 1.0.230 (2025-09-01)"></a>
 # Core 1.0.1857, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.330, Wallaby VS 1.0.68, Wallaby VS Code 1.0.462, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.516, Quokka VS Code 1.0.737, Quokka Sublime 1.0.230 (2025-09-01)
 
