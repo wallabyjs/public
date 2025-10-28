@@ -9,13 +9,6 @@ assignees: ''
 
 ### Issue description or question
 
-<!--
-PLEASE NOTE: If you are using Jest >= v24 or Angular CLI >= v8.2 and using a
-wallaby configuration file, switching to use automatic configuration may resolve your problem.
-
-https://wallabyjs.com/docs/intro/config.html#automatic-configuration
--->
-
 <!-- Describe your issue/question -->
 
 ### Wallaby diagnostics report
@@ -29,9 +22,12 @@ To share the report:
 - start Wallaby in your project;
 - wait until it reports some results (finishes running tests);
 - run `Copy Diagnostics Report` command:
-  - in VS Code, Atom, or Sublime editor execute Wallaby `Copy Diagnostics Report` command from your editor command palette; 
+  - in VS Code, or Sublime editor execute Wallaby `Copy Diagnostics Report` command from your editor command palette; 
   - in JetBrains IDEs or VS use Wallaby `Help | Wallaby.js | Copy Diagnostics Report` menu item;
 - paste generated report from your clipboard below (feel free to review and edit the report if required).
+
+If the generated report is too large to paste into the issue description, please open https://gist.github.com/, create a new public Gist with the report, and share the Gist URL instead.
+
 -->
 
-<!-- Replace this line with your Wallaby Diagnostics Report -->
+<!-- Replace this line with your Wallaby Diagnostics Report OR https://gist.github.com/ link -->
