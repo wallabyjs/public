@@ -1,5 +1,24 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1913, Wallaby IntelliJ 1.0.338, Wallaby VS 1.0.68, Wallaby VS Code 1.0.476, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.518, Quokka VS Code 1.0.742, Quokka Sublime 1.0.230 (2025-11-01)"></a>
+# Core 1.0.1913, Wallaby IntelliJ 1.0.338, Wallaby VS 1.0.68, Wallaby VS Code 1.0.476, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.518, Quokka VS Code 1.0.742, Quokka Sublime 1.0.230 (2025-11-01)
+
+* New for Wallaby - Copilot mode selector to choose between different AI-assisted modes (Analytical fix, Direct fix, Investigation only).
+* New for Wallaby - Navigation target selector to jump to test definition, assertion failure, or source code line.
+* New for Wallaby - Angular 20 workspaces run each project's tests in a dedicated browser for stronger isolation, aligned with ng test.
+* New for Wallaby - ability to specify which version of Wallaby core to use.
+* Improved Identifier expression logging - now captures multiple values with count/depth limits and truncation indicators [#3571](https://github.com/wallabyjs/public/issues/3571).
+* Improved test execution progress reporting; now aligned with streaming test execution.
+* Improved cached-results pipeline and smarter worker management to reduce memory and boost reliability.
+* Improved Wallaby's result caching mechanism to process results in a separate process.
+* Improved diagnostics report when Wallaby fails to start or crashes unexpectedly.
+* Various improvements to Vitest integration performance and reliability.
+* Various improvements to Wallaby's integration with AI tools and agents.
+* Various improvements and minor bug fixes for Wallaby's user interface.
+* Various bug fixes to Wallaby's v3 streaming test execution mechanism.
+* Bug fix for Wallaby sometimes un-associating source files from their test files after a file change when a global error occurs [#3569](https://github.com/wallabyjs/public/issues/3569). 
+* Bug fix for Wallaby for Vitest when some errors were being reported twice.
+
 <a name="# Core 1.0.1873, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.335, Wallaby VS 1.0.68, Wallaby VS Code 1.0.468, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.518, Quokka VS Code 1.0.742, Quokka Sublime 1.0.230 (2025-10-01)"></a>
 # Core 1.0.1873, Wallaby App 1.0.86, Wallaby IntelliJ 1.0.335, Wallaby VS 1.0.68, Wallaby VS Code 1.0.468, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.518, Quokka VS Code 1.0.742, Quokka Sublime 1.0.230 (2025-10-01)
 
