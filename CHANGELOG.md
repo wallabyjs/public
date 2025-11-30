@@ -1,5 +1,25 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1936, Wallaby IntelliJ 1.0.342, Wallaby VS 1.0.84, Wallaby VS Code 1.0.482, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.527, Quokka VS Code 1.0.747, Quokka Sublime 1.0.232 (2025-12-01)"></a>
+# Core 1.0.1936, Wallaby IntelliJ 1.0.342, Wallaby VS 1.0.84, Wallaby VS Code 1.0.482, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.527, Quokka VS Code 1.0.747, Quokka Sublime 1.0.232 (2025-12-01)
+
+* New for Wallaby for JetBrains editors - [Support for MCP for AI-assisted test writing and debugging](https://wallabyjs.com/docs/features/mcp/?editor=jb).
+* New for Quokka - [Run on Demand improvements](https://quokkajs.com/whatsnew/run-improvements.html).
+* New for Wallaby - [Peek Source Code anywhere]((https://wallabyjs.com/whatsnew/dot-peek.html)) with 'dot' key shortcut.
+* [Added support for Vitest 4.x](https://wallabyjs.com/whatsnew/vitest-v4.0.html).
+* Increased the maxConsoleMessagesPerTest setting default from 100 to 500.
+* Improved handling of global errors in the Wallaby UI test tree.
+* Various bug fixes and performance improvements to Wallaby's v3 vitest integration.
+* Various minor improvements and bug fixes to Wallaby's user interface.
+* Ability for Wallaby for VS Code and JetBrains editors to install a specific version of Wallaby core.
+* Bug fix for issue where sometimes stale coverage indicators, logs, or incorrect coverage number calculations would be shown.
+* Bug fix for Vitest sometimes reporting incorrect test execution times.
+* Bug fix for Wallaby for Vitest sometimes not correctly capturing import sequence when running affected tests after a test file change.
+* Bug fix for Logpoints not working correctly for Wallaby and Quokka in JetBrains editors when using Windows.
+* Bug fix for NX workspaces not working with Angular 20 [#3579](https://github.com/wallabyjs/public/issues/3579).
+* Bug fix for Wallaby Node Native not allowing for node runner version to be specified in project configuration.
+* Bug fix for Wallaby Node Native not correctly reporting errors within nested describe blocks.
+
 <a name="# Core 1.0.1913, Wallaby IntelliJ 1.0.338, Wallaby VS 1.0.68, Wallaby VS Code 1.0.476, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.518, Quokka VS Code 1.0.742, Quokka Sublime 1.0.230 (2025-11-01)"></a>
 # Core 1.0.1913, Wallaby IntelliJ 1.0.338, Wallaby VS 1.0.68, Wallaby VS Code 1.0.476, Wallaby Sublime 1.0.83, Quokka IntelliJ 1.0.518, Quokka VS Code 1.0.742, Quokka Sublime 1.0.230 (2025-11-01)
 
