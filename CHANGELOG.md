@@ -1,5 +1,27 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1955, Wallaby IntelliJ 1.0.343, Wallaby VS 1.0.84, Wallaby VS Code 1.0.484, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.531, Quokka VS Code 1.0.750, Quokka Sublime 1.0.232 (2026-01-01)"></a>
+# Core 1.0.1955, Wallaby IntelliJ 1.0.343, Wallaby VS 1.0.84, Wallaby VS Code 1.0.484, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.531, Quokka VS Code 1.0.750, Quokka Sublime 1.0.232 (2026-01-01)
+
+* Added support for the latest version of Node.js using Node.js native test runner - fixes breaking change in latest versions of Node that makes ESM hook loading block the main thread [#3592](https://github.com/wallabyjs/public/issues/3592).
+* Improved Vitest performance with optimizations and execution fixes.
+* Improved run mode functionality for Quokka sessions in JetBrains editors.
+* Improved replace global run mode dropdown with mutually-exclusive checkboxes for improved usability in IntelliJ.
+* Various improvements to Wallaby's user interface including context menus, log viewers, and error reporting.
+* Various improvements to Vitest integration performance and reliability.
+* Bug fix for Wallaby with Vitest not recovering from introduction of infinite loop in Vitest v4+.
+* Bug fix for Vitest with Angular v21 and AnalogJS on unsaved files.
+* Bug fix for Vitest prioritization issue in Angular CLI projects by disabling it.
+* Bug fix for Vitest worker state issue after unexpected exit.
+* Bug fix for node:test to preserve original NODE_OPTIONS for test runs to prevent issues with child processes [#3591](https://github.com/wallabyjs/public/issues/3591).
+* Bug fix for profile run failing when recycle is true and no teardown function exists.
+* Bug fix for null/undefined checks for project settings to prevent errors.
+* Bug fix for missing stylePreprocessorOptions migration for Angular projects.
+* Bug fix for improved error handling for Node version extraction to prevent Wallaby from hanging.
+* Bug fix for Quokka run mode configuration to default to 'auto' in Community edition.
+* Bug fix for Wallaby and Quokka for JetBrains editors - line painter document-accessing logic now wrapped in runReadAction (fixes issue in 2025.3 RC) [#3589](https://github.com/wallabyjs/public/issues/3589).
+* Bug fix for Wallaby UI - context menu behavior to close on window blur events.
+
 <a name="# Core 1.0.1936, Wallaby IntelliJ 1.0.342, Wallaby VS 1.0.84, Wallaby VS Code 1.0.482, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.527, Quokka VS Code 1.0.747, Quokka Sublime 1.0.232 (2025-12-01)"></a>
 # Core 1.0.1936, Wallaby IntelliJ 1.0.342, Wallaby VS 1.0.84, Wallaby VS Code 1.0.482, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.527, Quokka VS Code 1.0.747, Quokka Sublime 1.0.232 (2025-12-01)
 
