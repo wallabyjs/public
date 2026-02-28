@@ -1,5 +1,23 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.1989, Wallaby IntelliJ 1.0.344, Wallaby VS 1.0.84, Wallaby VS Code 1.0.491, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-03-01)"></a>
+# Core 1.0.1989, Wallaby IntelliJ 1.0.344, Wallaby VS 1.0.84, Wallaby VS Code 1.0.491, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-03-01)
+
+* Improved Analog.js incremental compilation performance by skipping unnecessary type-checking.
+* Improved Vitest and Analog.js file change tracking performance during full compilation.
+* Bug fix for Vitest browser mode sometimes not reporting coverage for certain files [#3612](https://github.com/wallabyjs/public/issues/3612).
+* Bug fix for Vitest browser mode race condition that could cause test results to be lost before run completion.
+* Bug fix for Vitest browser mode not starting correctly when Vite's dependency cache is not primed.
+* Bug fix for Vitest v4 sometimes not reporting coverage for certain files [#3606](https://github.com/wallabyjs/public/issues/3606).
+* Bug fix for Vitest include/exclude patterns not matching files correctly.
+* Bug fix for Vitest rollup errors not being reported when source file location is missing.
+* Bug fix for Angular compatibility with the latest Angular CLI version.
+* Bug fix for Angular Vite caching causing unnecessary reprocessing due to case-insensitive path comparison.
+* Bug fix for Angular integration variable naming conflicts that could cause unexpected behavior.
+* Bug fix for Angular Vite plugin case sensitivity issues in Windows paths.
+* Bug fix for Angular build target resolution not working correctly in some configurations.
+* Bug fix for Wallaby for JetBrains editors freezing during core version update [#61](https://github.com/wallabyjs/wallaby-intellij/issues/61).
+
 <a name="# Core 1.0.1976, Wallaby IntelliJ 1.0.343, Wallaby VS 1.0.84, Wallaby VS Code 1.0.487, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-02-01)"></a>
 # Core 1.0.1976, Wallaby IntelliJ 1.0.343, Wallaby VS 1.0.84, Wallaby VS Code 1.0.487, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-02-01)
 
