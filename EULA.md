@@ -1,4 +1,4 @@
-This End User License Agreement ("Agreement") is a legal contract between you as an individual or business organisation ("you" or "Licensee") and Wallaby Pty Ltd ACN 620 776 794 ("Licensor") for the Wallaby.js software, including any associated media, printed materials and electronic documentation (the "Software").
+This End User License Agreement ("Agreement") is a legal contract between you as an individual or business organisation ("you" or "Licensee") and Wallaby Pty Ltd ACN 620 776 794 ("Licensor") for the Wallaby software products (including Wallaby.js, Wallaby.py, Quokka.js, and Console Ninja), including any associated media, printed materials and electronic documentation (the "Software").
 
 By copying, downloading, accessing or otherwise using the Software, you agree to be bound by the terms of this Agreement and you represent that you are authorised to enter into this Agreement on behalf of yourself or your business organisation.
 
@@ -104,7 +104,7 @@ You and Licensor are independent parties. Nothing in this Agreement shall be con
 
 # PAYMENT
 
-The license fees are payable in accordance with the payment methods stipulated on the Software website (wallabyjs.com).
+The license fees are payable in accordance with the payment methods stipulated on the applicable Software website.
 
 # CONTROLLING LAW
 
