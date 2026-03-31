@@ -4,6 +4,7 @@ Please note that while the changelog is updated every few months, we release new
 # Core 1.0.2007, Wallaby IntelliJ 1.0.344, Wallaby VS 1.0.84, Wallaby VS Code 1.0.492, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-04-01)
 
 * New for Wallaby - Word wrap option for long strings in the Wallaby Logs panel.
+* [Added support for Angular CLI 21](https://wallabyjs.com/whatsnew/angular-cli-21.html)
 * Added support for Vitest 4.1.x.
 * Added support for the latest version of Vitest.
 * Improved stale async session isolation for more reliable test execution in Jest.
@@ -15,6 +16,7 @@ Please note that while the changelog is updated every few months, we release new
 * Bug fix for Vitest initial load issues in some environments caused by premature optimized-deps plugin removal.
 * Bug fix for Vitest server shutting down prematurely with Vitest 4.1.0.
 * Bug fix for excessive debug logging in Vitest browser-based configurations with isolate disabled.
+* Bug fix for first test execution time being incorrectly calculated per test file instead of per worker.
 * Bug fix for Smart Start not correctly loading test ranges on startup.
 * Bug fix for Smart Run incorrectly running all tests instead of only affected test files when adding test locations.
 * Bug fix for test location detection not correctly handling folder paths.
