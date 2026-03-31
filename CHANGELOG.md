@@ -1,5 +1,24 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.2007, Wallaby IntelliJ 1.0.344, Wallaby VS 1.0.84, Wallaby VS Code 1.0.492, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-04-01)"></a>
+# Core 1.0.2007, Wallaby IntelliJ 1.0.344, Wallaby VS 1.0.84, Wallaby VS Code 1.0.492, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-04-01)
+
+* New for Wallaby - Word wrap option for long strings in the Wallaby Logs panel.
+* Added support for Vitest 4.1.x.
+* Added support for the latest version of Vitest.
+* Improved stale async session isolation for more reliable test execution in Jest.
+* Improved TypeScript syntax handling for Quokka for Sublime Text 4 with built-in syntax support, removing the need for an external TypeScript package.
+* Bug fix for Vitest browser mode page focus and blur events not firing with Chrome 132+ headless mode [#3621](https://github.com/wallabyjs/public/issues/3621).
+* Bug fix for Analog.js template compilation issues with Angular declaration files in Vitest [#3616](https://github.com/wallabyjs/public/issues/3616).
+* Bug fix for Vitest browser runner not working correctly with `isolate: false`.
+* Bug fix for Vitest memory leak caused by worker thread pool instances not being properly disposed during test recycling.
+* Bug fix for Vitest initial load issues in some environments caused by premature optimized-deps plugin removal.
+* Bug fix for Vitest server shutting down prematurely with Vitest 4.1.0.
+* Bug fix for excessive debug logging in Vitest browser-based configurations with isolate disabled.
+* Bug fix for Smart Start not correctly loading test ranges on startup.
+* Bug fix for Smart Run incorrectly running all tests instead of only affected test files when adding test locations.
+* Bug fix for test location detection not correctly handling folder paths.
+
 <a name="# Core 1.0.1989, Wallaby IntelliJ 1.0.344, Wallaby VS 1.0.84, Wallaby VS Code 1.0.491, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-03-01)"></a>
 # Core 1.0.1989, Wallaby IntelliJ 1.0.344, Wallaby VS 1.0.84, Wallaby VS Code 1.0.491, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-03-01)
 
