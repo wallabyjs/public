@@ -1,5 +1,31 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.2027, Wallaby IntelliJ 1.0.344, Wallaby VS 1.0.84, Wallaby VS Code 1.0.495, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-05-01)"></a>
+# Core 1.0.2027, Wallaby IntelliJ 1.0.344, Wallaby VS 1.0.84, Wallaby VS Code 1.0.495, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-05-01)
+
+* **[Wallaby.py](https://wallabypy.com/) is now available** — Wallaby for Python now brings inline test results, value display, and code coverage to Python projects in VS Code!
+* Added support for `vite-plus` as an alternative Vitest package resolver.
+* Added support for `onTestsRerun` callbacks in the Vitest runner.
+* Added support for Vitest 4.1.4.
+* Improved test list tracking in the Wallaby Tests panel to reduce unnecessary background work when the panel is not visible.
+* Improved Angular zone.js testing strategy from static polyfills to dynamic detection for more flexible test configuration.
+* Improved Angular Vitest integration to prevent duplicate mock patch application.
+* Bug fix for file-watching on Windows where events could be silently dropped, now includes a polling fallback.
+* Bug fix for race condition in localhost port allocation during Wallaby startup.
+* Bug fix for orphaned Node.js and Vitest worker processes not being terminated when their parent process exits.
+* Bug fix for Vitest warning about incompatible Wallaby version incorrectly appearing.
+* Bug fix for Vitest virtual module misattribution when malformed sourcemaps are present, which could cause incomplete test runs.
+* Bug fix for Vitest runner uncaught errors causing error storms and reducing error reporting clarity.
+* Bug fix for Vitest module path resolution for `@vitest/runner` and `@vitest/snapshot`.
+* Bug fix for Smart Start incorrectly matching source files to test-only rules.
+* Bug fix for Smart Start not correctly auto-selecting tests that depend on an edited source file.
+* Bug fix for call stack trace frame sometimes being incorrectly dropped from the call stack.
+* Bug fix for Linux native file watcher warning appearing unconditionally, regardless of whether issues were actually present.
+* Bug fix for indicator switching when using run-on-save mode with pending editor file changes.
+* Bug fix for Angular CLI migration skipping options migration for unsupported builders.
+* Bug fix for Wallaby VS Code theme IDs not working correctly with new VS Code themes.
+* Bug fix for Wallaby VS Code decorations being incorrectly cleared when no ranges are defined.
+
 <a name="# Core 1.0.2007, Wallaby IntelliJ 1.0.344, Wallaby VS 1.0.84, Wallaby VS Code 1.0.492, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-04-01)"></a>
 # Core 1.0.2007, Wallaby IntelliJ 1.0.344, Wallaby VS 1.0.84, Wallaby VS Code 1.0.492, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-04-01)
 
