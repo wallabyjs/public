@@ -1,5 +1,24 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.2045, Wallaby IntelliJ 1.0.347, Wallaby VS 1.0.84, Wallaby VS Code 1.0.497, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.542, Quokka VS Code 1.0.762, Quokka Sublime 1.0.232 (2026-06-01)"></a>
+# Core 1.0.2045, Wallaby IntelliJ 1.0.347, Wallaby VS 1.0.84, Wallaby VS Code 1.0.497, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.542, Quokka VS Code 1.0.762, Quokka Sublime 1.0.232 (2026-06-01)
+
+* New for Wallaby - [CLI for Coding Agents](https://wallabyjs.com/whatsnew/cli.html), allowing AI coding agents to run Wallaby from the command line and use runtime test and coverage data without requiring an editor session or MCP server.
+* New for Wallaby - [Coverage Complexity and Change Risk Metrics](https://wallabyjs.com/whatsnew/coverage-complexity-change-risk.html) in the Coverage tab and AI coverage responses, helping identify complex files where additional test coverage may have the biggest payoff.
+* New for Quokka - [Quokka v3](https://quokkajs.com/whatsnew/quokka-3.html) with a redesigned Output and Details workflow, richer value exploration, output while code is still running, and integrated diffs and diagrams.
+* Added support for AVA 8.x.
+* Improved Angular Vitest support for TypeScript path aliases, wildcard and fallback mappings, dotted aliases, and runner config detection, including Angular 21 browser runner projects on Node 25 [#3634](https://github.com/wallabyjs/public/issues/3634).
+* Improved Vitest browser mode reliability for shared Vite server startup, SvelteKit projects, Vite cache isolation, and Wallaby-controlled reruns.
+* Improved Vitest error reporting to use resolved Vite import-analysis paths in Rollup error stacks.
+* Improved Wallaby coverage reports by surfacing the top files by change risk.
+* Bug fix for Quokka in Bun ESM mode showing stale errors after a runtime failure.
+* Bug fix for Quokka Value Explorer showing the Community depth-limit message before the user attempted to expand a value [#2182](https://github.com/wallabyjs/wallaby/issues/2182).
+* Bug fix for Quokka v3 shortcut handling and shared shortcut naming.
+* Bug fix for JetBrains editors where Accessibility zoom could be applied twice in Wallaby and Quokka webviews.
+* Bug fix for JetBrains editors where JCEF mouse wheel scaling could be incorrect after IDE zoom changes.
+* Bug fix for Smart Start not correctly returning to regular mode when Run Project Tests is executed.
+* Bug fix for Wallaby UI test tree keyboard handling and selection details in the Overview panel.
+
 <a name="# Core 1.0.2027, Wallaby IntelliJ 1.0.344, Wallaby VS 1.0.84, Wallaby VS Code 1.0.495, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-05-01)"></a>
 # Core 1.0.2027, Wallaby IntelliJ 1.0.344, Wallaby VS 1.0.84, Wallaby VS Code 1.0.495, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.534, Quokka VS Code 1.0.755, Quokka Sublime 1.0.232 (2026-05-01)
 
