@@ -1,5 +1,18 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.2055, Wallaby IntelliJ 1.0.347, Wallaby VS 1.0.84, Wallaby VS Code 1.0.497, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.542, Quokka VS Code 1.0.763, Quokka Sublime 1.0.232 (2026-07-01)"></a>
+# Core 1.0.2055, Wallaby IntelliJ 1.0.347, Wallaby VS 1.0.84, Wallaby VS Code 1.0.497, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.542, Quokka VS Code 1.0.763, Quokka Sublime 1.0.232 (2026-07-01)
+
+* Improved [Wallaby CLI for Coding Agents](https://wallabyjs.com/whatsnew/cli.html) with project analysis, framework and runner details in reports, and beta token-based authentication, enabling AI coding agents to use Wallaby in remote environments and containers such as GitHub Copilot Cloud Agents, Docker/Podman/WSL/Apple containers, VS Code Dev Containers, DevPod, among others.
+* Added support for Vitest 5.0.0 beta.
+* Added Wallaby.py compatibility with pytest 9.1.
+* Improved Vitest memory usage by starting instrumentation workers only when needed and cleaning up idle workers more reliably [#2098](https://github.com/wallabyjs/wallaby/issues/2098).
+* Improved Vitest workspace project handling by reusing Vite servers while preserving inline project identity and resolved project settings [#2127](https://github.com/wallabyjs/wallaby/issues/2127), [#3637](https://github.com/wallabyjs/public/issues/3637), [#3638](https://github.com/wallabyjs/public/issues/3638).
+* Improved Angular Vitest reliability by avoiding shared Vite server and configuration reuse during Angular compilation.
+* Bug fix for Vitest Vue SFC coverage where generated style virtual modules could overwrite valid component coverage [#3641](https://github.com/wallabyjs/public/issues/3641).
+* Bug fix for Wallaby CLI skill mode queue handling, improving agent-driven test execution behavior.
+* Bug fix for trace marker values being logged automatically by instrumentation.
+
 <a name="# Core 1.0.2045, Wallaby IntelliJ 1.0.347, Wallaby VS 1.0.84, Wallaby VS Code 1.0.497, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.542, Quokka VS Code 1.0.762, Quokka Sublime 1.0.232 (2026-06-01)"></a>
 # Core 1.0.2045, Wallaby IntelliJ 1.0.347, Wallaby VS 1.0.84, Wallaby VS Code 1.0.497, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.542, Quokka VS Code 1.0.762, Quokka Sublime 1.0.232 (2026-06-01)
 
