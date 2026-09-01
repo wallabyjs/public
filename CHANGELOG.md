@@ -1,5 +1,25 @@
 Please note that while the changelog is updated every few months, we release new versions of wallaby.js a few times a week (sometimes a few times a day). You may [follow us on twitter](https://twitter.com/wallabyjs) to get notified whenever we release notable features. You may also refer to the [Wallaby What's New page](https://wallabyjs.com/whatsnew/) and [Quokka What's New Page](https://quokkajs.com/whatsnew/) for more recent notable features.
 
+<a name="# Core 1.0.2069, Wallaby IntelliJ 1.0.348, Wallaby VS 1.0.84, Wallaby VS Code 1.0.501, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.545, Quokka VS Code 1.0.769, Quokka Sublime 1.0.232 (2026-09-01)"></a>
+# Core 1.0.2069, Wallaby IntelliJ 1.0.348, Wallaby VS 1.0.84, Wallaby VS Code 1.0.501, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.545, Quokka VS Code 1.0.769, Quokka Sublime 1.0.232 (2026-09-01)
+
+* Added [native TypeScript support for `node:test`](https://wallabyjs.com/whatsnew/node-test-native-type-stripping.html) on Node.js 22.18 and later. `.ts`, `.mts`, and `.cts` tests now work in CommonJS and ESM projects without an additional loader or Wallaby configuration [#3401](https://github.com/wallabyjs/public/issues/3401).
+* Added support for [Jasmine 7](https://wallabyjs.com/whatsnew/jasmine-v7.html).
+* Added support for [Jest 30.5](https://wallabyjs.com/whatsnew/jest-v30.5.html).
+* Added support for Angular 22 projects using Vite and esbuild, including correct coverage and test locations with Vite 8 [#3648](https://github.com/wallabyjs/public/issues/3648).
+* Improved Angular 22 Vitest support for libraries, linked packages, custom setup and test patterns, localization, Zone.js, and non-isolated tests.
+* Added Wallaby and Quokka compatibility with WebStorm 2026.2. The JetBrains plugins now require an IntelliJ-based IDE version 2024.2 or later [#3644](https://github.com/wallabyjs/public/issues/3644).
+* Added support for modern JavaScript syntax including RegExp `v` flags, duplicate named capturing groups, and `using` and `await using` declarations [#3647](https://github.com/wallabyjs/public/issues/3647).
+* Added aggregate test execution time to Wallaby CLI Run summaries.
+* Improved Quokka ESM package loading on Node.js 20.19+, 22.12+, and 24, while preserving explicit `stdEsm` configurations [#1031](https://github.com/wallabyjs/quokka/issues/1031).
+* Improved Wallaby for VS Code AI chat integration by hiding tools until a project is running, preventing duplicate tools, and using the selected failure in error investigations.
+* Improved Wallaby CLI auto-stop behavior on Windows when launched by a coding agent.
+* Bug fix for Vitest 4 `vmThreads` and `vmForks` sharing global, module, and DOM state between test files.
+* Bug fix for concurrent Vitest browser workers sometimes hanging during startup.
+* Bug fix for Smart Start and partial-run coverage where uncovered branches could be reported as covered.
+* Bug fix for initial Wallaby CLI runs reporting zero tests before test discovery completed [#3646](https://github.com/wallabyjs/public/issues/3646).
+* Bug fix for selected-test detection matching test modifiers inside quoted strings [#3642](https://github.com/wallabyjs/public/issues/3642).
+
 <a name="# Core 1.0.2055, Wallaby IntelliJ 1.0.347, Wallaby VS 1.0.84, Wallaby VS Code 1.0.497, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.542, Quokka VS Code 1.0.763, Quokka Sublime 1.0.232 (2026-07-01)"></a>
 # Core 1.0.2055, Wallaby IntelliJ 1.0.347, Wallaby VS 1.0.84, Wallaby VS Code 1.0.497, Wallaby Sublime 1.0.85, Quokka IntelliJ 1.0.542, Quokka VS Code 1.0.763, Quokka Sublime 1.0.232 (2026-07-01)
 
